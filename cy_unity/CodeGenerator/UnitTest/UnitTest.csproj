@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Defines.Generator.additionayfile" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="Defines.Generator.additionayfile" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataBindingGenerator\DataBindingGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false"/>
+    <ProjectReference Include="..\Generator\Generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+    <ProjectReference Include="..\Google.ProtoBuf\Google.ProtoBuf.csproj" />
+    <ProjectReference Include="..\ProtoWrapGenerator\ProtoWrapGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+
+</Project>
