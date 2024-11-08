@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15626c60eb484bd79378c59bef2cdfc, type: 3}
+  m_Name: ShaderCompileFilter
+  m_EditorClassIdentifier: 
+  enableFilter: 1
+  needCompileShaders: {fileID: 20000000, guid: e2e8deac60136c1459adf601dba260b0, type: 2}
+  alwaysIncludeShaderItems:
+  - {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 15104, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 15105, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 15106, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10783, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 4800000, guid: f6783ab646d374f94b199774402a5144, type: 3}
+  - {fileID: 4800000, guid: 69c1f799e772cb6438f56c23efccb782, type: 3}
+  - {fileID: 4800000, guid: 0a7e590f3cf1d4ee8a8fab5b6eff09ef, type: 3}
+  - {fileID: 4800000, guid: 21322c8b137c66e49b86085d3c8161f6, type: 3}
+  - {fileID: 4800000, guid: 8fbe92a9edfe6074e841d6dd1509bc59, type: 3}
+  - {fileID: 4800000, guid: e507fdfead5ca47e8b9a768b51c291a1, type: 3}
+  - {fileID: 4800000, guid: 29868e73b638e48ca99a19ea58c48d90, type: 3}
+  - {fileID: 4800000, guid: a9e6b3e090581174181a44544332b506, type: 3}
+  - {fileID: 4800000, guid: d40448071013cf6429a5d68ea2a273c4, type: 3}
+  excludeShaderItems: []
+  shaderPrefix: (DHGames|DH|Hidden/Universal|Terrain|Universal Render Pipeline|Cartoon
+    FX)+
+  forceCompilerShaderCollection: {fileID: 20000000, guid: f324eb7ef5ef2e543b789c63d832aef9, type: 2}
+  excludeShaderKeywords: 
+  excludeShaderPrefix: (Internal-|AssetGraph|UIElements|SpeedTree|Debug|LookDev|Editor|Inspector)+

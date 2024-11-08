@@ -1,0 +1,30 @@
+﻿---
+--- 文件名称:  ${NAME}
+--- 创建者:    ${USER}
+--- 创建时间:  ${DATE} ${TIME}
+-------------------------------------------------------------------
+--- 功能描述：
+---
+---
+
+local BaseView = require("Binding/BaseView")
+local Binding = require("Binding/Binding")
+
+--模块
+---@class ${NAME} : BaseView
+local ${NAME} = class("${NAME}", BaseView)
+${NAME}.viewModelName = "${NAME}Model" --ViewModel
+
+--- generated inject tag---
+--- end generated inject tag---
+
+function ${NAME}:onStart()
+   --- generated binding tag---
+   --- end generated binding tag---
+end
+
+function ${NAME}:onDestroy()
+    
+end
+
+return ${NAME}
