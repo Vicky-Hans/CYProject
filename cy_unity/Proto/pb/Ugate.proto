@@ -1,0 +1,293 @@
+syntax = "proto3";
+package DH.Proto;
+option go_package = "./pb";
+
+enum ErrorCode  {
+  ErrOK = 0;
+  ErrFail = -1;
+
+  ErrArgs = -1003; // 参数错误
+  ErrBusy = -1005; // 服务繁忙
+  ErrInner = -1006; // 内部错误
+  ErrRequestParse = -1007; // 解析请求错误
+}
+
+message Server {
+  int32 sid = 1;
+  string name = 2;
+  uint32 ctime = 3; // 开服时间
+  uint32 status = 4; // 0 维护 1 流畅 2 拥挤 3 爆满
+  int32 recommend = 5; // -9 ih保留 0 正常 1 新服 2 推荐 3 新推荐服
+  int32 bfid = 6; // 战区id
+}
+
+message ClientInfo {// 所有都会发给项目组
+  string adid = 1; //广告ID  //bi，af
+  string idfv = 2; //苹果厂商id //bi,af
+  string dhid = 3; //数美id // 鹰眼
+  string imei = 4; //国际移动设备识别码（仅安卓）//bi,af
+  string android_id = 5; //安卓设备号，安卓id（仅安卓）// bi
+  string appsflyer_id = 6; //appsflyer sdk得到的id //bi,af
+  string device_token = 7; //推送消息用的token //bi
+  string mac_address = 8; //mac地址 //bi
+  string device_model = 9; //设备型号 //bi
+  string dvice_name = 10; //设备名字 //bi
+  string os_version = 11; //手机系统版本 //bi,af
+  string language = 12; //游戏语言编码 //bi
+  string network_type = 13; //网络类型 1蜂窝移动网络 2WIFI //bi
+  string reserved_2 = 14; //OAID广告标识符 //bi,af
+  string bundle_id = 15; //游戏包名 //bi,af,鹰眼
+  string country = 17; //ISO 3166 标准二字码 //
+  string app_version = 18; //游戏版本  //bi
+  string platform = 19; //平台，只能是IOS或者ANDROID 大写 //bi
+  string channel = 20; //渠道 //
+  string att = 21; //广告权限结果 //af
+  string sub_package = 22; //分包id //bi
+  string openid = 23; // 渠道的用户id
+  string openkey = 24; // 渠道的用户会话密钥
+  string client_session_id = 25; // 客户端session_id
+}
+
+message RoleDigest {
+  int32 account = 1; // 账号
+  int32 roleId = 2; // 角色id
+  int32 sid = 3; // 区服ID,
+  string name = 4; // 名称
+  int32 logo = 5; //  头像
+  int64 exp = 6; // 角色经验
+  int32 vexp = 7; // 角色vip经验
+  int32 ctime = 8; //创角色时间
+  int32 last_online_time = 9; //上次登陆时间
+  int32 last_offline_time = 10; //上次下线时间
+  int32 head_frame = 11; // 头像框
+}
+
+// 1-1 grp: 1, cmd: 1
+message ReqAccountAuth {
+  bytes token = 1;
+  ClientInfo client = 2;
+  int32 cluster_type = 3; // 默认0正式，1为正式。2为审核
+}
+
+message RspAccountAuth {
+  int32 errno = 1;
+  string errmsg = 2;
+  int32 accountid = 3; // 账号id
+}
+
+// 2-1 grp: 2, cmd: 1
+message ReqCreateRole {
+  int32 sid = 1; // 区服ID, 分服模式下使用
+  string name = 2; // 名称
+  int32 logo = 3; //  头像
+}
+
+message RspCreateRole {
+  int32 errno = 1; //错误码
+  string errmsg = 2; //错误信息
+  int32 roleId = 3;
+  int32 ctime = 4; //创角时间
+  string name = 5; //名字（主要用于udb自行命名时，需要通知客户端)
+  int32 black_time = 6; // 黑名单封禁剩余时间
+}
+
+// 2-2 grp: 2, cmd: 2
+message ReqLoginRole {
+  int32 roleId = 1;
+  int32 logicid = 2; // 世界服模式下指定登陆逻辑服id
+}
+
+message RspLoginRole {
+  int32 errno = 1; // 错误码
+  string errmsg = 2; // 错误信息
+  bool isAdult = 3; // 是否成年
+  int64 gametime = 4; // 游戏剩余时间
+  int32 black_time = 5; // 黑名单封禁剩余时间
+}
+
+// 2-3 grp: 2, cmd: 3
+message ReqServersAndRoles {
+
+}
+
+message RspServersAndRoles {
+  int32 errno = 1;
+  string errmsg = 2;
+  repeated RoleDigest roles = 3;
+  repeated Server servers = 4;
+  bool maintain_open = 5; // 维护是否开启
+  int64 maintain_finish_time = 6; // 维护结束时间
+  bool in_white_list = 7; // 在白名中
+}
+
+// 防沉迷踢客户端下线
+// 2-4 grp: 2, cmd: 4
+message RspAntiKick {
+  string message = 1; //提示信息
+}
+
+// 注销账号冷静期时间
+// 2-5 grp: 2, cmd: 5
+message ReqUnRegisterAccountStatus {
+}
+
+// 冷静期结束，服务器列表不会返回玩家角色数据
+// 在获取server list 之前请求，如有冷静期就不再获取 server list
+message RspUnRegisterAccountStatus {
+  int32 err_no = 1;
+  string err_msg = 2;
+  int32 unregister_left_second = 3;   // 剩余冷静期时间（秒）。0：没有处于注销账号冷静期 或 冷静期结束;
+}
+
+// 注销账号
+// 2-6 grp: 2, cmd: 6
+message ReqUnRegisterAccount {
+}
+
+message RspUnRegisterAccount {
+  int32 err_no = 1;
+  string err_msg = 2;
+  int32 unregister_left_second = 3;  // 剩余冷静期时间（秒）
+}
+
+// 2-7 grp:2, cmd: 7
+message ReqCancelUnRegisterAccount {
+}
+
+message RspCancelUnRegisterAccount {
+  int32 err_no = 1;
+  string err_msg = 2;
+}
+
+
+// grp: 1, cmd: 3
+message ReqRoleFastLogin {
+  bytes token = 1;  //account token
+  ClientInfo client = 2;
+  int32 cluster_type = 3; //默认0正式，1为正式。2为审核。3灰度
+  int32 roleId = 4; //roleID
+  int32 sid = 5; //指定登陆逻辑服id
+  string vsn = 6; //当前版本号
+  string appName = 7;//bundleID
+  string md5 = 8;
+}
+message RspRoleFastLogin {
+  int32 err_code = 1; // 0:ok, 1:authErr, 2:vsnErr, 3:roleErr
+  string err_msg = 2; // 错误信息
+  RspAccountAuth authRsp = 3;
+  RspVsn vsnRsp = 4;
+  RspLoginRole roleRsp = 5;
+}
+
+// 快速登录
+// 1-5 grp: 1, cmd: 5
+message ReqQuicklyLoginRole {
+  bytes token = 1;
+  ClientInfo client = 2;
+  int32 roleId = 3;
+  int32 sid = 4;
+  string vsn = 5;
+  string appName = 6;
+  string md5 = 7;
+}
+
+message RspQuicklyLoginRole {
+  int32 err_code = 1; // 0:ok, 1:authErr, 2:vsnErr, 3:roleErr
+  RspAccountAuth authErr = 2;
+  RspVsn vsnError = 3;
+  RspLoginRole roleErr = 4;
+}
+
+// 3-1 客户端版本比对 grp: 3, cmd: 1
+message ReqVsn {
+  string vsn = 1;
+  string appName = 2;
+  int32 sid = 3;
+  string md5 = 4;
+}
+
+message RspVsn {
+  string vsn = 1;
+  repeated string cdnUrl = 2;
+  string md5 = 3;
+  string storeUrl = 4;
+  string err_msg = 5;
+  bool disableApkDownload = 6;
+}
+
+// 4-1 获取公告 grp: 4 cmd : 1
+message ReqNotice {
+  int32 language = 1; // 语言
+  string md5 = 2; // 客户端当前使用语言的md5信息（没有可传空）
+}
+
+message RspNotice {
+  int32 errno = 1;
+  string errmsg = 2;
+  int32 status = 3; // 0:公告未修改,返回的notice和md5都为空。1:公告有修改，返回notice和对应的md5
+  string notice = 4; // 公告内容
+  string md5 = 5; // 该公告对应的md5
+}
+
+message NoticeInfo {
+  int32 language = 1;
+  int32 index = 2;
+  int32 op = 3; // 0无 1增加 2删除
+  int32 dialog_type = 4;// 弹窗类型
+  int32 dialog_id = 5; // 弹窗id
+  string bundle_ids = 6; // 推送包名
+}
+
+// 4-2 公告通知客户端更新 grp: 4 cmd: 2
+message RspPushNotice {
+  repeated NoticeInfo infos = 1; // 更新列表
+}
+
+message MailInfo {
+  int64 _id = 1; // 邮件id
+  int32 type = 2; // 邮件类型 0:通知 1:附件
+  int32 roleid = 3; // 玩家id，邮件拥有者
+  int32 cfg_id = 4; // 邮件内容配置id (0:无配置)
+  string args = 5; // 邮件内容参数
+  string title = 6; // 邮件标题(当无内容配置时使用)
+  string content = 7; // 邮件内容(当无内容配置时使用)
+  string affix = 8; // 附件(json字符串)
+  int32 read_flag = 9; // 阅读状态 0:未读 1:已读
+  int32 reward_flag = 10; // 领取状态 0:未领取 1:已领取
+  int32 favorite_flag = 11; // 收藏状态 0:未收藏 1:已收藏
+  int64 send_time = 12; // 发送时间
+  int64 expire_time = 13; // 邮件过期时间
+  int64 affix_expire_time = 14; // 附件过期时间
+  int64 read_time = 15; // 阅读时间
+  int64 affix_time = 16; // 附件领取时间
+
+  int64 expire_cd = 17; // 邮件过期cd
+  int64 affix_expire_cd = 18; // 附件过期cd
+}
+/* 附件格式
+type MailRewards struct {
+	Type  int32   `json:"type"`
+	Id    int32   `json:"id"`
+	Count int64   `json:"count"`
+	Param []int64 `json:"param"`
+}
+*/
+
+
+
+// 5-1 新邮件通知客户端 grp: 5 cmd : 1
+message RspNewMail {
+  repeated MailInfo mails = 1; // 新邮件列表
+}
+
+// 5-2 新系统邮件通知客户端 grp: 5 cmd: 2 客户端收到后显示红点
+message RspNewSysMail {
+  int32 text = 1; // 通知邮件数量
+  int32 affix = 2;  // 奖励邮件数量
+}
+// grp:6, cmd:1
+message RspAnnouncement {
+  int32 language_id = 1;  // 语言表id
+  int32 importance_level = 2; // 重要等级
+  repeated string arguments = 3; // 参数
+}

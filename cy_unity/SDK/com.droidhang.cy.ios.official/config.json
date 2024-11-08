@@ -1,0 +1,696 @@
+{
+  "plugin_base": [
+    {
+      "ext": "",
+      "version": "1.5.1",
+      "group": "ubase",
+      "name": "DroidHangCommon",
+      "parameters": [
+        {
+          "custom_field": {
+            "dicName": "DroidHangShuMei"
+          },
+          "key": "DHShuMeiOrganization",
+          "value": "62YHvfAA7QPMIBf2wV9B",
+          "hidden": false,
+          "type": "102",
+          "label": "DHShuMeiOrganization",
+          "desc": "",
+          "options": [
+            {
+              "id": "dsobv27f4ug",
+              "value": "DroidHangShuMei",
+              "label": "dicName"
+            }
+          ]
+        },
+        {
+          "custom_field": {
+            "dicName": "DroidHangShuMei"
+          },
+          "key": "DHShuMeiAppId",
+          "value": "default",
+          "hidden": true,
+          "type": "102",
+          "label": "数美AppID",
+          "desc": "",
+          "options": [
+            {
+              "id": "up3hqd6dj4g",
+              "value": "DroidHangShuMei",
+              "label": "dicName"
+            }
+          ]
+        },
+        {
+          "custom_field": {
+            "dicName": "DroidHangShuMei"
+          },
+          "key": "DHShuMeiChannel",
+          "value": "bpc_ios",
+          "hidden": true,
+          "type": "102",
+          "label": "数美渠道名",
+          "desc": "",
+          "options": [
+            {
+              "id": "nr0lojrdcjg",
+              "value": "DroidHangShuMei",
+              "label": "dicName"
+            }
+          ]
+        },
+        {
+          "custom_field": {
+            "dicName": "DroidHangShuMei"
+          },
+          "key": "DHShuMeiPublicKey",
+          "value": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCYVG5aAzjOMxkp8BCTQNwJpqFHx2z7ab/ziA0S0Vj8wKQdfwUDsfcLJwlv96PW6V1qtgwJ7c0W9jWIRYsabRd6xpEMXgFzRQzZrk5rFIQmtj7bgjzBk+KRdp8CxCmxYbo69E8OF6Rd2N0cZL9gFlirs4Dk4Wa+ohOU0mNqb8hUPwIDAQAB",
+          "hidden": true,
+          "type": "102",
+          "label": "DHShuMeiPublicKey",
+          "desc": "",
+          "options": [
+            {
+              "id": "i42bbco5k5",
+              "value": "DroidHangShuMei",
+              "label": "dicName"
+            }
+          ]
+        },
+        {
+          "custom_field": {},
+          "key": "cocoapods",
+          "value": "source 'https://git.dhgames.cn/dh_cocoapods/dhspecs.git'",
+          "hidden": false,
+          "type": "202",
+          "label": "cocoapods仓库地址",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": {},
+          "key": "dhu_channel.plist",
+          "value": "/res/dhu_channel.plist",
+          "hidden": false,
+          "type": "301",
+          "label": "插件基础配置",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": {},
+          "key": "hidden3",
+          "value": "DHEditor.Toolset.DHCommonForXcode",
+          "hidden": true,
+          "type": "201",
+          "label": "hidden3",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": {},
+          "key": "lowest_version",
+          "value": "12.0",
+          "hidden": false,
+          "type": "203",
+          "label": "最低系统版本",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": {},
+          "key": "DHPackageArea",
+          "value": "0",
+          "hidden": false,
+          "type": "101",
+          "label": "DHPackageArea",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": {},
+          "key": "UIUserInterfaceStyle",
+          "value": "Light",
+          "hidden": false,
+          "type": "101",
+          "label": "UIUserInterfaceStyle",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": {
+            "valueType": "String"
+          },
+          "key": "AppJumpID",
+          "value": "6566180728",
+          "hidden": false,
+          "type": "101",
+          "label": "AppID（苹果后台创建的应用ID）",
+          "desc": "",
+          "options": [
+            {
+              "id": "kevfgh5j66c",
+              "value": "String",
+              "label": "valueType"
+            }
+          ]
+        },
+        {
+          "custom_field": {},
+          "key": "languageBundle",
+          "value": "/res/DHLanguageSource.bundle",
+          "hidden": false,
+          "type": "301",
+          "label": "多语言资源设置",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": {},
+          "key": "",
+          "value": "applinks:cy.dhgames.com",
+          "hidden": false,
+          "type": "204",
+          "label": "支付网页跳转的domains",
+          "desc": "applinks:cy.dhgames.com",
+          "options": []
+        }
+      ]
+    },
+    {
+      "ext": "",
+      "version": "1.5.0",
+      "group": "ubase",
+      "name": "DHDummyAdapter",
+      "parameters": []
+    },
+    {
+      "ext": "",
+      "version": "1.5.0",
+      "group": "ubase",
+      "name": "DHWebViewAdapter",
+      "parameters": [
+        {
+          "custom_field": {},
+          "key": "hidden1",
+          "value": "DHEditor.Toolset.DHLoginInterfaceAdapterForXcode",
+          "hidden": true,
+          "type": "201",
+          "label": "hidden1",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": {},
+          "key": "DHWebViewResourcePathName",
+          "value": "DHWebViewSource_AOD",
+          "hidden": false,
+          "type": "101",
+          "label": "Bundle配置文件路径",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": {},
+          "key": "BundleFile",
+          "value": "/res/DHWebViewSource_AOD.bundle",
+          "hidden": false,
+          "type": "301",
+          "label": "Bundle配置文件",
+          "desc": "",
+          "options": []
+        }
+      ]
+    },
+    {
+      "ext": "",
+      "version": "1.5.0",
+      "group": "ubase",
+      "name": "DHBaseLoginAdapter",
+      "parameters": []
+    },
+    {
+      "ext": "",
+      "version": "1.5.0",
+      "group": "ubase",
+      "name": "DHThirdEventBasePlugin",
+      "parameters": []
+    }
+  ],
+  "plugin_channel": null,
+  "plugin_plugin": [
+    {
+      "ext":"",
+      "version":"1.5.4",
+      "group":"uplugin",
+      "name":"DHAdvertisingAdapter",
+      "parameters":[]
+    },
+    {
+      "ext": "",
+      "version": "1.5.3",
+      "group": "uplugin",
+      "name": "AdmobAdapter",
+      "parameters": [
+        {
+          "value": "ApplovinSDK",
+          "label": "ApplovinPods depends",
+          "key": "ApplovinPods depends",
+          "hidden": true,
+          "type": "10206",
+          "desc": ""
+        },
+        {
+          "value":"fHfKUd1ceND_Rl8PeWzFGKBb6g-QebXJtCdMqf-T1BSTxbtZ6rpMA_zHgxhJWDcOPFlEvkhxv9OqlGOs6BDGBA",
+          "label":"ApplovinKey",
+          "key":"ApplovinKey",
+          "hidden":false,
+          "type":"101",
+          "desc":""
+        },
+        {
+          "custom_field": {},
+          "key": "GADApplicationIdentifier",
+          "value": "ca-app-pub-1022820009422209~8768959611",
+          "hidden": false,
+          "type": "101",
+          "label": "GADApplicationIdentifier",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": {},
+          "key": "AdmobAdapterForXcode",
+          "value": "DHEditor.Toolset.AdmobAdapterForXcode",
+          "hidden": true,
+          "type": "201",
+          "label": "AdmobAdapterForXcode",
+          "desc": "",
+          "options": []
+        }
+      ]
+    },
+    {
+      "ext": "",
+      "version": "1.5.0",
+      "group": "uplugin",
+      "name": "ShuMeiFramework",
+      "parameters": []
+    },
+    {
+      "ext": "",
+      "version": "1.5.0",
+      "group": "uplugin",
+      "name": "DroidHangPay",
+      "parameters": [
+        {
+          "custom_field": {},
+          "key": "hidden1",
+          "value": "DHEditor.Toolset.DroidHangPayForXcode",
+          "hidden": true,
+          "type": "201",
+          "label": "hidden1",
+          "desc": "",
+          "options": []
+        }
+      ]
+    },
+    {
+      "ext": "",
+      "version": "1.5.1",
+      "group": "uplugin",
+      "name": "AppsflyerAdapter",
+      "parameters": [
+        {
+          "custom_field": {},
+          "key": "hidden1",
+          "value": "DHEditor.Toolset.AppflyerAdapterForXcode",
+          "hidden": true,
+          "type": "201",
+          "label": "hidden1",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": {
+            "valueType": "String"
+          },
+          "key": "AppleAppId",
+          "value": "6566180728",
+          "hidden": false,
+          "type": "101",
+          "label": "Apple AppID",
+          "desc": "",
+          "options": [
+            {
+              "id": "sahq6hnk01g",
+              "value": "String",
+              "label": "valueType"
+            }
+          ]
+        },
+        {
+          "custom_field": {},
+          "key": "AppsflyerDevKey",
+          "value": "36FfNk244xi9BCxEURqa5n",
+          "hidden": false,
+          "type": "101",
+          "label": "Appsflyer Dev Key",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": {},
+          "key": "NSAdvertisingAttributionReportEndpoint",
+          "value": "https://appsflyer-skadnetwork.com/",
+          "hidden": false,
+          "type": "101",
+          "label": "Advertising attribution report endpoint URL",
+          "desc": "",
+          "options": []
+        }
+      ]
+    },
+    {
+      "ext": "",
+      "version": "1.5.0",
+      "group": "uplugin",
+      "name": "BuglyAdapter",
+      "parameters": [
+        {
+          "custom_field": {},
+          "key": "BuglyAppIDString",
+          "value": "d0d1f8659e",
+          "hidden": false,
+          "type": "101",
+          "label": "Bugly App ID",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": {},
+          "key": "BuglyAppKeyString",
+          "value": "27dbe288-6801-4f31-b4b4-5c0ff10c7a6a",
+          "hidden": false,
+          "type": "101",
+          "label": "Bugly App Key",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": {},
+          "key": "BuglyDebugEnable",
+          "value": "false",
+          "hidden": false,
+          "type": "101",
+          "label": "开启调试模式",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": {},
+          "key": "hidden1",
+          "value": "DHEditor.Toolset.BuglyAdapterForXcode",
+          "hidden": true,
+          "type": "201",
+          "label": "hidden1",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": {},
+          "key": "BuglySymbolUpload",
+          "value": "true",
+          "hidden": false,
+          "type": "101",
+          "label": "是否上传符号表",
+          "desc": "",
+          "options": []
+        }
+      ]
+    },
+    {
+      "ext": "",
+      "version": "1.5.0",
+      "group": "uplugin",
+      "name": "DHOverSeasLoginAdpater",
+      "parameters": [
+        {
+          "custom_field": {},
+          "key": "hidden1",
+          "value": "DHEditor.Toolset.DHLoginInterfaceAdapterForXcode",
+          "hidden": true,
+          "type": "201",
+          "label": "hidden1",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": {},
+          "key": "DHOverSeasLoginSourcePathName",
+          "value": "DHOverSeasLoginSource",
+          "hidden": false,
+          "type": "101",
+          "label": "Bundle配置文件路径",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": {},
+          "key": "BundleFile",
+          "value": "/res/DHOverSeasLoginSource.bundle",
+          "hidden": false,
+          "type": "301",
+          "label": "Bundle配置文件",
+          "desc": "",
+          "options": []
+        }
+      ]
+    },
+    {
+      "ext": "",
+      "version": "1.5.0",
+      "group": "uplugin",
+      "name": "DHRNAicsAdapter",
+      "parameters": [
+        {
+          "custom_field": {},
+          "key": "hidden1",
+          "value": "DHEditor.Toolset.DHRNAicsAdapterForXcode",
+          "hidden": true,
+          "type": "201",
+          "label": "hidden1",
+          "desc": "",
+          "options": []
+        }
+      ]
+    },
+    {
+      "ext": "",
+      "version": "1.5.1",
+      "group": "uplugin",
+      "name": "FirebaseAdapter",
+      "parameters": [
+        {
+          "custom_field": {},
+          "key": "GoogleService-Info.plist",
+          "value": "/res/GoogleService-Info.plist",
+          "hidden": false,
+          "type": "301",
+          "label": "GoogleService-Info.plist",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": {},
+          "key": "FirebaseAdapterForXcode",
+          "value": "DHEditor.Toolset.FirebaseAdapterForXcode",
+          "hidden": true,
+          "type": "201",
+          "label": "FirebaseAdapterForXcode",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": {},
+          "key": "GoogleClientID",
+          "value": "649525206585-esm13n0av8psog3co77jqavfjlq779qh.apps.googleusercontent.com",
+          "hidden": false,
+          "type": "101",
+          "label": "GoogleClientID",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": {},
+          "key": "GoogleReversedClientID",
+          "value": "com.googleusercontent.apps.649525206585-esm13n0av8psog3co77jqavfjlq779qh",
+          "hidden": false,
+          "type": "101",
+          "label": "GoogleReversedClientID",
+          "desc": "",
+          "options": []
+        }
+      ]
+    },
+    {
+      "ext": "",
+      "version": "1.5.0",
+      "group": "uplugin",
+      "name": "AppleIdLoginAdapter",
+      "parameters": [
+        {
+          "custom_field": {},
+          "key": "hidden1",
+          "value": "DHEditor.Toolset.AppleIdLoginAdapterForXcode",
+          "hidden": true,
+          "type": "201",
+          "label": "临时的",
+          "desc": "",
+          "options": []
+        }
+      ]
+    },
+    {
+      "ext": "",
+      "version": "1.5.0",
+      "group": "uplugin",
+      "name": "DHNotification",
+      "parameters": [
+        {
+          "custom_field": {},
+          "key": "hidden1",
+          "value": "DHEditor.Toolset.DHNotificationForXcode",
+          "hidden": true,
+          "type": "201",
+          "label": "hidden1",
+          "desc": "",
+          "options": []
+        }
+      ]
+    },
+    {
+      "ext": "",
+      "version": "1.5.0",
+      "group": "uplugin",
+      "name": "FacebookAdapter",
+      "parameters": [
+        {
+          "custom_field": {},
+          "key": "FacebookAppID",
+          "value": "1191522322175229",
+          "hidden": false,
+          "type": "101",
+          "label": "Facebook App ID",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": {},
+          "key": "FacebookClientToken",
+          "value": "9a491424acd8f747f5bc0effda450167",
+          "hidden": false,
+          "type": "101",
+          "label": "Facebook App ID",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": {},
+          "key": "FacebookDisplayName",
+          "value": "Backpack Merge",
+          "hidden": false,
+          "type": "101",
+          "label": "Facebook App Name",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": {},
+          "key": "FacebookAdapterForXcode",
+          "value": "DHEditor.Toolset.FacebookAdapterForXcode",
+          "hidden": true,
+          "type": "201",
+          "label": "FacebookAdapterForXcode",
+          "desc": "",
+          "options": []
+        },
+        {
+          "value": "FBAEMKit",
+          "label": "Facebook App depends",
+          "key": "Facebook App depends",
+          "hidden": true,
+          "type": "10206",
+          "desc": ""
+        },
+        {
+          "value": "FBSDKCoreKit",
+          "label": "Facebook App depends",
+          "key": "Facebook App depends",
+          "hidden": true,
+          "type": "10206",
+          "desc": ""
+        },
+        {
+          "value": "FBSDKCoreKit_Basics",
+          "label": "Facebook App depends",
+          "key": "Facebook App depends",
+          "hidden": true,
+          "type": "10206",
+          "desc": ""
+        },
+        {
+          "value": "FBSDKLoginKit",
+          "label": "Facebook App depends",
+          "key": "Facebook App depends",
+          "hidden": true,
+          "type": "10206",
+          "desc": ""
+        }
+      ]
+    }
+  ],
+  "plugin_function": [],
+  "sign": {
+    "store_file": "",
+    "store_password": "",
+    "v2_signing_enabled": "true",
+    "sign_type": "2",
+    "key_alias": "Apple Distribution: DHGames Limited (KKUVP9Q3A6)",
+    "key_password": ""
+  },
+  "common": {
+    "config": {
+      "aab": false,
+      "is_domestic": false,
+      "env": 3,
+      "disable_bitcode":true
+    },
+    "parameters": [
+      {
+        "custom_field": {},
+        "key": "urls",
+        "value": "[     {         \"env\":\"0\",         \"ugate_addr\":\"{0}:40011\",         \"vsn_addr\":\"https://login-dev.dev-dh.com\",         \"upay_addr\":\"https://pay-dev.dev-dh.com\",         \"uchat_addr\":\"{0}:40041\",       \"community_web_addr\":\"http://10.0.0.19:7770/aod/v1/index.html#/home\",         \"community_srv_addr\":\"https://community-dev.dev-dh.com:40052\",         \"community_srv_new_addr\":\"https://community-dev.dev-dh.com\",         \"community_web_new_addr\":\"https://community-web-dev.dev-dh.com\",         \"aics_ws_addr\":\"wss://aics-dev.dev-dh.com:40061/dh_ws/ws_app\",         \"aics_http_addr\":\"https://aics-dev.dev-dh.com:40061\",         \"aics_webview_addr\":\"https://aics-dev.dev-dh.com:40062\",         \"survey_webview_addr\":\"http://dh-survey-dev.dhgames.com:8991\"     },     {         \"env\":\"1\",         \"ugate_addr\":\"{0}:40011\",         \"vsn_addr\":\"https://login-vsn.dev-dh.com\",         \"upay_addr\":\"https://pay-vsn.dev-dh.com\",         \"uchat_addr\":\"{0}:40041\",         \"community_web_addr\":\"http://heroicexpeditiontalk-test.dhgames.com/v1/index.html#/home\",         \"community_srv_addr\":\"https://community-vsn.dev-dh.com:40052\",         \"community_srv_new_addr\":\"https://community-vsn.dev-dh.com\",         \"community_web_new_addr\":\"https://community-web-vsn.dev-dh.com\",         \"aics_ws_addr\":\"wss://aics-cli.dev-dh.com/dh_ws/ws_app\",         \"aics_http_addr\":\"https://aics-cli.dev-dh.com\",         \"aics_webview_addr\":\"https://dh-aics.dhgames.cn\",         \"survey_webview_addr\":\"https://dh-survey.dhgames.cn/\"     },     {         \"env\":\"2\",         \"ugate_addr\":\"{0}:40011\",         \"vsn_addr\":\"https://login-cn.dev-dh.com\",         \"upay_addr\":\"https://pay-cn.dev-dh.com\",         \"uchat_addr\":\"{0}:40041\",    \"community_web_addr\":\"https://heroicexpeditiontalk.dhgames.com/v1/index.html#/home\",         \"community_srv_addr\":\"https://community-release.dev-dh.com:40052\",         \"community_srv_new_addr\":\"https://community-cn.dev-dh.com\",         \"community_web_new_addr\":\"https://community-web-cn.dhgames.com\",         \"aics_ws_addr\":\"wss://aics-cli.dev-dh.com/dh_ws/ws_app\",         \"aics_http_addr\":\"https://aics-cli.dev-dh.com\",         \"aics_webview_addr\":\"https://dh-aics.dhgames.cn\",         \"survey_webview_addr\":\"https://dh-survey.dhgames.cn/\"     },     {         \"env\":\"3\",         \"ugate_addr\":\"{0}:40011\",         \"vsn_addr\":\"https://login-us.dev-dh.com\",         \"upay_addr\":\"https://pay-us.dev-dh.com\",         \"uchat_addr\":\"{0}:40041\",         \"community_web_addr\":\"https://heroicexpeditiontalk.dhgames.com/v1/index.html#/home\",         \"community_srv_addr\":\"https://community-release.dev-dh.com:40052\",         \"community_srv_new_addr\":\"https://community-us.dev-dh.com\",         \"community_web_new_addr\":\"https://community-web-us.dhgames.com\",         \"aics_ws_addr\":\"wss://aics-cli.dev-dh.com/dh_ws/ws_app\",         \"aics_http_addr\":\"https://aics-cli.dev-dh.com\",         \"aics_webview_addr\":\"https://dh-aics.dhgames.cn\",         \"survey_webview_addr\":\"https://dh-survey.dhgames.cn/\"     } ]",
+        "hidden": true,
+        "type": "401",
+        "label": "url 配置规则",
+        "desc": "",
+        "options": []
+      },
+      {
+        "custom_field": {},
+        "key": "NativeLocale",
+        "value": "res/iOS",
+        "hidden": false,
+        "type": "301",
+        "label": "appName",
+        "desc": "手机上展示的应用名称",
+        "options": []
+      }
+    ]
+  },
+  "app_pack_name": "com.droidhang.cy.ios.official",
+  "orientation_portrait": "false",
+  "usdk_id": "com.droidhang.cy.ios.official"
+}

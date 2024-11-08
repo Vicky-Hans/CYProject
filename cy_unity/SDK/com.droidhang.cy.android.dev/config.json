@@ -1,0 +1,552 @@
+{
+  "plugin_base": [
+    {
+      "ext": "",
+      "version": "1.3.6",
+      "group": "com.dhgames.usdk.ubase",
+      "name": "core",
+      "parameters": []
+    },
+    {
+      "ext": "",
+      "version": "1.3.7",
+      "group": "com.dhgames.usdk.ubase",
+      "name": "ulibrary",
+      "parameters": [
+        {
+          "key": "",
+          "value": "implementation 'com.dhgames.usdk.ubase.res_aod:ulibrary:1.3.7'",
+          "hidden": false,
+          "type": "207",
+          "label": "项目资源文件依赖库",
+          "desc": ""
+        }
+      ]
+    },
+    {
+      "ext": "",
+      "version": "1.3.1",
+      "group": "com.dhgames.usdk.ubase",
+      "name": "usdkforunity",
+      "parameters": []
+    }
+  ],
+  "plugin_channel": {
+    "ext": "",
+    "version": "1.1.10",
+    "group": "com.dhgames.usdk.uchannel",
+    "name": "channel_1_googlebilling",
+    "parameters": [
+      {
+        "custom_field": null,
+        "key": "rsa_public_key",
+        "value": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq4r5RGMP0ZG+tPxWR4aNu8V+OnhVOx5K/9qikse5mQa1SB86OzaDOS+fLc8hp9WSQqrUP/0gjNKYXgt54m2+H+WCKqSLz8G08SGJhHIzuA5Z1k1UbkagY7KDtoddNl2o234Yo3lLtX1UxsgSMfMGvz9/2Y8x3C4UGwj16M8HDUsI+GWtpvOlNR7gFRDEL1+0C946UZkUD76sCQDM8QrzaEWZ1iiEhkvwXykbyBCYejmoK7lzTIK1quZk79jFEFCW535JBBC7QKGaCAh1lQGHRJTz10QAHuUk/EIfLTC2IaGzpoFtL0CmaV6w2u+fJjh7om/JNdbR8cdXC1/Ebm8OmQIDAQAB",
+        "hidden": false,
+        "type": "102",
+        "label": "Base64 编码 RSA 公钥",
+        "desc": "Base64 编码 RSA 公钥",
+        "options": null
+      }
+    ]
+  },
+  "plugin_plugin": [
+    {
+      "ext": "",
+      "version": "1.3.1",
+      "group": "com.dhgames.usdk.umodule",
+      "name": "module_defence",
+      "parameters": []
+    },
+    {
+      "ext": "",
+      "version": "1.1.1",
+      "group": "com.dhgames.usdk.uplugin",
+      "name": "module_device",
+      "parameters": [
+        {
+          "custom_field": {},
+          "key": "src/main/assets/supplierconfig.json",
+          "value": "/res/supplierconfig.json",
+          "hidden": false,
+          "type": "301",
+          "label": "src/main/assets/supplierconfig.json",
+          "desc": "",
+          "options": []
+        }
+      ]
+    },
+    {
+      "ext": "",
+      "version": "1.2.2",
+      "group": "com.dhgames.usdk.uplugin",
+      "name": "plugin_10001_google",
+      "parameters": [
+        {
+          "custom_field": {},
+          "key": "google_client_id",
+          "value": "101805669379-nloeqarj26k1k9rs3a5747e85rs9a3bp.apps.googleusercontent.com",
+          "hidden": false,
+          "type": "102",
+          "label": "Google 登录 client id",
+          "desc": "",
+          "options": []
+        }
+      ]
+    },
+    {
+      "ext": "",
+      "version": "1.2.0",
+      "group": "com.dhgames.usdk.uplugin",
+      "name": "plugin_10017_event_facebook",
+      "parameters": []
+    },
+    {
+      "ext": "",
+      "version": "1.2.0",
+      "group": "com.dhgames.usdk.uplugin",
+      "name": "plugin_10002_facebook",
+      "parameters": [
+        {
+          "custom_field": null,
+          "key": "facebook_app_id",
+          "value": "8958116794260744",
+          "hidden": false,
+          "type": "101",
+          "label": "Facebook app id",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": null,
+          "key": "fb_facebook_app_id",
+          "value": "fb8958116794260744",
+          "hidden": false,
+          "type": "101",
+          "label": "fbLoginProtocolScheme",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": null,
+          "key": "facebook_client_token",
+          "value": "b1ada3fa6d485cdb655e1e3e7b9dcd9c",
+          "hidden": false,
+          "type": "101",
+          "label": "Facebook client token",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": null,
+          "key": "facebook_auto_event",
+          "value": "true",
+          "hidden": false,
+          "type": "102",
+          "label": "AutoLogAppEventsEnabled",
+          "desc": "",
+          "options": []
+        }
+      ]
+    },
+    {
+      "ext": "",
+      "version": "1.1.2",
+      "group": "com.dhgames.usdk.uplugin",
+      "name": "module_webview",
+      "parameters": []
+    },
+    {
+      "ext": "",
+      "version": "1.3.1",
+      "group": "com.dhgames.usdk.uplugin",
+      "name": "plugin_event_appsflyer",
+      "parameters": [
+        {
+          "custom_field": {},
+          "key": "appflyer_key",
+          "value": "gD44EyGmnRyLXdLeJUE7RX",
+          "hidden": false,
+          "type": "102",
+          "label": "appflyer_key",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": {},
+          "key": "Manifest Value2",
+          "value": "<manifest \n xmlns:android=\"http://schemas.android.com/apk/res/android\" xmlns:tools=\"http://schemas.android.com/tools\"> \n <application tools:replace=\"android:fullBackupContent\" android:fullBackupContent=\"true\"> \n </application> \n </manifest>",
+          "hidden": true,
+          "type": "204",
+          "label": "Manifest Value2",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": {},
+          "key": "Manifest Value3",
+          "value": "<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"> \n <application> \n  <meta-data android:name=\"CHANNEL\" android:value=\"${channel}\" /> \n </application> \n </manifest>",
+          "hidden": false,
+          "type": "204",
+          "label": "Manifest Value3",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": {},
+          "key": "channel",
+          "value": "com.dh.bpc.gp",
+          "hidden": false,
+          "type": "102",
+          "label": "channel",
+          "desc": "",
+          "options": []
+        },
+        {
+          "custom_field": {},
+          "key": "project_lib",
+          "value": "",
+          "hidden": false,
+          "type": "207",
+          "label": "oaid依赖（国内配置）",
+          "desc": "需要添加：implementation 'com.appsflyer:oaid:6.2.4'",
+          "options": []
+        },
+        {
+          "custom_field": {},
+          "key": "taptap",
+          "value": "",
+          "hidden": false,
+          "type": "204",
+          "label": "taptap预装",
+          "desc": "",
+          "options": []
+        }
+      ]
+    },
+    {
+      "ext": "",
+      "version": "1.3.4",
+      "group": "com.dhgames.usdk.uplugin",
+      "name": "plugin_login_overseas",
+      "parameters": [
+        {
+          "custom_field": {},
+          "key": "project_lib",
+          "value": "implementation 'com.dhgames.usdk.uplugin.res_re:plugin_login_overseas:1.3.4'",
+          "hidden": false,
+          "type": "207",
+          "label": "项目资源文件依赖库",
+          "desc": "",
+          "options": []
+        }
+      ]
+    },
+    {
+      "ext": "",
+      "version": "1.1.0",
+      "group": "com.dhgames.usdk.uplugin",
+      "name": "plugin_11002_rn_aics-aod-gp",
+      "parameters": []
+    },
+    {
+      "ext": "",
+      "version": "1.1.7",
+      "group": "com.dhgames.usdk.uplugin",
+      "name": "plugin_13001_admob",
+      "parameters": [
+        {
+          "custom_field": null,
+          "key": "google_admob_app_id",
+          "value": "ca-app-pub-3940256099942544~3347511713",
+          "hidden": false,
+          "type": "102",
+          "label": "广告应用ID",
+          "desc": "",
+          "options": []
+        }
+      ]
+    },
+    {
+      "ext": "",
+      "version": "1.1.2",
+      "group": "com.dhgames.usdk.umodule",
+      "name": "module_download",
+      "parameters": [
+        {
+          "key": "permission_install",
+          "value": "<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:tools=\"http://schemas.android.com/tools\">\n<uses-permission android:name=\"android.permission.REQUEST_INSTALL_PACKAGES\" />\n</manifest>",
+          "hidden": false,
+          "type": "204",
+          "label": "添加请求安装权限",
+          "desc": "<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:tools=\"http://schemas.android.com/tools\">\n<uses-permission android:name=\"android.permission.REQUEST_INSTALL_PACKAGES\" />\n</manifest>"
+        }
+      ]
+    }
+  ],
+  "plugin_function": [
+    {
+      "ext": "",
+      "version": "2.0.1",
+      "group": "com.dhgames.usdk.ufunction",
+      "name": "function_webview",
+      "parameters": [
+        {
+          "custom_field": {},
+          "key": "project_lib",
+          "value": "implementation 'com.dhgames.usdk.ufunction.res_ih:function_webview:2.0.1'",
+          "hidden": false,
+          "type": "207",
+          "label": "项目资源文件依赖库",
+          "desc": "",
+          "options": null
+        },
+        {
+          "custom_field": null,
+          "key": "permission_install",
+          "value": "",
+          "hidden": false,
+          "type": "204",
+          "label": "添加请求安装权限",
+          "desc": "<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:tools=\"http://schemas.android.com/tools\">\n<uses-permission android:name=\"android.permission.REQUEST_INSTALL_PACKAGES\" />\n</manifest>",
+          "options": null
+        }
+      ]
+    }
+  ],
+  "sign": {
+    "store_file": "/keystore/wa.keystore",
+    "store_password": "123456",
+    "v2_signing_enabled": "true",
+    "sign_type": "2",
+    "key_alias": "waalias",
+    "key_password": "123456"
+  },
+  "common": {
+    "config": {
+      "aab": false,
+      "is_domestic": false,
+      "env": 3
+    },
+    "parameters": [
+      {
+        "custom_field": null,
+        "key": "targetSdkVersion",
+        "value": "34",
+        "hidden": false,
+        "type": "103",
+        "label": "targetSdkVersion",
+        "desc": "",
+        "options": []
+      },
+      {
+        "custom_field": null,
+        "key": "minSdkVersion",
+        "value": "21",
+        "hidden": false,
+        "type": "103",
+        "label": "minSdkVersion",
+        "desc": "",
+        "options": []
+      },
+      {
+        "custom_field": null,
+        "key": "maven url1",
+        "value": "maven { url 'https://jitpack.io' }",
+        "hidden": false,
+        "type": "202",
+        "label": "maven url1",
+        "desc": "",
+        "options": []
+      },
+      {
+        "custom_field": null,
+        "key": "classpath",
+        "value": "classpath \"com.dhgames.usdk.plugins:apk-manager:1.0.12\"",
+        "hidden": true,
+        "type": "201",
+        "label": "classpath",
+        "desc": "",
+        "options": []
+      },
+      {
+        "custom_field": null,
+        "key": "plugin1",
+        "value": "apply plugin: 'com.dh.usdk.apkmanager'",
+        "hidden": true,
+        "type": "203",
+        "label": "plugin1",
+        "desc": "",
+        "options": []
+      },
+      {
+        "custom_field": null,
+        "key": "host1",
+        "value": "<intent-filter\n    xmlns:android=\"http://schemas.android.com/apk/res/android\" android:autoVerify=\"true\"><action android:name=\"android.intent.action.VIEW\"/>\n<category android:name=\"android.intent.category.DEFAULT\"/>\n<category android:name=\"android.intent.category.BROWSABLE\"/>\n<data android:scheme=\"https\" android:host=\"${host}\"/>\n<data android:scheme=\"${host_scheme}\"/>\n</intent-filter>",
+        "hidden": true,
+        "type": "205",
+        "label": "host1",
+        "desc": "",
+        "options": []
+      },
+      {
+        "custom_field": null,
+        "key": "host_scheme",
+        "value": "dhgames",
+        "hidden": false,
+        "type": "102",
+        "label": "host_scheme",
+        "desc": "",
+        "options": []
+      },
+      {
+        "custom_field": null,
+        "key": "host",
+        "value": "cy.dhgames.cn",
+        "hidden": false,
+        "type": "102",
+        "label": "host",
+        "desc": "",
+        "options": []
+      },
+      {
+        "custom_field": null,
+        "key": "del",
+        "value": "<manifest \n xmlns:android=\"http://schemas.android.com/apk/res/android\" xmlns:tools=\"http://schemas.android.com/tools\"> \n <uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />\n<uses-feature android:name=\"android.hardware.location.gps\" android:required=\"false\" />\n<uses-feature android:name=\"android.hardware.location\" android:required=\"false\" />\n \n</manifest>",
+        "hidden": true,
+        "type": "206",
+        "label": "del",
+        "desc": "",
+        "options": []
+      },
+      {
+        "key": "urls",
+        "value": "[     {         \"env\":\"0\",         \"ugate_addr\":\"{0}:40011\",         \"vsn_addr\":\"https://login-dev.dev-dh.com\",         \"upay_addr\":\"https://pay-dev.dev-dh.com\",         \"uchat_addr\":\"{0}:40041\",       \"community_web_addr\":\"http://10.0.0.19:7770/aod/v1/index.html#/home\",         \"community_srv_addr\":\"https://community-dev.dev-dh.com:40052\",         \"community_srv_new_addr\":\"https://community-dev.dev-dh.com\",         \"community_web_new_addr\":\"https://community-web-dev.dev-dh.com\",         \"aics_ws_addr\":\"wss://aics-dev.dev-dh.com:40061/dh_ws/ws_app\",         \"aics_http_addr\":\"https://aics-dev.dev-dh.com:40061\",         \"aics_webview_addr\":\"https://aics-dev.dev-dh.com:40062\",         \"survey_webview_addr\":\"http://dh-survey-dev.dhgames.com:8991\"     },     {         \"env\":\"1\",         \"ugate_addr\":\"{0}:40011\",         \"vsn_addr\":\"https://login-vsn.dev-dh.com\",         \"upay_addr\":\"https://pay-vsn.dev-dh.com\",         \"uchat_addr\":\"{0}:40041\",         \"community_web_addr\":\"http://heroicexpeditiontalk-test.dhgames.com/v1/index.html#/home\",         \"community_srv_addr\":\"https://community-vsn.dev-dh.com:40052\",         \"community_srv_new_addr\":\"https://community-vsn.dev-dh.com\",         \"community_web_new_addr\":\"https://community-web-vsn.dev-dh.com\",         \"aics_ws_addr\":\"wss://aics-cli.dev-dh.com/dh_ws/ws_app\",         \"aics_http_addr\":\"https://aics-cli.dev-dh.com\",         \"aics_webview_addr\":\"https://dh-aics.dhgames.cn\",         \"survey_webview_addr\":\"https://survey-vsn.dev-dh.com:40071/\"     },     {         \"env\":\"2\",         \"ugate_addr\":\"{0}:40011\",         \"vsn_addr\":\"https://login-cn.dev-dh.com\",         \"upay_addr\":\"https://pay-cn.dev-dh.com\",         \"uchat_addr\":\"{0}:40041\",    \"community_web_addr\":\"https://heroicexpeditiontalk.dhgames.com/v1/index.html#/home\",         \"community_srv_addr\":\"https://community-release.dev-dh.com:40052\",         \"community_srv_new_addr\":\"https://community-cn.dev-dh.com\",         \"community_web_new_addr\":\"https://community-web-cn.dhgames.com\",         \"aics_ws_addr\":\"wss://aics-cli.dev-dh.com/dh_ws/ws_app\",         \"aics_http_addr\":\"https://aics-cli.dev-dh.com\",         \"aics_webview_addr\":\"https://dh-aics.dhgames.cn\",         \"survey_webview_addr\":\"https://dh-survey.dhgames.cn/\"     },     {         \"env\":\"3\",         \"ugate_addr\":\"{0}:40011\",         \"vsn_addr\":\"https://login-us.dev-dh.com\",         \"upay_addr\":\"https://pay-us.dev-dh.com\",         \"uchat_addr\":\"{0}:40041\",         \"community_web_addr\":\"https://heroicexpeditiontalk.dhgames.com/v1/index.html#/home\",         \"community_srv_addr\":\"https://community-release.dev-dh.com:40052\",         \"community_srv_new_addr\":\"https://community-us.dev-dh.com\",         \"community_web_new_addr\":\"https://community-web-us.dhgames.com\",         \"aics_ws_addr\":\"wss://aics-cli.dev-dh.com/dh_ws/ws_app\",         \"aics_http_addr\":\"https://aics-cli.dev-dh.com\",         \"aics_webview_addr\":\"https://dh-aics.dhgames.cn\",         \"survey_webview_addr\":\"https://dh-survey.dhgames.cn/\"     } ]",
+        "hidden": true,
+        "type": "401",
+        "label": "url 配置规则",
+        "desc": ""
+      },
+      {
+        "custom_field": null,
+        "key": "logcontroller",
+        "value": "<manifest \n xmlns:android=\"http://schemas.android.com/apk/res/android\" xmlns:tools=\"http://schemas.android.com/tools\"> \n<queries><package android:name=\"com.dh.usdk.logcontroller\" /> </queries>\n\n</manifest>",
+        "hidden": true,
+        "type": "204",
+        "label": "日志控制标志",
+        "desc": "",
+        "options": []
+      },
+      {
+        "custom_field": null,
+        "key": "maven url pro",
+        "value": "maven {\n            allowInsecureProtocol = true\n            url 'http://maven.dhgames.com:8081/artifactory/dh/'\n        }",
+        "hidden": true,
+        "type": "202",
+        "label": "maven url pro",
+        "desc": "",
+        "options": []
+      },
+      {
+        "custom_field": null,
+        "key": "src/main/res&{Icon}",
+        "value": "/res/icon.png",
+        "hidden": false,
+        "type": "303",
+        "label": "icon图标",
+        "desc": "请上传512x512大小的icon图标，放至/res/icon.png",
+        "options": []
+      },
+      {
+        "custom_field": null,
+        "key": "src/main/res&{Background}",
+        "value": "/res/icon_bg.png",
+        "hidden": false,
+        "type": "303",
+        "label": "background",
+        "desc": "请上传512x512大小的icon背景图标，放至/res/background.png",
+        "options": []
+      },
+      {
+        "custom_field": null,
+        "key": "src/main/res&{Foreground}",
+        "value": "/res/icon_fg.png",
+        "hidden": false,
+        "type": "303",
+        "label": "foreground",
+        "desc": "请上传512x512大小的icon前景图标，放至/res/foreground.png",
+        "options": []
+      },
+      {
+        "custom_field": null,
+        "key": "appName",
+        "value": "",
+        "hidden": false,
+        "type": "210",
+        "label": "appName",
+        "desc": "手机上展示的应用名称",
+        "options": []
+      },
+      {
+        "custom_field": null,
+        "key": "src/main/res",
+        "value": "/res/res",
+        "hidden": false,
+        "type": "301",
+        "label": "多语言配置",
+        "desc": "",
+        "options": null
+      },
+      {
+        "custom_field": null,
+        "key": "backup",
+        "value": "<manifest \nxmlns:android=\"http://schemas.android.com/apk/res/android\"\nxmlns:tools=\"http://schemas.android.com/tools\">\n<application\n\t\tandroid:allowBackup=\"false\"\n\t\ttools:replace=\"android:allowBackup\">\n    </application>\n</manifest>",
+        "hidden": false,
+        "type": "204",
+        "label": "android:allowBackup",
+        "desc": "",
+        "options": []
+      },
+      {
+        "custom_field": null,
+        "key": "aabforcecpu",
+        "value": "true",
+        "hidden": false,
+        "type": "212",
+        "label": "aabforcecpu",
+        "desc": "是否强制aab的cpu架构至 armeabi-v7a 和 arm64-v8a ，不设置默认强制",
+        "options": []
+      },
+      {
+        "custom_field": null,
+        "key": "apkforcecpu",
+        "value": "false",
+        "hidden": false,
+        "type": "213",
+        "label": "apkforcecpu",
+        "desc": "是否强制apk的cpu架构至 armeabi-v7a 和 arm64-v8a ，不设置默认不强制",
+        "options": []
+      },
+      {
+        "custom_field": null,
+        "key": "keep_wake",
+        "value": "true",
+        "hidden": false,
+        "type": "101",
+        "label": "保持屏幕唤醒",
+        "desc": "",
+        "options": []
+      },
+      {
+        "key": "android:exported",
+        "value": "true",
+        "hidden": false,
+        "type": "105",
+        "label": "android:exported",
+        "desc": "启动Activity属性设置"
+      }
+    ]
+  },
+  "app_pack_name": "com.droidhang.cy.android.dev",
+  "orientation_portrait": "false",
+  "usdk_id": "com.droidhang.cy.android.dev"
+}

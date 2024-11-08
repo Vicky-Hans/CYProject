@@ -1,0 +1,1374 @@
+syntax = "proto3";
+package DH.Proto;
+option go_package = "./pb";
+
+import "comm.proto";
+
+// grp 10 cmd 1 角色资产同步
+message ReqSync{
+}
+
+message RspSync{
+  int32 status = 1;
+  int64 serverTime = 2;             //服务器时间
+  ItemBag  itemBag = 3;             //道具
+  CharacterSync character = 4;      //主角
+  Lives lives = 5;                  //体力
+  MailData mails = 6;               //邮件数据
+  MainStage mainStage = 7;          //主线
+  EquipBag equip = 8;               //装备
+  MonthCard monthCard = 9;          //月卡
+  Shop shop = 10;                   //商城功能
+  FirstCharge firstCharge = 11;     //首充礼包
+  Hero hero = 12;                   //英雄
+  Endless endless = 13;             //无尽冒险
+  AllPassport passport = 14;        //通行证
+  DailyPack dailyPack = 15;         //每日礼包
+  LuckyDrawSync luckyDraw = 16;     //幸运转盘
+  TriggerGift triggerGift = 17;     //触发礼包
+  DailyFight dailyFight = 19;       //每日挑战
+  MagicDrawSync magicDraw = 20;     //魔法祈福
+  Secret Secret = 21;               //秘林探险
+  HeroEquipBag heroEquip = 22;      //英雄装备
+  ChapterFund chapterFund = 23;     //章节基金
+  SchoolSync school = 24;           //魔法学院
+  LuckyTripSync luckyTrip = 25;     //幸运之旅
+  MagicAgeSync magicAge = 26;       //魔法时代
+  GiftPack giftPack = 27;           //小礼包相关
+  LuckyEggSync luckyEgg = 28;       //幸运扭蛋
+  AutumnSpecialSync autumn = 29;    //金秋特惠
+  BingoSync bingo = 30;             //bingo活动
+}
+
+// grp 10 cmd 2 客户端上报fb信息
+message ReqFbReport{
+  string id = 1;               //fb_id
+  string token = 2;            //fb_token
+  string headUrl = 3;          //fb头像url
+  string name = 4;             //fb名字
+}
+
+message RspFbReport{
+  int32 status = 1;
+}
+
+// grp 10 cmd 3 通用弹窗消息
+message ReqNotifyMsg{
+}
+
+message RspNotifyMsg{
+  int32 status = 1;
+  string msgKey = 2;
+}
+
+// grp 10 cmd 4 数据推送
+message ReqNotify {
+}
+
+message RspNotify {
+  repeated string dirty = 1;       //脏数据key
+  MainStage mainStage = 2;         //主线数据；mainStage
+  Shop shop = 3;                   //商城功能；shop
+  Hero hero = 4;                   //英雄功能：hero
+  Endless endless = 5;             //无尽冒险；endless
+  AllPassport passport = 6;         //通行证；passport， 通知的时候map有才有变化k-通行证类型；有那个key，哪个key就有变化，不是所有的；
+  DailyPack dailyPack = 7;         //每日礼包；dailyPack
+  LuckyDrawSync luckDraw = 8;      //幸运转盘：luckDraw
+  TriggerGift triggerGift = 9;     //触发礼包: triggerGift
+  DailyFight dailyFight = 10;      //每日挑战：dailyFight
+  MagicDrawSync magicDraw = 11;    //魔法祈福：magicDraw
+  Secret secret = 12;              //秘林探险:secret
+  SchoolSync school = 13;          //魔法学院，school
+  LuckyTripSync luckyTrip = 14;    //幸运之旅，luckyTrip
+  LuckyEggSync luckyEgg = 15;      //幸运扭蛋，luckyEgg
+  BingoSync bingo = 16;            //bingo活动，bingo
+}
+
+// grp 10 cmd 5 广告上报：所有广告按钮都上班
+message ReqAdUpload {
+  int32 count = 1;        //观看的广告次数
+  bool look = 2;          //是否实际观看；
+}
+
+message RspAdUpload {
+  int32 status = 1;
+}
+
+// grp 99 cmd 1 gm指令
+message ReqGm{
+  string cmd = 1;
+}
+
+message RspGm{
+  int32 status = 1;       //错误码
+  string retInfo = 2;     //返回信息：指令执行反馈文本信息；
+}
+
+// grp 99 cmd 2 gm指令数据同步
+message ReqGmSync{
+}
+
+message RspGmSync{
+  RspSync syncInfo = 1;     //GM同步信息
+}
+
+// grp 99 cmd 3 cy战斗gm指令
+message ReqBattleGm{
+  int32 cmd = 1; //1-刷新天赋，2-刷新装备
+  repeated int32 ids = 2;        //输入id
+}
+
+message RspBattleGm{
+  int32 status = 1;              //错误码
+  repeated int32 ids = 2;        //返回信息
+}
+//==================== 支付 ====================//
+// grp 200 cmd 1 预支付
+message ReqPrePay {
+  int32 packageId = 1;                    // package表id
+  appInfo app = 2;                        // 前端上传的信息
+  int32 index = 3;                        // 自选index,默认传-1，有自选传自选奖励index
+}
+
+message RspPrePay {
+  int32 status = 1;                       // 0成功1不满足支付条件 其他的错误码见upay文档 2 英雄背包已满 3 订阅信息更新请重新登陆
+  string orderId = 2;                    // 订单号
+}
+
+// grp 200 cmd 2 支付领奖
+message ReqRewardPay {
+  string orderId = 1;                        // prepay返回的订单号
+  string storeId = 2;                        // 商品id  <<"com.droidhang.test.diamond11">>
+  appInfo app = 3;                           // 前端上传的信息
+  currencyInfo currencyInfo = 4;             // 货币信息
+}
+
+message RspRewardPay {
+  int32 status = 1;                       // 0成功1验证失败
+  repeated Resource rewards = 2;                  // 奖励
+  int32 cd = 3;                          // 订阅到期cd
+}
+
+// grp 200 cmd 3 补单
+message ReqLoginRewardPay {
+  string orderId = 1;                        // prepay返回的订单号
+  string storeId = 2;                        // 商品id  <<"com.droidhang.test.diamond11">>
+  appInfo app = 3;                           // 前端上传的信息
+  currencyInfo currencyInfo = 4;             //货币信息
+}
+
+message RspLoginRewardPay {
+  int32 status = 1;                          // 0成功
+  string storeId = 2;                        // 商品id  <<"com.droidhang.test.diamond11">>
+}
+
+//11 体力相关
+
+// grp 11 cmd 1 体力：获得体力
+message ReqLivesGet{
+  int32 op = 1;   //获得操作：1-广告，2-钻石购买，3-购买砖石存储
+}
+
+message RspLivesGet{
+  int32 status = 1;
+  repeated Resource cost = 2; //消耗
+}
+
+// grp 11 cmd 2 体力：体力值同步
+message ReqLivesSync{
+}
+
+message RspLivesSync{
+  int32 status = 1;
+  int32 curr = 2;
+  int64 refreshStamp = 3;           //体力倒计时开始的时间戳
+}
+
+//12 邮件
+// grp 12 cmd 1 阅读邮件
+message ReqMailRead {
+  int32 mailId = 1;
+}
+
+message RspMailRead {
+  int32 status = 1;
+}
+
+// grp 12 cmd 2 邮件领奖
+message ReqMailReward {
+  repeated int32 mailIds = 1;
+}
+
+message RspMailReward {
+  int32 status = 1;
+  repeated Resource reward = 2;
+  repeated int32 mailIds = 3;       //成功领奖的mailId
+}
+
+// grp 12 cmd 3 邮件删除
+message ReqMailDelete {
+  repeated int32 mailIds = 1;
+}
+
+message RspMailDelete {
+  int32 status = 1;
+}
+
+// grp 12 cmd 4 邮件同步
+message ReqMailSync {
+}
+
+message RspMailSync {
+  int32 status = 1;
+  MailData mails = 2;               //邮件数据
+}
+
+//13 装备
+
+// grp 13 cmd 1 装备穿戴
+message ReqEquipWearOp {
+  int32 id = 1;         //装备id
+  int32 op = 2;         //1-穿戴，2-移除，3-替换
+  int32 oldId = 3;      //被替换的id；替换操作使用参数
+}
+
+message RspEquipWearOp {
+  int32 status = 1;
+  EquipWearFormation data = 2;      //操作后的该装备穿戴方案的数据
+}
+
+// grp 13 cmd 2 装备升级
+message ReqEquipLevelUp {
+  int32 id = 1;         //装备id
+}
+
+message RspEquipLevelUp {
+  int32 status = 1;
+  Equip data = 2;             //操作后的该装备数据
+  repeated Resource cost = 3; //消耗
+}
+
+// grp 13 cmd 3 切换方案
+message ReqEquipSwitch {
+  int32 id = 1;         //方案id，1-3
+}
+
+message RspEquipSwitch {
+  int32 status = 1;
+}
+
+//14 主线
+
+// grp 14 cmd 1 主线副本战斗开始
+message ReqMainFightBegin {
+  int32 chapterId = 1;
+}
+
+message RspMainFightBegin {
+  int32 status = 1;
+  FightData data = 2;                  //主线战斗数据；预留，只包含一些基本信息不包括具体计算属性值；目前包含，随机种子+战斗唯一id
+  repeated Resource cost = 3; //消耗
+}
+
+// grp 14 cmd 2 主线副本战斗结束
+message ReqMainFightEnd {
+  int32 chapterId = 1;
+  int64 uid = 2;                          //战斗uid
+  FightStat stat = 3;                     //战斗结束统计数据，没有的数据就不发和挑战使用一个；
+  bool archive = 4;                       //是否存档直接结算
+  map<int32,int32> equipSlots = 5;        //装备格子里的装备; k-格子位置（行*100+列）v-格子状态或数据（0-未解锁，1-已解锁，装备id-对应装备）；行和列都从1开始；
+  bool finish = 6;                        //是否是正常结束 true-正常结束 false-主动退出
+}
+
+message RspMainFightEnd {
+  int32 status = 1;
+  repeated Resource rewards = 2;  //对应奖励；
+  int32 star = 3;                 //更新当前关卡的star
+}
+
+// grp 14 cmd 3 主线副本广告双倍奖励
+message ReqMainFightAdDouble {
+  int32 chapterId = 1;
+  int64 uid = 2;                          //战斗uid
+  FightStat stat = 3;                     //将统计数据再发送一遍，以便直接再次计算奖励；
+}
+
+message RspMainFightAdDouble {
+  int32 status = 1;
+  repeated Resource rewards = 2;  //对应奖励；
+}
+
+// grp 14 cmd 4 主线副本领取章节宝箱
+message ReqMainFightBox {
+  int32 chapterId = 1;      //章节id
+  int32 boxIndex = 2;       //宝箱下标
+}
+
+message RspMainFightBox {
+  int32 status = 1;
+  repeated Resource rewards = 2;  //对应奖励；
+}
+
+// grp 14 cmd 6 主线副本战斗读取存档开始
+message ReqMainFightArchiveBegin {
+}
+
+message RspMainFightArchiveBegin {
+  int32 status = 1;
+  int32 stageId = 2;                     //存档的关卡
+  FightData data = 3;                  //主线战斗数据；预留，只包含一些基本信息不包括具体计算属性值；目前包含，随机种子+战斗唯一id
+}
+
+// grp 14 cmd 8 主线副本巡逻奖励领取
+message ReqMainHangupClaim {
+  int32 op = 1;       //领取操作：1-正常时间结算 2-免费快速巡逻，3-广告快速巡逻
+}
+
+message RspMainHangupClaim {
+  int32 status = 1;
+  repeated Resource reward = 2;  //对应奖励；
+  repeated Resource cost = 3;  //对应消耗；
+}
+
+//15 战斗交互
+
+// grp 15 cmd 1 战斗装备刷新
+message ReqBattleEquipRefresh {
+  int64 uid = 1;                       //战斗唯一id
+  int32 op = 2;                        //1-波次免费刷新，2-广告免费刷新，3-金币刷新；
+  repeated int32 equipMergeCount = 3;  //装备合成次数数据；依次是物理，魔法
+  map<int32,int32> equipSlots = 4;     //【战斗中的刷新不需要使用这个存盘】装备格子里的装备; k-格子位置（行*100+列）v-格子状态或数据（0-未解锁，1-已解锁，装备id-对应装备）；行和列都从1开始；
+}
+
+message RspBattleEquipRefresh {
+  int32 status = 1;
+  repeated int32 equips = 2;             //刷新出来的装备；
+  int32 costMoney = 3;                   //花费的钱；
+}
+
+// grp 15 cmd 2 战斗天赋刷新
+message ReqBattleTalentRefresh {
+  int64 uid = 1;                       //战斗唯一id
+  int32 op = 2;                        //1-升级免费刷新，2-广告免费刷新
+  int32 param = 3;                     //参数：等级；由于可以存储这个刷新，这个参数传递的是需要刷新哪个等级的天赋不是当前等级；广告的时候传当前已经刷新到哪个等级了；
+}
+
+message RspBattleTalentRefresh {
+  int32 status = 1;
+  repeated int32 talents = 2;         //刷新出来的天赋；
+}
+
+// grp 15 cmd 3 战斗天赋选择
+message ReqBattleTalentSelect {
+  int64 uid = 1;                       //战斗唯一id
+  int32 index = 2;                     //选择技能的角标；从0开始
+}
+
+message RspBattleTalentSelect {
+  int32 status = 1;
+  repeated int32 talent = 2;                   //选择成功的技能；可能是多个，存在技能一次性获得全部
+  int32 gotMoney = 3;                          //变化的钱；
+  int32 equipRefreshMoney = 4;                 //更新装备刷新需要花的钱；
+}
+
+// grp 15 cmd 4 战斗升级
+message ReqBattleLvUp {
+  int64 uid = 1;                       //战斗唯一id
+  int32 lv = 2;                        //等级
+  int32 exp = 3;                       //经验
+}
+
+message RspBattleLvUp {
+  int32 status = 1;
+}
+
+// grp 15 cmd 5 波次结束
+message ReqBattleWaveDone {
+  int64 uid = 1;                        //战斗唯一id
+  int32 lv = 2;                         //等级
+  int32 exp = 3;                        //经验
+  repeated int32 equips = 4;            //刷新出来但未操作的装备；战斗开始就有；id*10+广告状态(0-未看，1-已看)
+  map<int32,int32> equipSlots = 5;      //装备格子里的装备; k-格子位置（行*100+列）v-格子状态或数据（0-未解锁，1-已解锁，装备id-对应装备）；
+  map<string,int32> attr = 6;             //需要保存的属性，k-属性key，v-值；
+  map<int64,int64> hurtStat = 7;          //伤害统计
+  int32 energy = 8;                       //主动技能能量值
+  repeated int32 wish = 9;                //心愿存储槽位
+  int32 kills = 10;                      //杀敌数
+  int32 wave = 11;                      //结束的波次；第一波结束传1；
+  repeated int32 equipMergeCount = 12;  //装备合成次数数据；依次是物理，魔法
+}
+
+message RspBattleWaveDone {
+  int32 status = 1;
+  int32 money = 2;                  //更新钱
+  int32 equipWaveRefresh = 3;       //默认的装备刷新剩余次数；每波都有；
+  int32 equipWaveAdRefresh = 4;     //默认的装备广告刷新剩余次数；每波都有；
+  repeated int32 moneyShow = 5;     //用于做表现，实际最后得钱以上面的数值为准；固定三个值；利息，波次奖励，钱袋子收益
+}
+
+// grp 15 cmd 6 装备多属性技能选择
+message ReqBattleEquipSkillSelect {
+  int64 uid = 1;                        //战斗唯一id
+  int32 equipId = 2;                    //装备id
+  int32 skillId = 3;                    //选择的equip model id
+}
+
+message RspBattleEquipSkillSelect {
+  int32 status = 1;
+}
+
+// grp 15 cmd 7 无尽战斗装备刷新
+message ReqBattleEndlessEquip {
+  int64 uid = 1;                       //战斗唯一id
+  int32 op = 2;                        //1-波次免费刷新，2-广告免费刷新，3-金币刷新；
+  bool battleBegin = 3;                //战斗是否开始；用于判断存盘；
+  map<int32,int32> equipSlots = 4;     //【战斗中的刷新不需要使用这个存盘】装备格子里的装备; k-格子位置（行*100+列）v-格子状态或数据（0-未解锁，1-已解锁，装备id-对应装备）；行和列都从1开始；（
+  repeated int32 equipMergeCount = 5;  //装备合成次数数据；依次是物理，魔法
+}
+
+message RspBattleEndlessEquip {
+  int32 status = 1;
+  repeated int32 equips = 2;             //刷新出来的装备；
+  int32 costMoney = 3;                   //花费的钱；
+  repeated int32 holy = 4;              //刷新出来的圣物；不一定有
+}
+
+// grp 15 cmd 8 无尽战斗波次结束存盘信息上传；
+message ReqBattleEndlessWaveDone {
+  int64 uid = 1;                        //战斗唯一id
+  map<int64,int64> hurtStat = 2;        //伤害统计
+  repeated int32 equips = 3;            //刷新出来但未操作的装备；战斗开始就有；id*10+广告状态(0-未看，1-已看)
+  map<int32,int32> equipSlots = 4;      //装备格子里的装备; k-格子位置（行*100+列）v-格子状态或数据（0-未解锁，1-已解锁，装备id-对应装备）；
+  map<string,int32> attr = 5;           //需要保存的属性，k-属性key，v-值；
+  int32 kills = 6;                      //击杀
+  int32 survivalTime = 7;               //生存时间；秒
+  int32 energy = 8;                     //能量
+  repeated int32 wish = 9;              //心愿存储槽位
+  repeated int32 equipMergeCount = 10;  //装备合成次数数据；依次是物理，魔法
+}
+
+message RspBattleEndlessWaveDone {
+  int32 status = 1;
+}
+
+// grp 15 cmd 9 战斗复活
+message ReqFightRevive {
+  int32 op = 1;                        //1-主线钻石复活，2-服饰技能复活 3-每日挑战钻石复活
+}
+
+message RspFightRevive {
+  int32 status = 1;
+  FightData data = 2;                  //战斗数据；用上一波的数据恢复战斗；
+  repeated Resource cost = 3;          //复活消耗；
+}
+
+//16 主角相关
+
+// grp 16 cmd 1 改名
+message ReqChangeName{
+  string name = 1;   //获得操作：1-广告，2-钻石购买
+}
+
+message RspChangeName{
+  int32 status = 1;
+  repeated Resource cost = 2; //道具消耗
+}
+
+// grp 16 cmd 2 排行榜通用协议
+message ReqRankOp {
+  int32 op = 1;         //排行榜类型；1-主线，2-无尽冒险，3-学院活动 4-秘林
+  int32 param = 2;      //主线参数说明：1-全球；2-地区
+}
+
+message RspRankOp {
+  int32 status = 1;
+  repeated RankMember top = 2;   //排行榜上信息
+  int32 score = 3;               //玩家自己的分数
+  int64 rank = 4;                //玩家自己的排名，<=0都表示未上榜，>0表示排名
+}
+
+// grp 16 cmd 3 玩家排行榜概要信息
+message ReqRankDigest{
+  int64 roleId = 1;
+}
+
+message RspRankDigest{
+  int32 status = 1;
+  RankDigestInfo data = 2;    //概要信息
+}
+
+// grp 16 cmd 4 头像/头像框相关操作
+message ReqHeadOp{
+  int32 op = 1;   //1-更改头像，2-更改头像框，3-点击头像/头像框【新】
+  int32 id = 2;   //对应id
+}
+
+message RspHeadOp{
+  int32 status = 1;
+}
+
+// grp 16 cmd 5 兑换码兑换
+message ReqRedeemExchange{
+  string code = 1;        //兑换码
+}
+
+message RspRedeemExchange{
+  int32 status = 1;
+  repeated Resource rewards = 2;
+}
+
+// grp 16 cmd 6 discord社区兑换成功推送
+message ReqDiscordSync{
+}
+
+message RspDiscordSync{
+  int32 status = 1;
+  int32 discordFlag = 2;      //对应discord flag
+}
+
+// grp 16 cmd 7 使用免广告券
+message ReqItemUseFreeAd{
+}
+
+message RspItemUseFreeAd{
+  int32 status = 1;
+  repeated Resource cost = 2;
+}
+
+// grp 16 cmd 8 玩家点击邀请链接上报后端
+message ReqInviteReport{
+  int64 roleId = 1;          //链接里的要求者id
+}
+
+message RspInviteReport{
+  int32 status = 1;      //状态码；
+  bool success = 2;      //是否成功被邀请，true-成功（修改数据里的标记），false-失败；
+}
+
+// grp 16 cmd 9 邀请成功后进度同步
+message ReqInviteSync{
+}
+
+message RspInviteSync{
+  int32 status = 1;            //状态码；
+  int32 inviteNumber = 2;      //成功邀请的次数；
+}
+
+// grp 16 cmd 10 领取要求进度奖励
+message ReqInviteClaim{
+  int32 id = 1;               //配置表id
+}
+
+message RspInviteClaim{
+  int32 status = 1;            //状态码；
+  repeated Resource reward = 2;  //奖励
+}
+
+// 17 月卡
+
+// grp 17 cmd 1 月卡每日奖励领取
+message ReqMonthCardClaim {
+  int32 op = 1;         //操作 1-普通月卡，2-高级月卡
+}
+
+message RspMonthCardClaim {
+  int32 status = 1;
+  repeated Resource reward = 2;   //奖励，可能会领取多日的奖励
+}
+
+// grp 17 cmd 2 双月卡奖励领取
+message ReqMonthCardDoubleClaim {
+}
+
+message RspMonthCardDoubleClaim {
+  int32 status = 1;
+  repeated Resource reward = 2;   //奖励
+}
+
+// 商城 18
+
+// grp 18 cmd 1 每日商城购买
+message ReqShopDailyBuy {
+  int32 dailyId = 1;          //dailyShop配置表id
+  int32 count = 2;            //购买数量
+}
+
+message RspShopDailyBuy {
+  int32 status = 1;
+  repeated Resource rewards = 2;    //奖励
+  repeated Resource cost = 3;       //消耗
+}
+
+// grp 18 cmd 2 招募宝箱购买
+message ReqShopRecruitBuy {
+  int32 equipChestId = 1; //equipChest表的id，对应不同的宝箱
+  int32 op = 2;           //1-广告免费，2-砖石，3-道具
+}
+
+message RspShopRecruitBuy {
+  int32 status = 1;
+  repeated Resource rewards = 2;    //宝箱开出的奖励
+  repeated Resource cost = 3;       //消耗
+  int32 guarantee = 4;              //保底次数同步
+  int32 lv = 5;
+  int32 exp = 6;
+}
+
+// grp 18 cmd 3 礼包统一购买协议
+message ReqShopPackageBuy {
+  int32 packageId = 1;          //金币购买内容配置在package表格
+  int32 op = 2;                 //购买类型：1-货币购买 2-非货币购买【广告，免费】；
+  int32 count = 3;              //购买数量：默认传1即可，目前金币购买需要指定数量，免费和广告情况传1；
+  int32 index = 4;          //可选参数：特惠商店自选商品礼包，商品index
+}
+
+message RspShopPackageBuy {
+  int32 status = 1;
+  repeated Resource rewards = 2;  //对应奖励；
+  repeated Resource cost = 3;       //消耗
+}
+
+// grp 18 cmd 4 招募服饰购买
+message ReqShopRecruitEquip {
+  int32 equipChestId = 1; //equipChest表的id，对应不同的宝箱
+  int32 op = 2;           //1-广告免费[这里没有]，2-砖石，3-道具，4-钻石十连。5-道具十连
+}
+
+message RspShopRecruitEquip {
+  int32 status = 1;
+  repeated Resource rewards = 2;        //宝箱开出的奖励
+  repeated Resource cost = 3;           //消耗
+  int32 minGuarantee = 4;              //服饰宝箱小保底：当前抽取的次数，必出次数等于保底次数减该次数；
+  int32 maxGuarantee = 5;              //服饰宝箱大保底；当前抽取的次数，必出次数等于保底次数减该次数；
+}
+// 19-首充礼包
+
+// grp 19 cmd 1 新手礼包领取 直接领取可以领取的全部奖励
+message ReqFirstChargeClaim {
+}
+
+message RspFirstChargeClaim {
+  int32 status = 1;
+  repeated Resource rewards = 2;  //对应奖励；
+}
+
+// 20-英雄
+
+// grp 20 cmd 1 英雄解锁
+message ReqHeroUnlock {
+  int32 heroId = 1;//英雄id
+  int32 op = 2;//解锁方式 0：碎片，1：钻石 2：货币
+}
+
+message RspHeroUnlock {
+  int32 status = 1;
+  repeated Resource costs = 2;       //消耗
+  repeated Resource rewards = 3;       //奖励
+}
+
+// grp 20 cmd 2 英雄升级
+message ReqHeroLvUp{
+  int32 heroId = 1;//英雄id
+}
+
+message RspHeroLvUp {
+  int32 status = 1;
+  repeated Resource costs = 2;       //消耗
+  int32 lv = 3; //当前英雄等级
+}
+
+
+// grp 20 cmd 3 英雄觉醒
+message ReqHeroStarUp{
+  int32 heroId = 1;//英雄id
+}
+
+message RspHeroStarUp {
+  int32 status = 1;
+  repeated Resource costs = 2;       //消耗
+  int32 star = 3;  //当前星级
+}
+
+// grp 20 cmd 4 英雄上阵
+message ReqHeroInBattle{
+  int32 heroId = 1;//英雄id
+}
+
+message RspHeroInBattle {
+  int32 status = 1;
+}
+
+// grp 20 cmd 5 英雄重置
+message ReqHeroReset{
+  int32 heroId = 1;//英雄id
+}
+
+message RspHeroReset {
+  int32 status = 1;
+  repeated Resource rewards = 2;  //对应奖励；
+  int32 lv = 3;                   //当前等级
+ }
+
+// grp 20 cmd 6 英雄一键升级
+message ReqHeroLvUpAuto{
+  int32 heroId = 1;//英雄id
+}
+
+message RspHeroLvUpAuto {
+  int32 status = 1;
+  repeated Resource costs = 2;       //消耗
+  int32 lv = 3; //当前英雄等级
+}
+
+// 21-无尽战斗（一站到底）
+
+// grp 21 cmd 1 无尽战斗开始
+message ReqEndlessBegin {
+}
+
+message RspEndlessBegin {
+  int32 status = 1;
+  FightData data = 2;                  //战斗数据
+  repeated Resource cost = 3;          //体力消耗
+}
+
+// grp 21 cmd 2 无尽战斗结束
+message ReqEndlessEnd {
+  int64 uid = 1;                          //战斗uid
+  FightStat stat = 2;                     //战斗结束统计数据，没有的数据就不发和挑战使用一个；
+  bool archive = 3;                       //是否存档直接结算
+}
+
+message RspEndlessEnd {
+  int32 status = 1;
+  repeated Resource rewards = 2;  //对应奖励；
+  int32 maxDayCoin = 3;           //每日金币最大值更新
+}
+
+// grp 21 cmd 3 无尽存档开始
+message ReqEndlessArchiveBegin {
+}
+
+message RspEndlessArchiveBegin {
+  int32 status = 1;
+  FightData data = 2;                  //战斗数据
+}
+
+// grp 21 cmd 4 无尽战斗扫荡
+message ReqEndlessSweep {
+}
+
+message RspEndlessSweep {
+  int32 status = 1;
+  repeated Resource rewards = 2;  //对应奖励；
+  repeated Resource cost = 3;          //体力消耗
+}
+
+// 22-通行证
+
+// grp 22 cmd 1 通行证奖励领取
+message ReqPassportClaim {
+  int32 typ = 1;                        //通行证类型
+}
+
+message RspPassportClaim {
+  int32 status = 1;                      //成功领取后要更新领取等级的数据，免费的直接等于当前等级，付费的已购买的情况直接等于当前等级；
+  repeated Resource reward = 2;          //奖励
+}
+
+// grp 22 cmd 2 通行证奖励解锁
+message ReqPassportUnlock {
+  int32 id = 1;                        //解锁对应的配置id；直接传fundReward的配置表id，后端就不用再去找一次id，只用校验；
+  int32 typ = 2;                        //通行证类型
+}
+
+message RspPassportUnlock {
+  int32 status = 1;                    //成功后更新当前等级；
+  repeated Resource cost = 2;          //钻石消耗
+  int32 lv = 3;                        //成功后更新当前等级；
+}
+
+// 23-每日礼包
+
+// grp 23 cmd 1 每日礼包免费宝箱领取
+message ReqDailyPackClaim {
+  int32 id = 1;                         //配置id
+}
+
+message RspDailyPackClaim {
+  int32 status = 1;
+  repeated Resource reward = 2;          //奖励
+}
+
+// grp 23 cmd 2 每日礼包装备购买选择
+message ReqDailyPackSelect {
+  int32 id = 1;                         //装备id
+}
+
+message RspDailyPackSelect {
+  int32 status = 1;
+}
+
+// grp 23 cmd 3 每日礼包自选奖励选择
+message ReqDailyPackOptional {
+  int32 id = 1;                         //配置表idid
+  int32 index = 2;
+}
+
+message RspDailyPackOptional {
+  int32 status = 1;
+}
+
+// 24-幸运转盘
+
+// grp 24 cmd 1 幸运抽奖
+message ReqLuckyDraw {
+  int32 op = 1;         //1-广告抽奖 2-道具单抽 3-道具五连抽
+}
+
+message RspLuckyDraw {
+  int32 status = 1;
+  repeated int32 index = 2;               //对应奖励的index,五连抽有五个；
+  repeated Resource rewards = 3;          //对应奖励,五连抽有五个
+  repeated Resource costs = 4;            //消耗
+  int32 progress = 5;                     //进度
+  repeated int32 ps = 6;                  //本次抽奖进度，五连抽有五个
+}
+
+// grp 24 cmd 2 阶段奖励领取
+message ReqLuckyClaim {
+  repeated int32 ids = 1;    //对应阶段id列表
+}
+
+message RspLuckyClaim {
+  int32 status = 1;
+  repeated Resource rewards = 2;  //对应奖励；
+}
+
+//25 触发礼包
+
+// grp 25 cmd 1 触发礼包购买
+message ReqTriggerGiftConditionBuy {
+  int32 id = 1;                   //对应id
+}
+
+message RspTriggerGiftConditionBuy {
+  int32 status = 1;
+  repeated Resource rewards = 2;  //对应奖励；
+}
+
+// grp 25 cmd 2 特殊商店领取累计天数奖励
+message ReqTriggerGiftClaim {
+  int32 id = 1;                   //对应id
+  int32 optionalIndex = 2;        //自选奖励角标；没有自选奖励默认传-1，有自选奖励传自选奖励数值index，从0开始；
+}
+
+message RspTriggerGiftClaim {
+  int32 status = 1;
+  repeated Resource reward = 2;  //对应奖励；
+}
+
+// 27-每日挑战
+
+// grp 27 cmd 1 每日挑战开始
+message ReqDailyFightBegin {
+}
+
+message RspDailyFightBegin {
+  int32 status = 1;
+  FightData data = 2;                  //战斗数据
+  repeated Resource cost = 3;          //体力消耗
+  repeated int32 buff = 4;             //buff
+  map<int32,int32> mons = 5;           //怪物
+}
+
+// grp 27 cmd 2 每日挑战结束
+message ReqDailyFightEnd {
+  int64 uid = 1;                          //战斗uid
+  FightStat stat = 2;                     //战斗结束统计数据，没有的数据就不发和挑战使用一个；
+  bool archive = 3;                       //是否存档直接结算
+}
+
+message RspDailyFightEnd {
+  int32 status = 1;
+  repeated Resource reward = 2;  //对应奖励；
+  int32 dailyKills = 3;//每日累计杀敌数
+}
+
+// grp 27 cmd 3 每日挑战存档开始
+message ReqDailyFightArchiveBegin {
+}
+
+message RspDailyFightArchiveBegin {
+  int32 status = 1;
+  FightData data = 2;                  //战斗数据
+  repeated int32 buff = 3;             //buff
+  map<int32,int32> mons = 4;           //怪物
+}
+
+// grp 27 cmd 4 每日挑战领取日进度宝箱
+message ReqDailyFightBox {
+  int32 id = 1;       //宝箱id
+}
+
+message RspDailyFightBox {
+  int32 status = 1;
+  repeated Resource reward = 2;  //对应奖励；
+}
+
+// grp 27 cmd 5 领取每日挑战周宝箱
+message ReqDailyFightWeekBox {
+  int32 id = 1;       //宝箱id
+}
+
+message RspDailyFightWeekBox {
+  int32 status = 1;
+  repeated Resource reward = 2;  //对应奖励；
+}
+
+// grp 27 cmd 6 每日挑战扫荡
+message ReqDailyFightSweep {
+}
+
+message RspDailyFightSweep {
+  int32 status = 1;
+  repeated Resource rewards = 2;  //对应奖励；
+  repeated Resource cost = 3; //消耗
+  int32 dailyKills = 4;//每日累计杀敌数
+}
+
+// 28-魔法祈愿
+
+// grp 28 cmd 1 魔法祈愿抽奖
+message ReqMagicDraw {
+  int32 op = 1;         //1-广告抽奖 2-道具抽奖
+  int32 count = 2;      //抽奖次数
+}
+
+message RspMagicDraw {
+  int32 status = 1;
+  repeated int32 ids = 2;                 //对应表的id,几抽有几个,按顺序；
+  repeated Resource reward = 3;           //抽奖奖励,几抽有几个
+  repeated Resource cost = 4;             //消耗
+  int32 progress = 5;                     //总进度
+  repeated Resource extra = 6;            //额外奖励
+}
+
+// grp 28 cmd 2 阶段奖励领取
+message ReqMagicClaim {
+  int32 id = 1;             //对应阶段id
+  int32 optionalIndex = 2;  //自选奖励角标；没有自选奖励默认传-1，有自选奖励传自选奖励数值index，从0开始；
+}
+
+message RspMagicClaim {
+  int32 status = 1;
+  repeated Resource reward = 2;  //对应奖励；
+}
+
+// grp 28 cmd 3 基金领取
+message ReqMagicFundClaim {
+}
+
+message RspMagicFundClaim {
+  int32 status = 1;
+  repeated Resource reward = 2;  //奖励
+  repeated int32 freeIds = 3;    //普通基金领取了的id
+  repeated int32 plusIds = 4;    //付费基金领取了的id
+}
+
+//30 秘林探险
+
+// grp 30 cmd 1 秘林探险战斗开始
+message ReqSecretFightBegin {
+  int32 stageId = 1;  //关卡id
+}
+
+message RspSecretFightBegin {
+  int32 status = 1;
+  SFightData data = 2;         //秘林战斗数据；预留，只包含一些基本信息不包括具体计算属性值；目前包含，随机种子+战斗唯一id
+}
+
+// grp 30 cmd 2 秘林战斗结束
+message ReqSecretFightEnd {
+  int32 stageId = 1;                 //关卡id
+  int64 uid = 2;                     //战斗uid
+  FightStat stat = 3;                //战斗结束统计数据，没有的数据就不发和挑战使用一个；
+  bool archive = 4;                  //是否存档直接结算
+  bool isPass = 5;                   //是否挑战成功
+}
+
+message RspSecretFightEnd {
+  int32 status = 1;
+  repeated Resource reward = 2;  //对应奖励；
+}
+
+// grp 30 cmd 3 秘林战斗一键领取关卡宝箱
+message ReqSecretFightBox {
+}
+
+message RspSecretFightBox {
+  int32 status = 1;
+  repeated Resource reward = 2;  //对应奖励；
+}
+
+// grp 30 cmd 4 秘林战斗读取存档开始
+message ReqSecretFightArchiveBegin {
+}
+
+message RspSecretFightArchiveBegin {
+  int32 status = 1;
+  int32 stageId = 2;                 //存档的关卡
+  SFightData data = 3;              //秘林战斗数据；预留，只包含一些基本信息不包括具体计算属性值；目前包含，随机种子+战斗唯一id
+}
+
+
+//31 秘林探险战斗交互
+
+// grp 31 cmd 1 秘林战斗天赋刷新
+message ReqSecretBattleTalentRefresh {
+  int64 uid = 1;                       //战斗唯一id
+  int32 lv = 2;                        //参数：等级；要刷的那个等级，初始的装备天赋此参数传0
+  int32 op = 3;                        //操作类型 1：初始装备天赋 2：升级天赋 3:广告刷新天赋 4:局内道具刷新
+  int32 exp = 4;                       //经验值
+  int32 dur = 5;                       //本局时长 单位秒
+}
+
+message RspSecretBattleTalentRefresh {
+  int32 status = 1;
+  repeated int32 talents = 2;         //刷新出来的天赋；
+}
+
+// grp 31 cmd 2 秘林战斗天赋选择
+message ReqSecretBattleTalentSelect {
+  int64 uid = 1;                       //战斗唯一id
+  repeated int32 index = 2;            //选择天赋的index；选两个
+}
+
+message RspSecretBattleTalentSelect {
+  int32 status = 1;
+  repeated int32 talent = 2;                   //选择成功的天赋；
+}
+
+// grp 31 cmd 3 秘林波次结束
+message ReqSecretBattleWaveDone {
+  int64 uid = 1;                          //战斗唯一id
+  map<int32,int32> equipSlots = 2;        //装备栏里的装备
+  map<string,int32> attr = 3;             //需要保存的属性，k-属性key，v-值；
+  map<int64,int64> hurtStat = 4;          //伤害统计
+  int32 energy = 5;                       //主动技能能量值
+  int32 wave = 6;                         //当前结束的波次，例:第1波结束就传1
+  int32 lv = 7;                           //等级
+  int32 exp = 8;                          //经验值
+  int32 dur = 9;                          //本局时长 单位秒
+  int32 kills = 10;                       //本局击杀数
+  int32 boss = 11;                        //boss
+}
+
+message RspSecretBattleWaveDone {
+  int32 status = 1;
+}
+
+// grp 31 cmd 4 装备多属性技能选择
+message ReqSecretBattleEquipSkillSelect {
+  int64 uid = 1;                        //战斗唯一id
+  int32 equipId = 2;                    //装备id
+  int32 skillId = 3;                    //选择的equip model id
+}
+
+message RspSecretBattleEquipSkillSelect {
+  int32 status = 1;
+}
+
+// 32 英雄装备相关功能
+
+// grp 32 cmd 1 装扮穿戴
+message ReqHeroEquipWear {
+  int32 pos = 1;      //穿戴位置
+  int32 op = 2;       //操作：1-穿戴，2-卸下
+  int64 uid = 3;      //装备uid
+  bool inherit = 4;   //穿戴的时候是否继承；被替换的等级高于新的装备才可选择；
+}
+
+message RspHeroEquipWear {
+  int32 status = 1;
+}
+
+// grp 32 cmd 2 装备升级/装备一键升级
+message ReqHeroEquipLevelUp {
+  int64 uid = 1;       //装备uid
+  int32 op = 2;         //1-升级[1级]，2-一键升级
+}
+
+message RspHeroEquipLevelUp {
+  int32 status = 1;
+  int32 lv = 2;           //成功后的等级
+  repeated Resource costs = 3;  //对应消耗；
+}
+
+// grp 32 cmd 3 装备降级/降阶（材料返还）
+message ReqHeroEquipDown {
+  int64 uid = 1;       //装备uid
+  int32 op = 2;         //1-降级，2-降阶【降到该品质0阶】
+}
+
+message RspHeroEquipDown {
+  int32 status = 1;
+  repeated Resource rewards = 2;  //对应返还材料；
+}
+
+// grp 32 cmd 4 装备合成
+message ReqHeroEquipMerge {
+  int64 uid = 1;                  //装备uid，待合成uid
+  repeated int64 material = 2;    //合成材料；装备uid
+  int32 itemCount = 3;            //合成替换道具数量：如果选的是替换道具，通过这个字段传数量；
+}
+
+message RspHeroEquipMerge {
+  int32 status = 1;
+  repeated Resource rewards = 2;  //对应返还材料；
+}
+
+// grp 32 cmd 5 装备一键合成
+message ReqHeroEquipMergeFast {
+}
+
+message RspHeroEquipMergeFast {
+  int32 status = 1;
+  repeated int64 costUid = 2;           //自动合成消耗的装备Uid
+  repeated HeroEquip equip = 3;         //自动合成产出的新的equips
+  repeated Resource rewards = 4;        //对应返还材料；
+}
+
+// 34-星际学院
+
+// grp 34 cmd 1 任务领取
+message ReqSchoolTaskClaim {
+  int32 id = 1;                   //任务id
+}
+
+message RspSchoolTaskClaim {
+  int32 status = 1;
+  repeated Resource rewards = 2;  //奖励；
+}
+
+// grp 34 cmd 2 积分进度领取
+message ReqSchoolScoreClaim {
+  int32 id = 1;                   //配置id
+  int32 optionalIndex = 2;        //自选奖励角标；没有自选奖励默认传-1，有自选奖励传自选奖励数值index，从0开始；
+}
+
+message RspSchoolScoreClaim {
+  int32 status = 1;
+  repeated Resource rewards = 2;  //奖励；
+}
+
+// grp 34 cmd 3 学院基金领取
+message ReqSchoolFundClaim {
+}
+
+message RspSchoolFundClaim {
+  int32 status = 1;
+  repeated int32 freeIds = 2;               //领取了的id
+  repeated int32 plusIds = 3;               //领取了的id
+  repeated Resource rewards = 4;            //奖励
+}
+
+// 35-幸运之旅
+
+// grp 35 cmd 1 幸运之旅抽奖
+message ReqLuckyTrip {
+  int32 op = 1;         //1-广告抽奖 2-道具抽奖
+  int32 count = 2;      //抽奖次数
+}
+
+message RspLuckyTrip {
+  int32 status = 1;
+  repeated Resource prize = 2;       //大奖
+  repeated Resource reward = 3;      //普通奖励
+  repeated Resource cost = 4;        //消耗
+  int32 progress = 5;                //总进度
+  bool pull = 6;                     //是否需要拉取一次奖池信息和中奖记录
+}
+
+// grp 35 cmd 2 幸运之旅阶段奖励领取
+message ReqLuckyTripClaim {
+  int32 id = 1;    //对应阶段id
+  int32 optionalIndex = 2;  //自选奖励角标；没有自选奖励默认传-1，有自选奖励传自选奖励数值index，从0开始；
+}
+
+message RspLuckyTripClaim {
+  int32 status = 1;
+  repeated Resource reward = 2;  //对应奖励；
+}
+
+// grp 35 cmd 3 幸运之旅拉取中奖记录，进活动页面和抽到大奖后都要调该接口
+message ReqLuckyTripPullRecord {
+}
+
+message RspLuckyTripPullRecord {
+  int32 status = 1;
+  repeated LuckyTripRecord record = 2;  //中奖记录
+  repeated Resource reward = 3;         //大奖；
+}
+
+// 36-魔法时代
+
+// grp 36 cmd 1 魔法时代免费的领取
+message ReqMagicAgeClaim {
+  int32 id = 1;
+  int32 index = 2;                  //有自选传自选index
+}
+
+message RspMagicAgeClaim {
+  int32 status = 1;
+  repeated Resource reward = 2;      //奖励
+}
+
+// 37-小礼包相关
+
+// grp 37 cmd 1 零元购免费领取
+message ReqGiftPackZeroClaim {
+  int32 id = 1;
+  int32 index = 2;                  //有自选传自选index
+}
+
+message RspGiftPackZeroClaim {
+  int32 status = 1;
+  repeated Resource reward = 2;      //奖励
+}
+
+// 38-幸运扭蛋
+
+// grp 38 cmd 1 扭蛋币购买
+message ReqLuckyEggBuy {
+  int32 count = 1;            //购买次数
+}
+
+message RspLuckyEggBuy {
+  int32 status = 1;
+  repeated Resource reward = 2;      //奖励
+  repeated Resource cost = 3;        //消耗
+}
+
+// grp 38 cmd 2 扭蛋进度奖励领取
+message ReqLuckyEggClaim {
+  int32 id = 1;                             //进度奖励id
+  int32 optionalIndex = 2;                  //自选index
+}
+
+message RspLuckyEggClaim {
+  int32 status = 1;
+  repeated Resource reward = 2;             //奖励
+}
+
+// grp 38 cmd 3 扭蛋任务领取
+message ReqLuckyEggTaskClaim {
+  int32 id = 1;                   //任务id
+}
+
+message RspLuckyEggTaskClaim {
+  int32 status = 1;
+  repeated Resource rewards = 2;  //奖励；
+}
+
+// grp 38 cmd 4 扭蛋基金领取
+message ReqLuckyEggFundClaim {
+}
+
+message RspLuckyEggFundClaim {
+  int32 status = 1;
+  repeated int32 freeIds = 2;               //领取了的id
+  repeated int32 plusIds = 3;               //领取了的id
+  repeated Resource rewards = 4;            //奖励
+}
+
+// grp 38 cmd 5 扭蛋兑换
+message ReqLuckyEggExchange {
+  int32 id = 1;                             //id
+  int32 optionalIndex = 2;                  //自选index
+}
+
+message RspLuckyEggExchange {
+  int32 status = 1;
+  repeated Resource rewards = 2;     //奖励；
+  repeated Resource cost = 3;        //消耗
+}
+
+// grp 38 cmd 6 扭蛋抽奖
+message ReqLuckyEggDraw {
+  int32 op = 1;                     //1-单抽，2-十连抽
+}
+
+message RspLuckyEggDraw {
+  int32 status = 1;
+  repeated Resource rewards = 2;     //奖励；
+  repeated Resource cost = 3;        //消耗
+}
+
+// 41-缤果活动
+
+// grp 41 cmd 1 缤果币购买
+message ReqBingoCoinBuy {
+  int32 count = 1;                  //购买数量
+}
+
+message RspBingoCoinBuy {
+  int32 status = 1;
+  repeated Resource reward = 2;      //奖励
+  repeated Resource cost = 3;        //消耗
+}
+
+// grp 41 cmd 2 缤果翻牌
+message ReqBingoOpen {
+  int32 pos = 1;                  //位置（行*100+列，行列都是从1开始）
+}
+
+message RspBingoOpen {
+  int32 status = 1;
+  int32 bingoCount = 2;               //连线次数更新；
+  map<int32,Resource> openRecord = 3; //这一次翻出来的两个奖励；界面展示
+  repeated Resource cost = 4;         //消耗
+  repeated Resource reward = 5;       //奖励；实际奖励
+}
+
+// grp 41 cmd 3 缤果进度奖励领取
+message ReqBingoClaim {
+}
+
+message RspBingoClaim {
+  int32 status = 1;
+  repeated Resource reward = 2;             //奖励
+  repeated int32 id = 3;                    //领取完的id；直接更新
+}
+
+// grp 41 cmd 4 缤果reset
+message ReqBingoReset {
+}
+
+message RspBingoReset {
+  int32 status = 1;
+  repeated Resource reward = 2;             //奖励；可能得到的奖励
+  BingoGrid grid = 3;                       //重置后的缤果活动棋盘信息
+}
+
+// grp 41 cmd 5 缤果任务领取
+message ReqBingoTaskClaim {
+  int32 id = 1;                   //任务id
+}
+
+message RspBingoTaskClaim {
+  int32 status = 1;
+  repeated Resource rewards = 2;  //奖励；
+}
+
+// grp 41 cmd 6 缤果兑换
+message ReqBingoExchange {
+  int32 id = 1;                             //id
+  int32 optionalIndex = 2;                  //自选index
+}
+
+message RspBingoExchange {
+  int32 status = 1;
+  repeated Resource rewards = 2;     //奖励；
+  repeated Resource cost = 3;        //消耗
+}
