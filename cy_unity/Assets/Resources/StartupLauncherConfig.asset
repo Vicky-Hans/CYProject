@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 019e30cc1cd194baf899983ef9daeb2f, type: 3}
+  m_Name: StartupLauncherConfig
+  m_EditorClassIdentifier: 
+  CanvsRoot: 
+  EnableHybridCLR: 1
+  EnabledEncryptGlobalMetadata: 1
+  PreLoadDllList:
+  - DH.Proto
+  - DH.ConfigData
+  - DH.UIFramework.MVVM
+  - DH.Data
+  StartDllName: DH.Game
+  StartTypeName: AppMain
+  StartMethodName: StartGame
+  AutoDestroyStartupDlg: 1
+  UseAsyncAwait: 1
+  EnableRelease: 0
+  GameCode: 1030
+  GameName: cy
+  UserAgreement: https://www.dhgames.cn/other/register-{0}.html
+  PrivacyAgreement: https://www.dhgames.cn/other/privacy-{0}.html
+  AgreementSupportLanguages:
+  - en
+  StartupMainUIPath: Startup/StartupMainDlg
+  UserAgreementUIPath: Startup/UserAgreementDlg
+  MessageBoxUIPath: Startup/MessageDlg
+  LoginUIPath: 
+  StartupLanguageConfigPath: Startup/Config/bson/{0}/StartupLanguage
+  LocalizationConfigPath: Startup/Localization/LocalizationConfig

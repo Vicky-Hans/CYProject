@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eec4882d68a9346b3b5f8ecf1e38a534, type: 3}
+  m_Name: FightingGroup
+  m_EditorClassIdentifier: 
+  m_allNodes:
+  - m_name: "\u6587\u4EF6\u5939\u8FC7\u6EE4\u52A0\u8F7D\u5668"
+    m_id: f668e29c-9138-4d67-92fc-da59090d394f
+    m_x: 384
+    m_y: 168
+    m_nodeInstance:
+      m_className: DH.Asset.Editor.CustomNode.CustomFileLoaderBySearch, DH.AssetsTool,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      m_instanceData: B64|eyJsb2FkUGF0aCI6eyJtX3ZhbHVlcyI6W3sidGFyZ2V0R3JvdXAiOjAsInZhbHVlIjoiR2FtZUFzc2V0cy9GaWdodGluZy9FbmVteSJ9XX0sImxvYWRQYXRoR3VpZCI6eyJtX3ZhbHVlcyI6W3sidGFyZ2V0R3JvdXAiOjAsInZhbHVlIjoiNTJmYTk2NGFhMzBkNTRkZThhNjcyMDhiMjFjMzFhNTYifV19LCJzZWFyY2hQYXR0ZXJucyI6W3siZmlsdGVyUGF0dGVybiI6IkFuaW1hdG9yIiwiZXh0ZW5zaW9uIjoiIiwiaXNGb2xkZXIiOnRydWUsImRlcHRoIjoxfV0sInJlc3BvbmRUb0Fzc2V0Q2hhbmdlIjpmYWxzZX0=
+    m_inputPoints: []
+    m_outputPoints:
+    - id: 198315a4-7a11-444e-b13a-94adcf317cb8
+      label: +
+      parentId: f668e29c-9138-4d67-92fc-da59090d394f
+      isInput: 0
+      buttonRect:
+        serializedVersion: 2
+        x: 139
+        y: 33
+        width: 10
+        height: 23
+  - m_name: FightingGroup
+    m_id: ce9b9ff9-3d79-4c34-adb1-9544aec86a15
+    m_x: 828
+    m_y: 180
+    m_nodeInstance:
+      m_className: DH.Asset.Editor.CustomNode.SetAddressableGroup, DH.AssetsTool,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      m_instanceData: B64|eyJpc0FkZHJlc3NhYmxlIjp0cnVlLCJpc0FsbExvd2VyQ2FzZSI6ZmFsc2UsIm1hdGNoUGF0dGVybiI6IiIsImFkZHJlc3NQYXR0ZXJuIjoiIiwiZ3JvdXBOYW1lIjoiRmlnaHRpbmdHcm91cCIsImluY2x1ZGVBZGRyZXNzSW5DYXRhbG9nIjpmYWxzZSwiaW5jbHVkZUd1aWRJbkNhdGFsb2ciOmZhbHNlLCJpbmNsdWRlTGFiZWxzSW5DYXRhbG9nIjpmYWxzZSwiaW5jbHVkZUluQnVpbGQiOnRydWUsImJ1bmRsZU1vZGUiOjF9
+    m_inputPoints:
+    - id: 95d65a05-1844-4cd5-8e4f-afe728d9b372
+      label: '-'
+      parentId: ce9b9ff9-3d79-4c34-adb1-9544aec86a15
+      isInput: 1
+      buttonRect:
+        serializedVersion: 2
+        x: 0
+        y: 30
+        width: 21
+        height: 29
+    m_outputPoints:
+    - id: da130ea3-b0d0-4c08-95d2-4664939a13f8
+      label: +
+      parentId: ce9b9ff9-3d79-4c34-adb1-9544aec86a15
+      isInput: 0
+      buttonRect:
+        serializedVersion: 2
+        x: 122
+        y: 33
+        width: 10
+        height: 23
+  m_allConnections:
+  - m_id: 5dc09a41-7188-419e-b496-72a6002bdcfc
+    m_fromNodeId: f668e29c-9138-4d67-92fc-da59090d394f
+    m_fromNodeConnectionPointId: 198315a4-7a11-444e-b13a-94adcf317cb8
+    m_toNodeId: ce9b9ff9-3d79-4c34-adb1-9544aec86a15
+    m_toNodeConnectionPoiontId: 95d65a05-1844-4cd5-8e4f-afe728d9b372
+    m_label: +
+  m_lastModified: 133392452022492210
+  m_version: 2
+  m_graphDescription: 
+  m_useAsAssetPostprocessor: 0
+  m_graphExecOrderPriority: 0

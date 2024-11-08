@@ -1,0 +1,189 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eec4882d68a9346b3b5f8ecf1e38a534, type: 3}
+  m_Name: BgGroup
+  m_EditorClassIdentifier: 
+  m_allNodes:
+  - m_name: "\u6587\u4EF6\u5939\u8FC7\u6EE4\u52A0\u8F7D\u5668"
+    m_id: 8fc87631-5e54-443a-b173-880c1e59f120
+    m_x: 192
+    m_y: 84
+    m_nodeInstance:
+      m_className: DH.Asset.Editor.CustomNode.CustomFileLoaderBySearch, DH.AssetsTool,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      m_instanceData: B64|eyJsb2FkUGF0aCI6eyJtX3ZhbHVlcyI6W3sidGFyZ2V0R3JvdXAiOjAsInZhbHVlIjoiR2FtZUFzc2V0cy9VSS9JbWFnZS9iZyJ9XX0sImxvYWRQYXRoR3VpZCI6eyJtX3ZhbHVlcyI6W3sidGFyZ2V0R3JvdXAiOjAsInZhbHVlIjoiMDczODVhYmVjOTYxYjIxNDFhYjBlYWQ3YTk0NWI4ZWIifV19LCJzZWFyY2hQYXR0ZXJucyI6W3siZmlsdGVyUGF0dGVybiI6IiIsImV4dGVuc2lvbiI6IioucG5nIiwiaXNGb2xkZXIiOmZhbHNlLCJkZXB0aCI6MX1dLCJyZXNwb25kVG9Bc3NldENoYW5nZSI6ZmFsc2V9
+    m_inputPoints: []
+    m_outputPoints:
+    - id: bed63aa6-4d46-4801-8f0c-324e0c1182e0
+      label: +
+      parentId: 8fc87631-5e54-443a-b173-880c1e59f120
+      isInput: 0
+      buttonRect:
+        serializedVersion: 2
+        x: 139
+        y: 33.5
+        width: 10
+        height: 23
+  - m_name: UIBgGroup
+    m_id: 3be87aa1-e0d8-4643-a179-ea30f4315c90
+    m_x: 564
+    m_y: 96
+    m_nodeInstance:
+      m_className: DH.Asset.Editor.CustomNode.SetAddressableGroup, DH.AssetsTool,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      m_instanceData: B64|eyJpc0FkZHJlc3NhYmxlIjp0cnVlLCJpc0FsbExvd2VyQ2FzZSI6ZmFsc2UsIm1hdGNoUGF0dGVybiI6IiIsImFkZHJlc3NQYXR0ZXJuIjoiU3RhcnR1cC8kMSIsImdyb3VwTmFtZSI6IlVJQmdHcm91cCIsImluY2x1ZGVBZGRyZXNzSW5DYXRhbG9nIjpmYWxzZSwiaW5jbHVkZUd1aWRJbkNhdGFsb2ciOmZhbHNlLCJpbmNsdWRlTGFiZWxzSW5DYXRhbG9nIjpmYWxzZSwiaW5jbHVkZUluQnVpbGQiOnRydWUsImJ1bmRsZU1vZGUiOjF9
+    m_inputPoints:
+    - id: be1882a1-9039-4091-a3c6-42234839a2bf
+      label: '-'
+      parentId: 3be87aa1-e0d8-4643-a179-ea30f4315c90
+      isInput: 1
+      buttonRect:
+        serializedVersion: 2
+        x: 0
+        y: 30.5
+        width: 21
+        height: 29
+    m_outputPoints:
+    - id: 43ba7d23-cb5c-4685-b17b-4409d22181ab
+      label: +
+      parentId: 3be87aa1-e0d8-4643-a179-ea30f4315c90
+      isInput: 0
+      buttonRect:
+        serializedVersion: 2
+        x: 111
+        y: 33.5
+        width: 10
+        height: 23
+  - m_name: "\u6587\u4EF6\u5939\u8FC7\u6EE4\u52A0\u8F7D\u5668"
+    m_id: 0bbcd71b-f4af-4b11-bc12-c709eae6d7f6
+    m_x: 168
+    m_y: 216
+    m_nodeInstance:
+      m_className: DH.Asset.Editor.CustomNode.CustomFileLoaderBySearch, DH.AssetsTool,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      m_instanceData: B64|eyJsb2FkUGF0aCI6eyJtX3ZhbHVlcyI6W3sidGFyZ2V0R3JvdXAiOjAsInZhbHVlIjoiR2FtZUFzc2V0cy9NaW5pbmcvYmdzIn1dfSwibG9hZFBhdGhHdWlkIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiI2MGE3NzM5ZDQ2MDg5NGUyZGEzMmNkNTc1YzBiOTE4ZiJ9XX0sInNlYXJjaFBhdHRlcm5zIjpbeyJmaWx0ZXJQYXR0ZXJuIjoiIiwiZXh0ZW5zaW9uIjoiKi5wbmciLCJpc0ZvbGRlciI6ZmFsc2UsImRlcHRoIjoxfV0sInJlc3BvbmRUb0Fzc2V0Q2hhbmdlIjpmYWxzZX0=
+    m_inputPoints: []
+    m_outputPoints:
+    - id: 3313df51-0948-49a2-b01f-b96ebe9a8cfa
+      label: +
+      parentId: 0bbcd71b-f4af-4b11-bc12-c709eae6d7f6
+      isInput: 0
+      buttonRect:
+        serializedVersion: 2
+        x: 139
+        y: 33.5
+        width: 10
+        height: 23
+  - m_name: SceneBgGroup
+    m_id: afe7d411-f5fd-4fd5-b372-a28d66ae2876
+    m_x: 612
+    m_y: 216
+    m_nodeInstance:
+      m_className: DH.Asset.Editor.CustomNode.SetAddressableGroup, DH.AssetsTool,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      m_instanceData: B64|eyJpc0FkZHJlc3NhYmxlIjp0cnVlLCJpc0FsbExvd2VyQ2FzZSI6ZmFsc2UsIm1hdGNoUGF0dGVybiI6IiIsImFkZHJlc3NQYXR0ZXJuIjoiIiwiZ3JvdXBOYW1lIjoiU2NlbmVCZ0dyb3VwIiwiaW5jbHVkZUFkZHJlc3NJbkNhdGFsb2ciOmZhbHNlLCJpbmNsdWRlR3VpZEluQ2F0YWxvZyI6ZmFsc2UsImluY2x1ZGVMYWJlbHNJbkNhdGFsb2ciOmZhbHNlLCJpbmNsdWRlSW5CdWlsZCI6dHJ1ZSwiYnVuZGxlTW9kZSI6MX0=
+    m_inputPoints:
+    - id: ed898b1a-707e-498d-9982-bcf74a60ebad
+      label: '-'
+      parentId: afe7d411-f5fd-4fd5-b372-a28d66ae2876
+      isInput: 1
+      buttonRect:
+        serializedVersion: 2
+        x: 0
+        y: 30.5
+        width: 21
+        height: 29
+    m_outputPoints:
+    - id: c4323f1e-1de5-4f6f-abee-8ee855bfffc9
+      label: +
+      parentId: afe7d411-f5fd-4fd5-b372-a28d66ae2876
+      isInput: 0
+      buttonRect:
+        serializedVersion: 2
+        x: 128
+        y: 33.5
+        width: 10
+        height: 23
+  - m_name: "\u6587\u4EF6\u5939\u8FC7\u6EE4\u52A0\u8F7D\u5668"
+    m_id: 0b3f02aa-830b-4da9-b00b-326a2906e161
+    m_x: 180
+    m_y: 360
+    m_nodeInstance:
+      m_className: DH.Asset.Editor.CustomNode.CustomFileLoaderBySearch, DH.AssetsTool,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      m_instanceData: B64|eyJsb2FkUGF0aCI6eyJtX3ZhbHVlcyI6W3sidGFyZ2V0R3JvdXAiOjAsInZhbHVlIjoiR2FtZUFzc2V0cy9GaWdodGluZy9CZ3MifV19LCJsb2FkUGF0aEd1aWQiOnsibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IjVmZjdhOGRjMmFlNzQ0MTQzOWM1YmZhMjcwNWIwMmRhIn1dfSwic2VhcmNoUGF0dGVybnMiOlt7ImZpbHRlclBhdHRlcm4iOiIiLCJleHRlbnNpb24iOiIqLnBuZyIsImlzRm9sZGVyIjpmYWxzZSwiZGVwdGgiOjF9XSwicmVzcG9uZFRvQXNzZXRDaGFuZ2UiOmZhbHNlfQ==
+    m_inputPoints: []
+    m_outputPoints:
+    - id: 4eecd815-8d66-4bc5-bc1e-b66ba44c6cd5
+      label: +
+      parentId: 0b3f02aa-830b-4da9-b00b-326a2906e161
+      isInput: 0
+      buttonRect:
+        serializedVersion: 2
+        x: 139
+        y: 33.5
+        width: 10
+        height: 23
+  - m_name: FightingBgGroup
+    m_id: 30107459-aa3f-4eb3-ad8e-f977972c1721
+    m_x: 624
+    m_y: 348
+    m_nodeInstance:
+      m_className: DH.Asset.Editor.CustomNode.SetAddressableGroup, DH.AssetsTool,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      m_instanceData: B64|eyJpc0FkZHJlc3NhYmxlIjp0cnVlLCJpc0FsbExvd2VyQ2FzZSI6ZmFsc2UsIm1hdGNoUGF0dGVybiI6Ii4qL0dhbWVBc3NldHMvKC4qKS5wbmciLCJhZGRyZXNzUGF0dGVybiI6IiQxIiwiZ3JvdXBOYW1lIjoiRmlnaHRpbmdCZ0dyb3VwIiwiaW5jbHVkZUFkZHJlc3NJbkNhdGFsb2ciOnRydWUsImluY2x1ZGVHdWlkSW5DYXRhbG9nIjpmYWxzZSwiaW5jbHVkZUxhYmVsc0luQ2F0YWxvZyI6ZmFsc2UsImluY2x1ZGVJbkJ1aWxkIjp0cnVlLCJidW5kbGVNb2RlIjoxfQ==
+    m_inputPoints:
+    - id: d43205cc-e574-4c9e-a80d-94e1c729f896
+      label: '-'
+      parentId: 30107459-aa3f-4eb3-ad8e-f977972c1721
+      isInput: 1
+      buttonRect:
+        serializedVersion: 2
+        x: 0
+        y: 30.5
+        width: 21
+        height: 29
+    m_outputPoints:
+    - id: a65e78ca-6141-4ebe-a92c-d5291bbe583f
+      label: +
+      parentId: 30107459-aa3f-4eb3-ad8e-f977972c1721
+      isInput: 0
+      buttonRect:
+        serializedVersion: 2
+        x: 137
+        y: 33.5
+        width: 10
+        height: 23
+  m_allConnections:
+  - m_id: bc3fd73f-02bc-4d9f-96f4-28dcb30a3a09
+    m_fromNodeId: 8fc87631-5e54-443a-b173-880c1e59f120
+    m_fromNodeConnectionPointId: bed63aa6-4d46-4801-8f0c-324e0c1182e0
+    m_toNodeId: 3be87aa1-e0d8-4643-a179-ea30f4315c90
+    m_toNodeConnectionPoiontId: be1882a1-9039-4091-a3c6-42234839a2bf
+    m_label: +
+  - m_id: 6eeb5142-4954-442b-adff-e039fbfe443c
+    m_fromNodeId: 0bbcd71b-f4af-4b11-bc12-c709eae6d7f6
+    m_fromNodeConnectionPointId: 3313df51-0948-49a2-b01f-b96ebe9a8cfa
+    m_toNodeId: afe7d411-f5fd-4fd5-b372-a28d66ae2876
+    m_toNodeConnectionPoiontId: ed898b1a-707e-498d-9982-bcf74a60ebad
+    m_label: +
+  - m_id: e5f4fd69-3fbf-424d-af6e-cf26ee9bf485
+    m_fromNodeId: 0b3f02aa-830b-4da9-b00b-326a2906e161
+    m_fromNodeConnectionPointId: 4eecd815-8d66-4bc5-bc1e-b66ba44c6cd5
+    m_toNodeId: 30107459-aa3f-4eb3-ad8e-f977972c1721
+    m_toNodeConnectionPoiontId: d43205cc-e574-4c9e-a80d-94e1c729f896
+    m_label: +
+  m_lastModified: 133450355842354620
+  m_version: 2
+  m_graphDescription: 
+  m_useAsAssetPostprocessor: 1
+  m_graphExecOrderPriority: 0

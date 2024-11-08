@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eec4882d68a9346b3b5f8ecf1e38a534, type: 3}
+  m_Name: Spines
+  m_EditorClassIdentifier: 
+  m_allNodes:
+  - m_name: "Spine\u8D44\u6E90"
+    m_id: 8ab7fe5e-204e-45f9-a05d-8056837ee947
+    m_x: 288
+    m_y: 252
+    m_nodeInstance:
+      m_className: DH.Asset.Editor.CustomNode.CustomFileLoaderBySearch, DH.AssetsTool,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      m_instanceData: B64|eyJsb2FkUGF0aCI6eyJtX3ZhbHVlcyI6W3sidGFyZ2V0R3JvdXAiOjAsInZhbHVlIjoiR2FtZUFzc2V0cy9TcGluZXMifV19LCJsb2FkUGF0aEd1aWQiOnsibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IjZkMTJhYjU3NDQ1ZDc0MDI5YWQxMzFiOGM4MTIxYWU1In1dfSwic2VhcmNoUGF0dGVybnMiOlt7ImZpbHRlclBhdHRlcm4iOiIiLCJleHRlbnNpb24iOiIqLnBuZyIsImlzRm9sZGVyIjpmYWxzZSwiZGVwdGgiOjF9XSwicmVzcG9uZFRvQXNzZXRDaGFuZ2UiOmZhbHNlfQ==
+    m_inputPoints: []
+    m_outputPoints:
+    - id: 51f2abec-16e3-4efa-bcc6-01dbbcc12274
+      label: +
+      parentId: 8ab7fe5e-204e-45f9-a05d-8056837ee947
+      isInput: 0
+      buttonRect:
+        serializedVersion: 2
+        x: 111
+        y: 33
+        width: 10
+        height: 23
+  - m_name: Overwrite Import Settings
+    m_id: a769031e-f6e9-4e51-8306-026c9607e97e
+    m_x: 612
+    m_y: 240
+    m_nodeInstance:
+      m_className: UnityEngine.AssetGraph.ImportSetting, Unity.AssetGraph.Editor,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      m_instanceData: B64|eyJtX3Nwcml0ZVBhY2tpbmdUYWdOYW1lVGVtcGxhdGUiOnsibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IioifV19LCJtX292ZXJ3cml0ZVBhY2tpbmdUYWciOmZhbHNlLCJtX3VzZUN1c3RvbVNldHRpbmdBc3NldCI6ZmFsc2UsIm1fb3ZlcndyaXRlU3ByaXRlU2hlZXQiOmZhbHNlLCJtX2N1c3RvbVNldHRpbmdBc3NldEd1aWQiOiIiLCJtX3JlZmVyZW5jZUFzc2V0R3VpZCI6ImQxYjZjNjgzYzI0ZTQ0Y2UwYTMxMWJlMzYwYWQ2NDM4IiwibV9jb25maWd1cmF0b3JJbnN0YW5jZSI6eyJtX2NsYXNzTmFtZSI6IlVuaXR5RW5naW5lLkFzc2V0R3JhcGguVGV4dHVyZUltcG9ydFNldHRpbmdzQ29uZmlndXJhdG9yLCBVbml0eS5Bc3NldEdyYXBoLkVkaXRvciwgVmVyc2lvbj0wLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGwiLCJtX3ZhbHVlcyI6W3sidGFyZ2V0R3JvdXAiOjAsInZhbHVlIjoiQjY0fGV5SnRYMjkyWlhKM2NtbDBaVkJoWTJ0cGJtZFVZV2NpT21aaGJITmxMQ0p0WDI5MlpYSjNjbWwwWlZOd2NtbDBaVk5vWldWMElqcG1ZV3h6WlN3aWJWOWpkWE4wYjIxUVlXTnJhVzVuVkdGblZHVnRjR3hoZEdVaU9uc2liVjkyWVd4MVpYTWlPbHRkZlN3aWJWOXBaMjV2Y21WWGNtRndUVzlrWlNJNlptRnNjMlVzSW0xZmFXZHViM0psVUdsMmIzUk5iMlJsSWpwbVlXeHpaU3dpYlY5elpYUk5aWE5vVkhsd1pTSTZabUZzYzJWOSJ9XX19
+    m_inputPoints:
+    - id: e6630495-c678-4210-9e93-555e3a9b3877
+      label: '-'
+      parentId: a769031e-f6e9-4e51-8306-026c9607e97e
+      isInput: 1
+      buttonRect:
+        serializedVersion: 2
+        x: 0
+        y: 30
+        width: 21
+        height: 29
+    m_outputPoints:
+    - id: 717f9186-0eb8-4297-a293-7fe4e93a9e86
+      label: +
+      parentId: a769031e-f6e9-4e51-8306-026c9607e97e
+      isInput: 0
+      buttonRect:
+        serializedVersion: 2
+        x: 185
+        y: 33
+        width: 10
+        height: 23
+  m_allConnections:
+  - m_id: 0b224564-b6b5-4be8-af0f-67515feb05bd
+    m_fromNodeId: 8ab7fe5e-204e-45f9-a05d-8056837ee947
+    m_fromNodeConnectionPointId: 51f2abec-16e3-4efa-bcc6-01dbbcc12274
+    m_toNodeId: a769031e-f6e9-4e51-8306-026c9607e97e
+    m_toNodeConnectionPoiontId: e6630495-c678-4210-9e93-555e3a9b3877
+    m_label: +
+  m_lastModified: 133411520599422590
+  m_version: 2
+  m_graphDescription: 
+  m_useAsAssetPostprocessor: 1
+  m_graphExecOrderPriority: 0
