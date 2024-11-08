@@ -1,0 +1,304 @@
+﻿
+
+<linker>
+
+	<assembly fullname="DH.UDownload">
+		<type fullname="DHFramework.Download.DownloaderComponent" preserve="all"/>
+		<type fullname="DHFramework.Download.DownloadManager" preserve="all"/>
+		<type fullname="DHFramework.Download.ApkDownloaderComponent" preserve="all"/>
+		<type fullname="DHFramework.Download.ResourceManager" preserve="all"/>
+		<type fullname="DHFramework.Download.ResourceComponent" preserve="all"/>
+		<type fullname="DHFramework.Download.UnityWebRequestAgentHelper" preserve="all"/>
+		<type fullname="DHFramework.Download.UnityWebRequestAgentHelper.DownloadHandler" preserve="all"/>
+		<type fullname="DHFramework.Download.BestHttpDownloadAgentHelper" preserve="all"/>
+		<type fullname="DHFramework.Download.HttpClientDownloadAgentHelper" preserve="all"/>
+		<type fullname="DHFramework.Download.HttpClientExtension" preserve="all"/>
+	</assembly>
+
+	<assembly fullname="Assembly-CSharp">
+	    <type fullname="UIFramework.Binding.UnityExtension" preserve="all"/>
+		<type fullname="DH.UIFramework.LuaBehaviour" preserve="all"/>
+		<type fullname="DH.UIFramework.LuaFrameworkModule" preserve="all"/>
+		<type fullname="DH.UIFramework.MenuManagerWrapper" preserve="all"/>
+		<type fullname="DH.UIFramework.PrefabManagerLua" preserve="all"/>
+		<type fullname="DH.UIFramework.SceneManagerLua" preserve="all"/>
+		<type fullname="DHGames.LuaUtil" preserve="all"/>
+		<type fullname="CustomMove" preserve="all"/>
+		<type fullname="SWS.PathManager" preserve="all"/>
+		<type fullname="WorldMapParams" preserve="all"/>
+		<type fullname="terrain_mat" preserve="all"/>
+		<type fullname="LightmapSettingsManager" preserve="all"/>
+		<type fullname="BlockLightmap" preserve="all"/>
+		<type fullname="LuaUnityType" preserve="all"/>
+		<type fullname="LuaBindTable" preserve="all"/>
+		<type fullname="LuaBindTable/SerializeConfig" preserve="all"/>
+		<type fullname="LuaBindTable/SerializeObj" preserve="all"/>
+		<type fullname="BattleAnimancerComponent" preserve="all"/>
+		<type fullname="DH.UIFramework.LoopScrollView" preserve="all"/>
+		<type fullname="DH.UIFramework.GroupLoopScrollView" preserve="all"/>
+		<type fullname="DH.UIFramework.TipsLoopScrollView" preserve="all"/>
+		<type fullname="DH.UIFramework.FlipLoopScrollView" preserve="all"/>
+		<type fullname="DH.UIFramework.BulletChatView" preserve="all"/>
+		<type fullname="DH.UIFramework.ResourceLoader" preserve="all"/>
+		<type fullname="DH.UIFramework.SoringOrderGroup" preserve="all"/>
+		<type fullname="LodLevel" preserve="all"/>
+		<type fullname="MapData" preserve="all"/>
+		<type fullname="PathFinderUtils" preserve="all"/>
+		<type fullname="BattleEffectController" preserve="all"/>
+		<type fullname="BattleCameraTrack" preserve="all"/>
+		<type fullname="FoW.FogOfWarTeam" preserve="all"/>
+		<type fullname="FoW.FogOfWarUnit" preserve="all"/>
+		<type fullname="FoW.FogOfWarClearFog" preserve="all"/>
+		<type fullname="FoW.FogOfWarURP" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="UnityEngine.InputLegacyModule">
+	    <type fullname="UnityEngine.Input" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="UnityEngine.CoreModule">
+	    <type fullname="UnityEngine.SceneManagement.SceneManager" preserve="all"/>
+		<type fullname="UnityEngine.ShaderVariantCollection" preserve="all"/>
+		<type fullname="UnityEngine.Object" preserve="all"/>
+		<type fullname="UnityEngine.Vector2" preserve="all"/>
+		<type fullname="UnityEngine.Vector3" preserve="all"/>
+		<type fullname="UnityEngine.Vector4" preserve="all"/>
+		<type fullname="UnityEngine.Quaternion" preserve="all"/>
+		<type fullname="UnityEngine.Rect" preserve="all"/>
+		<type fullname="UnityEngine.Color" preserve="all"/>
+		<type fullname="UnityEngine.Color32" preserve="all"/>
+		<type fullname="UnityEngine.Ray" preserve="all"/>
+		<type fullname="UnityEngine.Bounds" preserve="all"/>
+		<type fullname="UnityEngine.Ray2D" preserve="all"/>
+		<type fullname="UnityEngine.Time" preserve="all"/>
+		<type fullname="UnityEngine.GameObject" preserve="all"/>
+		<type fullname="UnityEngine.Component" preserve="all"/>
+		<type fullname="UnityEngine.Behaviour" preserve="all"/>
+		<type fullname="UnityEngine.Transform" preserve="all"/>
+		<type fullname="UnityEngine.Resources" preserve="all"/>
+		<type fullname="UnityEngine.TextAsset" preserve="all"/>
+		<type fullname="UnityEngine.Keyframe" preserve="all"/>
+		<type fullname="UnityEngine.AnimationCurve" preserve="all"/>
+		<type fullname="UnityEngine.MonoBehaviour" preserve="all"/>
+		<type fullname="UnityEngine.SkinnedMeshRenderer" preserve="all"/>
+		<type fullname="UnityEngine.Renderer" preserve="all"/>
+		<type fullname="UnityEngine.Light" preserve="all"/>
+		<type fullname="UnityEngine.Mathf" preserve="all"/>
+		<type fullname="UnityEngine.RectTransform" preserve="all"/>
+		<type fullname="UnityEngine.Application" preserve="all"/>
+		<type fullname="UnityEngine.PlayerPrefs" preserve="all"/>
+		<type fullname="UnityEngine.RenderTexture" preserve="all"/>
+		<type fullname="UnityEngine.RenderTextureFormat" preserve="all"/>
+		<type fullname="UnityEngine.LogType" preserve="all"/>
+		<type fullname="UnityEngine.AsyncOperation" preserve="all"/>
+		<type fullname="UnityEngine.AttributeHelperEngine" preserve="all"/>
+		<type fullname="UnityEngine.BootConfigData" preserve="all"/>
+		<type fullname="UnityEngine.Camera" preserve="all"/>
+		<type fullname="UnityEngine.ComputeShader" preserve="all"/>
+		<type fullname="UnityEngine.ClassLibraryInitializer" preserve="all"/>
+		<type fullname="UnityEngine.ContextMenu" preserve="all"/>
+		<type fullname="UnityEngine.Coroutine" preserve="all"/>
+		<type fullname="UnityEngine.CullingGroup" preserve="all"/>
+		<type fullname="UnityEngine.CustomRenderTextureManager" preserve="all"/>
+		<type fullname="UnityEngine.Debug" preserve="all"/>
+		<type fullname="Unity.Collections.DeallocateOnJobCompletionAUnityEngine.Componentttribute" preserve="all"/>
+		<type fullname="Unity.Collections.LowLevel.Unsafe.NativeContainerAttribute" preserve="all"/>
+		<type fullname="Unity.Collections.LowLevel.Unsafe.NativeContainerIsAtomicWriteOnlyAttribute" preserve="all"/>
+		<type fullname="Unity.Collections.LowLevel.Unsafe.NativeContainerIsReadOnlyAttribute" preserve="all"/>
+		<type fullname="Unity.Collections.LowLevel.Unsafe.NativeContainerNeedsThreadIndexAttribute" preserve="all"/>
+		<type fullname="Unity.Collections.LowLevel.Unsafe.NativeContainerSupportsDeallocateOnJobCompletionAttribute" preserve="all"/>
+		<type fullname="Unity.Collections.LowLevel.Unsafe.NativeContainerSupportsDeferredConvertListToArray" preserve="all"/>
+		<type fullname="Unity.Collections.LowLevel.Unsafe.NativeContainerSupportsMinMaxWriteRestrictionAttribute" preserve="all"/>
+		<type fullname="Unity.Collections.LowLevel.Unsafe.NativeDisableContainerSafetyRestrictionAttribute" preserve="all"/>
+		<type fullname="Unity.Collections.LowLevel.Unsafe.NativeDisableUnsafePtrRestrictionAttribute" preserve="all"/>
+		<type fullname="Unity.Collections.LowLevel.Unsafe.NativeSetClassTypeToNullOnScheduleAttribute" preserve="all"/>
+		<type fullname="Unity.Collections.LowLevel.Unsafe.NativeSetThreadIndexAttribute" preserve="all"/>
+		<type fullname="Unity.Collections.NativeDisableParallelForRestrictionAttribute" preserve="all"/>
+		<type fullname="Unity.Collections.NativeFixedLengthAttribute" preserve="all"/>
+		<type fullname="Unity.Collections.NativeMatchesParallelForLengthAttribute" preserve="all"/>
+		<type fullname="Unity.Collections.ReadOnlyAttribute" preserve="all"/>
+		<type fullname="Unity.Collections.WriteOnlyAttribute" preserve="all"/>
+		<type fullname="Unity.IO.LowLevel.Unsafe.AsyncReadManagerMetricsFilters" preserve="all"/>
+		<type fullname="Unity.IO.LowLevel.Unsafe.AsyncReadManagerRequestMetric" preserve="all"/>
+		<type fullname="Unity.IO.LowLevel.Unsafe.FileState" preserve="all"/>
+		<type fullname="Unity.IO.LowLevel.Unsafe.Priority" preserve="all"/>
+		<type fullname="Unity.Jobs.LowLevel.Unsafe.JobsUtility" preserve="all"/>
+		<type fullname="UnityEngine._Scripting.APIUpdating.APIUpdaterRuntimeHelpers" preserve="all"/>
+	</assembly>
+
+	<assembly fullname="Animancer">
+	    <type fullname="Animancer.AnimancerEvent" preserve="all"/>
+		<type fullname="Animancer.NamedAnimancerComponent" preserve="all"/>
+		<type fullname="Animancer.AnimancerEvent/Sequence" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="DOTween">
+	    <type fullname="DG.Tweening.AutoPlay" preserve="all"/>
+		<type fullname="DG.Tweening.AxisConstraint" preserve="all"/>
+		<type fullname="DG.Tweening.Ease" preserve="all"/>
+		<type fullname="DG.Tweening.LogBehaviour" preserve="all"/>
+		<type fullname="DG.Tweening.LoopType" preserve="all"/>
+		<type fullname="DG.Tweening.PathMode" preserve="all"/>
+		<type fullname="DG.Tweening.PathType" preserve="all"/>
+		<type fullname="DG.Tweening.RotateMode" preserve="all"/>
+		<type fullname="DG.Tweening.ScrambleMode" preserve="all"/>
+		<type fullname="DG.Tweening.TweenType" preserve="all"/>
+		<type fullname="DG.Tweening.UpdateType" preserve="all"/>
+		<type fullname="DG.Tweening.DOTween" preserve="all"/>
+		<type fullname="DG.Tweening.DOVirtual" preserve="all"/>
+		<type fullname="DG.Tweening.EaseFactory" preserve="all"/>
+		<type fullname="DG.Tweening.Tweener" preserve="all"/>
+		<type fullname="DG.Tweening.Tween" preserve="all"/>
+		<type fullname="DG.Tweening.Sequence" preserve="all"/>
+		<type fullname="DG.Tweening.TweenParams" preserve="all"/>
+		<type fullname="DG.Tweening.Core.ABSSequentiable" preserve="all"/>
+		<type fullname="DG.Tweening.Core.TweenerCore`3[UnityEngine.Vector3,UnityEngine.Vector3,DG.Tweening.Plugins.Options.VectorOptions]" preserve="all"/>
+		<type fullname="DG.Tweening.TweenExtensions" preserve="all"/>
+		<type fullname="DG.Tweening.TweenSettingsExtensions" preserve="all"/>
+		<type fullname="DG.Tweening.ShortcutExtensions" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="Assembly-CSharp-firstpass">
+	    <type fullname="DG.Tweening.DOTweenModuleUI" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="Unity.TextMeshPro">
+	    <type fullname="TMPro.TMP_Dropdown" preserve="all"/>
+		<type fullname="TMPro.TMP_Dropdown/OptionData" preserve="all"/>
+		<type fullname="TMPro.TMP_Dropdown/DropdownEvent" preserve="all"/>
+		<type fullname="TMPro.TMP_Dropdown/OptionDataList" preserve="all"/>
+		<type fullname="TMPro.TMP_InputField" preserve="all"/>
+		<type fullname="TMPro.TMP_Text" preserve="all"/>
+		<type fullname="TMPro.VertexGradient" preserve="all"/>
+		<type fullname="TMPro.TMP_InputField/SubmitEvent" preserve="all"/>
+		<type fullname="TMPro.TMP_InputField/OnChangeEvent" preserve="all"/>
+		<type fullname="TMPro.TMP_InputField/SelectionEvent" preserve="all"/>
+		<type fullname="TMPro.TMP_InputField/TextSelectionEvent" preserve="all"/>
+		<type fullname="TMPro.TMP_InputField/TouchScreenKeyboardEvent" preserve="all"/>
+		<type fullname="TMPro.TMP_FontAsset" preserve="all"/>
+		<type fullname="DH.Localize.TMP_Localization" preserve="all"/>
+		<type fullname="TMPro.TextMeshProUGUI" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="Startup">
+	    <type fullname="NetworkManager" preserve="all"/>
+		<type fullname="LoginListener" preserve="all"/>
+		<type fullname="DH.Launch.StartupEntry" preserve="all"/>
+		<type fullname="DH.HotService.HotUpdateSetting" preserve="all"/>
+		<type fullname="DH.HotService.HotUpdateManager" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="mscorlib">
+	    <type fullname="System.Type" preserve="all"/>
+		<type fullname="System.Object" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="UnityEngine.AnimationModule">
+	    <type fullname="UnityEngine.AnimationClip" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="UnityEngine.ParticleSystemModule">
+	    <type fullname="UnityEngine.ParticleSystem" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="UnityEngine.UI">
+	    <type fullname="UnityEngine.UI.ScrollRect" preserve="all"/>
+		<type fullname="UnityEngine.UI.Dropdown" preserve="all"/>
+		<type fullname="UnityEngine.UI.Dropdown/OptionData" preserve="all"/>
+		<type fullname="UnityEngine.UI.InputField" preserve="all"/>
+		<type fullname="UnityEngine.UI.RawImage" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="Unity.Addressables">
+	    <type fullname="UnityEngine.AddressableAssets.Addressables" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="DH.NativeCore">
+	    <type fullname="DH.NativeCore.Platform.DeviceUtility" preserve="all"/>
+		<type fullname="DH.NativeCore.ProductCollection" preserve="all"/>
+		<type fullname="DH.NativeCore.IULoginListener" preserve="all"/>
+		<type fullname="DH.Usdk" preserve="all"/>
+		<type fullname="DH.NativeCore.ULogin" preserve="all"/>
+		<type fullname="DH.NativeCore.UPay" preserve="all"/>
+		<type fullname="DH.NativeCore.IPayListener" preserve="all"/>
+		<type fullname="DH.NativeCore.IPayController" preserve="all"/>
+		<type fullname="IPayAntiAddictionListener" preserve="all"/>
+		<type fullname="DH.NativeCore.ConfigurationBuilder" preserve="all"/>
+		<type fullname="DH.NativeCore.ConfigurationBuilder/Metadata" preserve="all"/>
+		<type fullname="DH.NativeCore.Product" preserve="all"/>
+		<type fullname="DH.NativeCore.ProductType" preserve="all"/>
+		<type fullname="DH.Usdk/Config" preserve="all"/>
+		<type fullname="DH.Usdk/Login" preserve="all"/>
+		<type fullname="DH.Usdk/LoginCallback" preserve="all"/>
+		<type fullname="DH.Usdk/Social" preserve="all"/>
+		<type fullname="DH.Usdk/SocialCallback" preserve="all"/>
+		<type fullname="DH.Usdk/Customer" preserve="all"/>
+		<type fullname="DH.Usdk/CustomerCallback" preserve="all"/>
+		<type fullname="DH.Usdk/Chat" preserve="all"/>
+		<type fullname="DH.Usdk/ChatCallback" preserve="all"/>
+		<type fullname="DH.Usdk/Utility" preserve="all"/>
+		<type fullname="DH.Usdk/ThirdEvent" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="DH.Foundation">
+	    <type fullname="DHFramework.DHUtility" preserve="all"/>
+		<type fullname="DH.NativeCore.MonoSingleton.MonoSingleton`1[DHGames.AppMain]" preserve="all"/>
+		<type fullname="DH.NativeCore.MonoSingleton.MonoSingleton`1[DHFramework.GameFramework]" preserve="all"/>
+		<type fullname="DHFramework.HTTPMethods" preserve="all"/>
+		<type fullname="DHFramework.DHUtility/Http" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="UnityEngine.UIModule">
+	    <type fullname="UnityEngine.RectTransformUtility" preserve="all"/>
+	</assembly>
+
+	<assembly fullname="DH.UNet">
+		<type fullname="DH.UNet.UNetErrorCode" preserve="all"/>
+		<type fullname="DH.Log.TableEntity" preserve="all"/>
+		<type fullname="DH.Log.ULogClient" preserve="all"/>
+		<type fullname="DH.Log.BaseModel" preserve="all"/>
+		<type fullname="DH.Log.BIDataEntity" preserve="all"/>
+		<type fullname="DH.UNet.UNetClient" preserve="all"/>
+		<type fullname="DH.UNet.Utility.UNetUtility.ReqVsn" preserve="all"/>
+	</assembly>
+
+	<assembly fullname="UnityEngine.UnityWebRequestModule">
+		<type fullname="UnityEngine.Networking.UnityWebRequest" preserve="all"/>
+	</assembly>
+
+	<assembly fullname="DH.AssetsTools">
+	    <type fullname="DH.Asset.AssetsManager" preserve="all"/>
+	</assembly>
+
+	<assembly fullname="AstarPathfindingProject">
+	    <type fullname="AstarPath" preserve="all"/>
+		<type fullname="Pathfinding.AstarData" preserve="all"/>
+		<type fullname="Pathfinding.Seeker" preserve="all"/>
+		<type fullname="Pathfinding.AIPath" preserve="all"/>
+		<type fullname="Pathfinding.Path" preserve="all"/>
+	</assembly>
+
+	<assembly fullname="Cinemachine">
+	    <type fullname="Cinemachine.CinemachineBrain" preserve="all"/>
+		<type fullname="Cinemachine.CinemachineCore" preserve="all"/>
+		<type fullname="Cinemachine.CinemachineVirtualCamera" preserve="all"/>
+		<type fullname="Cinemachine.CinemachineSmoothPath" preserve="all"/>
+		<type fullname="Cinemachine.CinemachineTargetGroup" preserve="all"/>
+		<type fullname="Cinemachine.CinemachineBlendDefinition" preserve="all"/>
+	</assembly>
+
+</linker>
