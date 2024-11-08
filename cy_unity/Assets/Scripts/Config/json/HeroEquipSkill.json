@@ -1,0 +1,952 @@
+{"data": [
+	{
+		"id": 1,
+		"dec": "攻击+{0}%，物理武器攻击时有{1}%概率给敌人添加1层{buff1}效果，触发概率可叠加",
+		"value": [
+			10,
+			5
+		],
+		"buffId": [
+			1
+		],
+		"quaId": 2,
+		"heroEquipId": 1,
+		"skillId": 910001
+	},
+	{
+		"id": 2,
+		"dec": "背包格子刷出概率+{0}%",
+		"severMade": 1,
+		"value": [
+			10
+		],
+		"quaId": 3,
+		"heroEquipId": 1
+	},
+	{
+		"id": 3,
+		"dec": "初始背包格子+{0},处于背包的物理武器攻击附带1层{buff1}效果",
+		"severMade": 1,
+		"value": [
+			3,
+			1
+		],
+		"buffId": [
+			1
+		],
+		"quaId": 4,
+		"heroEquipId": 1,
+		"skillId": 910003
+	},
+	{
+		"id": 4,
+		"dec": "攻击+ {0}%",
+		"value": [
+			10
+		],
+		"quaId": 5,
+		"heroEquipId": 1,
+		"skillId": 910004
+	},
+	{
+		"id": 5,
+		"dec": "{buff1}效果可叠加，最高可叠加{0}层",
+		"value": [
+			5
+		],
+		"buffId": [
+			1
+		],
+		"quaId": 6,
+		"heroEquipId": 1,
+		"skillId": 910005
+	},
+	{
+		"id": 6,
+		"dec": "物理武器合成到{0}阶后，攻击时有2%概率给敌人添加1层{buff1}效果，触发概率可叠加",
+		"value": [
+			4,
+			2
+		],
+		"buffId": [
+			1
+		],
+		"quaId": 2,
+		"heroEquipId": 4,
+		"skillId": 910006
+	},
+	{
+		"id": 7,
+		"dec": "生命+{0}%",
+		"value": [
+			10
+		],
+		"quaId": 3,
+		"heroEquipId": 4,
+		"skillId": 910007
+	},
+	{
+		"id": 8,
+		"dec": "所有恢复效果+{0}%",
+		"value": [
+			20
+		],
+		"quaId": 4,
+		"heroEquipId": 4,
+		"skillId": 910008
+	},
+	{
+		"id": 9,
+		"dec": "每击败{0}只怪物，恢复{1}%生命",
+		"value": [
+			20,
+			5
+		],
+		"quaId": 5,
+		"heroEquipId": 4,
+		"skillId": 910009
+	},
+	{
+		"id": 10,
+		"dec": "生命+{0}%",
+		"value": [
+			15
+		],
+		"quaId": 6,
+		"heroEquipId": 4,
+		"skillId": 910010
+	},
+	{
+		"id": 11,
+		"dec": "物理武器攻击时有{0}%概率给敌人添加1层{buff1}效果，触发概率可叠加",
+		"value": [
+			1
+		],
+		"buffId": [
+			1
+		],
+		"quaId": 2,
+		"heroEquipId": 2,
+		"skillId": 910011
+	},
+	{
+		"id": 12,
+		"dec": "攻击+{0}%",
+		"value": [
+			10
+		],
+		"quaId": 3,
+		"heroEquipId": 2,
+		"skillId": 910012
+	},
+	{
+		"id": 13,
+		"dec": "对距离小于{0}米的怪物造成物理伤害时，有50%概率附带1层{buff1}效果",
+		"value": [
+			5,
+			50
+		],
+		"buffId": [
+			1
+		],
+		"quaId": 4,
+		"heroEquipId": 2,
+		"skillId": 910013
+	},
+	{
+		"id": 14,
+		"dec": "每击败{0}只怪物，{buff1}效果持续时长+{1}秒，最多增加{2}秒",
+		"value": [
+			20,
+			0.2,
+			1
+		],
+		"buffId": [
+			1
+		],
+		"quaId": 5,
+		"heroEquipId": 2,
+		"skillId": 910014
+	},
+	{
+		"id": 15,
+		"dec": "攻击+{0}%",
+		"value": [
+			15
+		],
+		"quaId": 6,
+		"heroEquipId": 2,
+		"skillId": 910015
+	},
+	{
+		"id": 16,
+		"dec": "物理武器受到其他武器加成时攻击有{0}%概率给敌人添加1层{buff1}效果，触发概率可叠加",
+		"value": [
+			2
+		],
+		"buffId": [
+			1
+		],
+		"quaId": 2,
+		"heroEquipId": 5,
+		"skillId": 910016
+	},
+	{
+		"id": 17,
+		"dec": "生命+{0}%",
+		"value": [
+			10
+		],
+		"quaId": 3,
+		"heroEquipId": 5,
+		"skillId": 910017
+	},
+	{
+		"id": 18,
+		"dec": "受到伤害时，有{0}%的概率使伤害来源目标获得1层{buff1}",
+		"value": [
+			50
+		],
+		"buffId": [
+			1
+		],
+		"quaId": 4,
+		"heroEquipId": 5,
+		"skillId": 910018
+	},
+	{
+		"id": 19,
+		"dec": "有{buff1}效果的怪物造成的伤害-{0}%",
+		"value": [
+			10
+		],
+		"buffId": [
+			1
+		],
+		"quaId": 5,
+		"heroEquipId": 5,
+		"skillId": 910019
+	},
+	{
+		"id": 20,
+		"dec": "生命+{0}%",
+		"value": [
+			15
+		],
+		"quaId": 6,
+		"heroEquipId": 5,
+		"skillId": 910020
+	},
+	{
+		"id": 21,
+		"dec": "背包中每有1个物理武器，伤害+{0}%，上限{1}%",
+		"value": [
+			1,
+			10
+		],
+		"quaId": 2,
+		"heroEquipId": 3,
+		"skillId": 910021
+	},
+	{
+		"id": 22,
+		"dec": "攻击+{0}%",
+		"value": [
+			10
+		],
+		"quaId": 3,
+		"heroEquipId": 3,
+		"skillId": 910022
+	},
+	{
+		"id": 23,
+		"dec": "有{0}%的几率直接秒杀非首领类型的怪物",
+		"value": [
+			1
+		],
+		"quaId": 4,
+		"heroEquipId": 3,
+		"skillId": 910023
+	},
+	{
+		"id": 24,
+		"dec": "每击败{0}只怪物，秒杀概率+{1}%，最多增加至{2}%",
+		"value": [
+			20,
+			0.5,
+			2.5
+		],
+		"quaId": 5,
+		"heroEquipId": 3,
+		"skillId": 910024
+	},
+	{
+		"id": 25,
+		"dec": "攻击+{0}%",
+		"value": [
+			15
+		],
+		"quaId": 6,
+		"heroEquipId": 3,
+		"skillId": 910025
+	},
+	{
+		"id": 26,
+		"dec": "物理武器合成时，银币+{0}",
+		"severMade": 1,
+		"value": [
+			1
+		],
+		"quaId": 2,
+		"heroEquipId": 6,
+		"skillId": 910026
+	},
+	{
+		"id": 27,
+		"dec": "生命+ {0}%",
+		"value": [
+			10
+		],
+		"quaId": 3,
+		"heroEquipId": 6,
+		"skillId": 910027
+	},
+	{
+		"id": 28,
+		"dec": "每击败{0}只怪物，获得1次免疫伤害效果",
+		"value": [
+			40
+		],
+		"quaId": 4,
+		"heroEquipId": 6,
+		"skillId": 910028
+	},
+	{
+		"id": 29,
+		"dec": "触发免疫伤害效果后，获得最大生命{0}%的护盾",
+		"value": [
+			5
+		],
+		"quaId": 5,
+		"heroEquipId": 6,
+		"skillId": 910029
+	},
+	{
+		"id": 30,
+		"dec": "生命+ {0}%",
+		"value": [
+			15
+		],
+		"quaId": 6,
+		"heroEquipId": 6,
+		"skillId": 910030
+	},
+	{
+		"id": 31,
+		"dec": "攻击+{0}%，魔法武器攻击时有{1}%概率给敌人添加1层{buff1}效果，效果可叠加",
+		"value": [
+			10,
+			5
+		],
+		"buffId": [
+			2
+		],
+		"quaId": 2,
+		"heroEquipId": 7,
+		"skillId": 910031
+	},
+	{
+		"id": 32,
+		"dec": "背包格子刷出概率+{0}%",
+		"severMade": 1,
+		"value": [
+			10
+		],
+		"quaId": 3,
+		"heroEquipId": 7
+	},
+	{
+		"id": 33,
+		"dec": "初始背包格子+{0}，处于背包的魔法武器攻击附带1层{buff1}效果",
+		"severMade": 1,
+		"value": [
+			3
+		],
+		"buffId": [
+			2
+		],
+		"quaId": 4,
+		"heroEquipId": 7,
+		"skillId": 910033
+	},
+	{
+		"id": 34,
+		"dec": "攻击+{0}%",
+		"value": [
+			10
+		],
+		"quaId": 5,
+		"heroEquipId": 7,
+		"skillId": 910034
+	},
+	{
+		"id": 35,
+		"dec": "{buff1}效果可叠加，最高可叠加{0}层",
+		"value": [
+			10
+		],
+		"buffId": [
+			2
+		],
+		"quaId": 6,
+		"heroEquipId": 7,
+		"skillId": 910035
+	},
+	{
+		"id": 36,
+		"dec": "魔法武器合成达到{0}阶后，攻击时有{1}%概率给敌人添加1层{buff1}效果，效果可叠加",
+		"value": [
+			4,
+			2
+		],
+		"buffId": [
+			2
+		],
+		"quaId": 2,
+		"heroEquipId": 10,
+		"skillId": 910036
+	},
+	{
+		"id": 37,
+		"dec": "生命+{0}%",
+		"value": [
+			10
+		],
+		"quaId": 3,
+		"heroEquipId": 10,
+		"skillId": 910037
+	},
+	{
+		"id": 38,
+		"dec": "随机在地图上生成{0}个剧毒圈，对经过的怪物造成伤害并附带1层{buff1}效果",
+		"value": [
+			2
+		],
+		"buffId": [
+			2
+		],
+		"quaId": 4,
+		"heroEquipId": 10,
+		"skillId": 910038
+	},
+	{
+		"id": 39,
+		"dec": "生成的剧毒圈数量+{0},所有剧毒圈范围增大",
+		"value": [
+			1
+		],
+		"quaId": 5,
+		"heroEquipId": 10,
+		"skillId": 910039
+	},
+	{
+		"id": 40,
+		"dec": "生命+{0}%",
+		"value": [
+			15
+		],
+		"quaId": 6,
+		"heroEquipId": 10,
+		"skillId": 910040
+	},
+	{
+		"id": 41,
+		"dec": "魔法武器攻击时有{0}%概率给敌人添加1层{buff1}效果，效果可叠加",
+		"value": [
+			1
+		],
+		"buffId": [
+			2
+		],
+		"quaId": 2,
+		"heroEquipId": 8,
+		"skillId": 910041
+	},
+	{
+		"id": 42,
+		"dec": "攻击+{0}%",
+		"value": [
+			10
+		],
+		"quaId": 3,
+		"heroEquipId": 8,
+		"skillId": 910042
+	},
+	{
+		"id": 43,
+		"dec": "受到伤害后释放一道向前推进的冲击波， 每波战斗可触发{0}次",
+		"value": [
+			1
+		],
+		"quaId": 4,
+		"heroEquipId": 8,
+		"skillId": 910043
+	},
+	{
+		"id": 44,
+		"dec": "冲击波附带强力击退效果",
+		"quaId": 5,
+		"heroEquipId": 8,
+		"skillId": 910044
+	},
+	{
+		"id": 45,
+		"dec": "攻击+ {0}%",
+		"value": [
+			15
+		],
+		"quaId": 6,
+		"heroEquipId": 8,
+		"skillId": 910045
+	},
+	{
+		"id": 46,
+		"dec": "魔法武器受到其他武器加成时攻击有{0}%概率给敌人添加1层{buff1}效果，效果可叠加",
+		"value": [
+			2
+		],
+		"buffId": [
+			2
+		],
+		"quaId": 2,
+		"heroEquipId": 11,
+		"skillId": 910046
+	},
+	{
+		"id": 47,
+		"dec": "生命+{0}%",
+		"value": [
+			10
+		],
+		"quaId": 3,
+		"heroEquipId": 11,
+		"skillId": 910047
+	},
+	{
+		"id": 48,
+		"dec": "恢复生命时，有{0}%概率释放一道冲击波",
+		"value": [
+			5
+		],
+		"quaId": 4,
+		"heroEquipId": 11,
+		"skillId": 910048
+	},
+	{
+		"id": 49,
+		"dec": "受到持有{buff1}效果怪物的伤害时，有{0}%概率恢复受到伤害{1}%的生命",
+		"value": [
+			25,
+			30
+		],
+		"buffId": [
+			2
+		],
+		"quaId": 5,
+		"heroEquipId": 11,
+		"skillId": 910049
+	},
+	{
+		"id": 50,
+		"dec": "攻击+{0}%",
+		"value": [
+			15
+		],
+		"quaId": 6,
+		"heroEquipId": 11,
+		"skillId": 910050
+	},
+	{
+		"id": 51,
+		"dec": "背包中每有1个魔法武器，伤害+{0}%，上限{1}%",
+		"value": [
+			1,
+			10
+		],
+		"quaId": 2,
+		"heroEquipId": 9,
+		"skillId": 910051
+	},
+	{
+		"id": 52,
+		"dec": "攻击+{0}%",
+		"value": [
+			10
+		],
+		"quaId": 3,
+		"heroEquipId": 9,
+		"skillId": 910052
+	},
+	{
+		"id": 53,
+		"dec": "击败怪物有概率留下剧毒圈",
+		"quaId": 4,
+		"heroEquipId": 9,
+		"skillId": 910053
+	},
+	{
+		"id": 54,
+		"dec": "所有剧毒圈持续时间增加",
+		"quaId": 5,
+		"heroEquipId": 9,
+		"skillId": 910054
+	},
+	{
+		"id": 55,
+		"dec": "攻击+{0}%",
+		"value": [
+			15
+		],
+		"quaId": 6,
+		"heroEquipId": 9,
+		"skillId": 910055
+	},
+	{
+		"id": 56,
+		"dec": "魔法武器合成时，银币+{0}",
+		"severMade": 1,
+		"value": [
+			1
+		],
+		"quaId": 2,
+		"heroEquipId": 12,
+		"skillId": 910056
+	},
+	{
+		"id": 57,
+		"dec": "生命+{0}%",
+		"value": [
+			10
+		],
+		"quaId": 3,
+		"heroEquipId": 12,
+		"skillId": 910057
+	},
+	{
+		"id": 58,
+		"dec": "对怪物造成伤害时有概率使怪物获得剧毒路径",
+		"quaId": 4,
+		"heroEquipId": 12,
+		"skillId": 910058
+	},
+	{
+		"id": 59,
+		"dec": "剧毒路径持续时间增长，持续伤害增加",
+		"quaId": 5,
+		"heroEquipId": 12,
+		"skillId": 910059
+	},
+	{
+		"id": 60,
+		"dec": "生命+{0}%",
+		"value": [
+			15
+		],
+		"quaId": 6,
+		"heroEquipId": 12,
+		"skillId": 910060
+	},
+	{
+		"id": 61,
+		"dec": "攻击+{0}%",
+		"value": [
+			15
+		],
+		"quaId": 2,
+		"heroEquipId": 13,
+		"skillId": 910061
+	},
+	{
+		"id": 62,
+		"dec": "背包格子刷出概率+{0}%，初始背包格子数+{1}",
+		"severMade": 1,
+		"value": [
+			10,
+			3
+		],
+		"quaId": 3,
+		"heroEquipId": 13
+	},
+	{
+		"id": 63,
+		"dec": "处于背包的武器攻击敌人时有{0}%概率携带连锁闪电，对攻击目标及周围的{1}名敌人造成电击伤害。",
+		"value": [
+			15,
+			3
+		],
+		"quaId": 4,
+		"heroEquipId": 13,
+		"skillId": 910063
+	},
+	{
+		"id": 64,
+		"dec": "攻击+{0}%",
+		"value": [
+			25
+		],
+		"quaId": 5,
+		"heroEquipId": 13,
+		"skillId": 910064
+	},
+	{
+		"id": 65,
+		"dec": "连锁闪电会麻痹敌人，持续{0}秒。",
+		"value": [
+			3
+		],
+		"quaId": 6,
+		"heroEquipId": 13,
+		"skillId": 910065
+	},
+	{
+		"id": 66,
+		"dec": "可以满血复活1次",
+		"severMade": 1,
+		"quaId": 2,
+		"heroEquipId": 16,
+		"skillId": 910066
+	},
+	{
+		"id": 67,
+		"dec": "生命+{0}%",
+		"value": [
+			15
+		],
+		"quaId": 3,
+		"heroEquipId": 16,
+		"skillId": 910067
+	},
+	{
+		"id": 68,
+		"dec": "复活后攻击+{0}%，伤害减免+{1}%",
+		"value": [
+			10,
+			10
+		],
+		"quaId": 4,
+		"heroEquipId": 16,
+		"skillId": 910068
+	},
+	{
+		"id": 69,
+		"dec": "生命+{0}%",
+		"value": [
+			25
+		],
+		"quaId": 5,
+		"heroEquipId": 16,
+		"skillId": 910069
+	},
+	{
+		"id": 70,
+		"dec": "选择新技能时，有{0}%的概率获得所有出现的技能。",
+		"severMade": 1,
+		"value": [
+			10
+		],
+		"quaId": 6,
+		"heroEquipId": 16
+	},
+	{
+		"id": 71,
+		"dec": "目标血量越高造成伤害越高",
+		"quaId": 2,
+		"heroEquipId": 14,
+		"skillId": 910071
+	},
+	{
+		"id": 72,
+		"dec": "攻击+{0}%",
+		"value": [
+			15
+		],
+		"quaId": 3,
+		"heroEquipId": 14,
+		"skillId": 910072
+	},
+	{
+		"id": 73,
+		"dec": "对满血敌人额外造成10%的伤害",
+		"quaId": 4,
+		"heroEquipId": 14,
+		"skillId": 910073
+	},
+	{
+		"id": 74,
+		"dec": "攻击+{0}%",
+		"value": [
+			25
+		],
+		"quaId": 5,
+		"heroEquipId": 14,
+		"skillId": 910074
+	},
+	{
+		"id": 75,
+		"dec": "相邻的同名武器攻击+{0}%",
+		"value": [
+			15
+		],
+		"quaId": 6,
+		"heroEquipId": 14,
+		"skillId": 910075
+	},
+	{
+		"id": 76,
+		"dec": "回合开始获得最大生命值{0}%的护盾",
+		"value": [
+			2
+		],
+		"quaId": 2,
+		"heroEquipId": 17,
+		"skillId": 910076
+	},
+	{
+		"id": 77,
+		"dec": "生命+{0}%",
+		"value": [
+			15
+		],
+		"quaId": 3,
+		"heroEquipId": 17,
+		"skillId": 910077
+	},
+	{
+		"id": 78,
+		"dec": "每回合护盾首次为{0}时，释放一次盾击，对距离{1}米范围内的怪物造成1次伤害",
+		"value": [
+			0,
+			2
+		],
+		"quaId": 4,
+		"heroEquipId": 17,
+		"skillId": 910078
+	},
+	{
+		"id": 79,
+		"dec": "生命+{0}%",
+		"value": [
+			25
+		],
+		"quaId": 5,
+		"heroEquipId": 17,
+		"skillId": 910079
+	},
+	{
+		"id": 80,
+		"dec": "盾击附带强力击退效果",
+		"quaId": 6,
+		"heroEquipId": 17,
+		"skillId": 910080
+	},
+	{
+		"id": 81,
+		"dec": "自身血量高于{0}%时攻击增加{1}%",
+		"value": [
+			50,
+			20
+		],
+		"quaId": 2,
+		"heroEquipId": 15,
+		"skillId": 910081
+	},
+	{
+		"id": 82,
+		"dec": "攻击+{0}%",
+		"value": [
+			15
+		],
+		"quaId": 3,
+		"heroEquipId": 15,
+		"skillId": 910082
+	},
+	{
+		"id": 83,
+		"dec": "攻击有{0}%概率附带当前护盾值{1}%的伤害",
+		"value": [
+			5,
+			10
+		],
+		"quaId": 4,
+		"heroEquipId": 15,
+		"skillId": 910083
+	},
+	{
+		"id": 84,
+		"dec": "攻击+{0}%",
+		"value": [
+			25
+		],
+		"quaId": 5,
+		"heroEquipId": 15,
+		"skillId": 910084
+	},
+	{
+		"id": 85,
+		"dec": "触发概率翻倍",
+		"quaId": 6,
+		"heroEquipId": 15,
+		"skillId": 910085
+	},
+	{
+		"id": 86,
+		"dec": "闪避+{0}%",
+		"value": [
+			10
+		],
+		"quaId": 2,
+		"heroEquipId": 18,
+		"skillId": 910086
+	},
+	{
+		"id": 87,
+		"dec": "生命+{0}%",
+		"value": [
+			15
+		],
+		"quaId": 3,
+		"heroEquipId": 18,
+		"skillId": 910087
+	},
+	{
+		"id": 88,
+		"dec": "闪避时立即获得最大生命{0}%的护盾",
+		"value": [
+			2
+		],
+		"quaId": 4,
+		"heroEquipId": 18,
+		"skillId": 910088
+	},
+	{
+		"id": 89,
+		"dec": "生命+{0}%",
+		"value": [
+			25
+		],
+		"quaId": 5,
+		"heroEquipId": 18,
+		"skillId": 910089
+	},
+	{
+		"id": 90,
+		"dec": "闪避时攻击力增加{0}%（上限{1}%）",
+		"value": [
+			2,
+			20
+		],
+		"quaId": 6,
+		"heroEquipId": 18,
+		"skillId": 910090
+	}
+]}

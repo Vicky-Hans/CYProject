@@ -1,0 +1,165 @@
+{"data": [
+	{
+		"id": 101,
+		"type": 3,
+		"isShowPerson": 1,
+		"isShowMask": 0,
+		"isShowDesc": 1,
+		"descPosition": 1,
+		"nextId": 102,
+		"triggerStr": {
+			"show": "gameUi",
+			"chapterId": "1",
+			"uid": "1"
+		},
+		"completeStr": {
+			"click": "click"
+		}
+	},
+	{
+		"id": 102,
+		"type": 3,
+		"isShowPerson": 1,
+		"isShowMask": 0,
+		"isPlayAction": 1,
+		"isShowTouch": 1,
+		"isShowDesc": 1,
+		"descPosition": 0,
+		"firstId": 101,
+		"nextId": 103,
+		"completeStr": {
+			"uid": "1",
+			"randomWeaponCount": "0"
+		}
+	},
+	{
+		"id": 103,
+		"type": 3,
+		"isShowPerson": 1,
+		"isShowDesc": 1,
+		"descPosition": 1,
+		"firstId": 102,
+		"nextId": 104,
+		"completeStr": {
+			"uid": "1",
+			"click": "refreshBtn"
+		}
+	},
+	{
+		"id": 104,
+		"type": 3,
+		"isShowPerson": 1,
+		"isShowTouch": 1,
+		"isShowDesc": 1,
+		"descPosition": 0,
+		"firstId": 103,
+		"nextId": 106,
+		"completeStr": {
+			"uid": "1",
+			"randomWeaponCount": "2"
+		}
+	},
+	{
+		"id": 106,
+		"type": 3,
+		"isShowPerson": 1,
+		"isShowDesc": 1,
+		"descPosition": 0,
+		"firstId": 104,
+		"nextId": 107,
+		"triggerStr": {
+			"uid": "1",
+			"equipId": "901"
+		},
+		"completeStr": {
+			"click": "click"
+		}
+	},
+	{
+		"id": 107,
+		"type": 3,
+		"isShowPerson": 1,
+		"isShowDesc": 1,
+		"descPosition": 1,
+		"firstId": 106,
+		"nextId": 108,
+		"completeStr": {
+			"uid": "1",
+			"click": "battleBtn"
+		}
+	},
+	{
+		"id": 108,
+		"type": 3,
+		"isShowPerson": 1,
+		"isShowDesc": 1,
+		"descPosition": 2,
+		"firstId": 107,
+		"nextId": 109,
+		"triggerStr": {
+			"uid": "1",
+			"talentIndex": "1"
+		}
+	},
+	{
+		"id": 109,
+		"type": 3,
+		"isShowPerson": 1,
+		"isShowMask": 1,
+		"isShowDesc": 1,
+		"descPosition": 2,
+		"firstId": 108,
+		"nextId": 110
+	},
+	{
+		"id": 110,
+		"type": 3,
+		"isShowPerson": 1,
+		"isShowDesc": 1,
+		"descPosition": 1,
+		"firstId": 109,
+		"nextId": 111,
+		"triggerStr": {
+			"uid": "1",
+			"waveState": "end",
+			"waveId": "1"
+		}
+	},
+	{
+		"id": 111,
+		"type": 3,
+		"isShowPerson": 1,
+		"isShowDesc": 1,
+		"descPosition": 1,
+		"firstId": 110,
+		"nextId": 112,
+		"completeStr": {
+			"uid": "1",
+			"click": "refreshBtn"
+		}
+	},
+	{
+		"id": 112,
+		"type": 3,
+		"isShowPerson": 1,
+		"isShowDesc": 1,
+		"descPosition": 0,
+		"firstId": 111,
+		"nextId": 116,
+		"triggerStr": {
+			"uid": "1",
+			"equipId": "1010"
+		},
+		"completeStr": {
+			"click": "click"
+		}
+	},
+	{
+		"id": 116,
+		"type": 3,
+		"isShowPerson": 1,
+		"isShowDesc": 1,
+		"descPosition": 1,
+		"firstId": 112
+	}
+]}

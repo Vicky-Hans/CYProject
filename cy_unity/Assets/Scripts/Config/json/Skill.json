@@ -1,0 +1,6147 @@
+{"data": [
+	{
+		"id": 100,
+		"equipId": 1,
+		"result": [
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "bulletSize",
+				"value": 7000
+			},
+			{
+				"type": "bulletSpeed",
+				"value": 50000
+			},
+			{
+				"type": "pierce",
+				"value": 0
+			},
+			{
+				"type": "critDmg",
+				"value": 15000
+			}
+		],
+		"skillEffect": "Fighting/Skill/player_skill_100"
+	},
+	{
+		"id": 101,
+		"equipId": 1,
+		"tigger1": {
+			"skillNum": 3,
+			"prob": 10000
+		},
+		"complete1": {
+			"mustCrit": 1
+		}
+	},
+	{
+		"id": 102,
+		"equipId": 1,
+		"result": [
+			{
+				"type": "decSkillNum",
+				"value": 1
+			}
+		]
+	},
+	{
+		"id": 103,
+		"equipId": 1,
+		"result": [
+			{
+				"type": "attackBonus",
+				"value": 5200
+			}
+		]
+	},
+	{
+		"id": 104,
+		"equipId": 1,
+		"result": [
+			{
+				"type": "critDmg",
+				"value": 15500
+			}
+		]
+	},
+	{
+		"id": 105,
+		"equipId": 1,
+		"their": 105,
+		"tigger1": {
+			"hitFrozenOrDec": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"extraDmg": 10200
+		}
+	},
+	{
+		"id": 106,
+		"equipId": 1,
+		"their": 106,
+		"tigger1": {
+			"hitFire": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"extraDmg": 5500
+		}
+	},
+	{
+		"id": 107,
+		"equipId": 1,
+		"their": 105,
+		"result": [
+			{
+				"type": "enableRevert",
+				"value": 1
+			},
+			{
+				"type": "revertAtk",
+				"value": 4500
+			}
+		]
+	},
+	{
+		"id": 108,
+		"equipId": 1,
+		"their": 106,
+		"result": [
+			{
+				"type": "brulNum",
+				"value": 8
+			}
+		]
+	},
+	{
+		"id": 109,
+		"equipId": 1,
+		"their": 105,
+		"result": [
+			{
+				"type": "enableWaterSword",
+				"value": 1
+			}
+		],
+		"tigger1": {
+			"killTarget": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"revertAtk": 4500
+		}
+	},
+	{
+		"id": 110,
+		"equipId": 1,
+		"their": 106,
+		"result": [
+			{
+				"type": "brulTime",
+				"value": 5000
+			},
+			{
+				"type": "brulNum",
+				"value": 4
+			},
+			{
+				"type": "enableFireSword",
+				"value": 1
+			},
+			{
+				"type": "fireInterval",
+				"value": 1000
+			}
+		],
+		"tigger1": {
+			"critTime": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"firing": 1,
+			"firingDmg": 1200
+		}
+	},
+	{
+		"id": 200,
+		"equipId": 2,
+		"result": [
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "bulletSize",
+				"value": 6000
+			},
+			{
+				"type": "bulletSpeed",
+				"value": 60000
+			},
+			{
+				"type": "pierce",
+				"value": 0
+			},
+			{
+				"type": "critDmg",
+				"value": 15000
+			}
+		],
+		"skillEffect": "Fighting/Skill/player_skill_200"
+	},
+	{
+		"id": 201,
+		"equipId": 2,
+		"result": [
+			{
+				"type": "overlayNum",
+				"value": 5
+			}
+		],
+		"tigger1": {
+			"hitSameTarget": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"upDaggerDmg": 2100
+		}
+	},
+	{
+		"id": 202,
+		"equipId": 2,
+		"result": [
+			{
+				"type": "upAtkSpd",
+				"value": 3200
+			}
+		]
+	},
+	{
+		"id": 203,
+		"equipId": 2,
+		"result": [
+			{
+				"type": "critRate",
+				"value": 5100
+			}
+		]
+	},
+	{
+		"id": 204,
+		"equipId": 2,
+		"result": [
+			{
+				"type": "critDmg",
+				"value": 5500
+			}
+		]
+	},
+	{
+		"id": 205,
+		"equipId": 2,
+		"their": 205,
+		"result": [
+			{
+				"type": "catapultNum",
+				"value": 5
+			},
+			{
+				"type": "enableCatapult",
+				"value": 1
+			},
+			{
+				"type": "range",
+				"value": 40000
+			}
+		]
+	},
+	{
+		"id": 206,
+		"equipId": 2,
+		"their": 206,
+		"tigger1": {
+			"hitPoisoningTarget": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"extraDmg": 10200
+		}
+	},
+	{
+		"id": 207,
+		"equipId": 2,
+		"their": 205,
+		"result": [
+			{
+				"type": "windPierce",
+				"value": 6
+			}
+		]
+	},
+	{
+		"id": 208,
+		"equipId": 2,
+		"their": 206,
+		"result": [
+			{
+				"type": "enableRangePoison",
+				"value": 1
+			},
+			{
+				"type": "rangePoisonInterval",
+				"value": 500
+			},
+			{
+				"type": "rangePoisonDmg",
+				"value": 10200
+			},
+			{
+				"type": "rangePoisonTime",
+				"value": 2000
+			}
+		]
+	},
+	{
+		"id": 209,
+		"equipId": 2,
+		"their": 205,
+		"result": [
+			{
+				"type": "windPierce",
+				"value": 3
+			},
+			{
+				"type": "enableWindDagger",
+				"value": 1
+			}
+		]
+	},
+	{
+		"id": 210,
+		"equipId": 2,
+		"their": 206,
+		"result": [
+			{
+				"type": "enablePosionDagger",
+				"value": 1
+			},
+			{
+				"type": "poisoningTime",
+				"value": 3000
+			},
+			{
+				"type": "poisonInterval",
+				"value": 500
+			},
+			{
+				"type": "poisonDmg",
+				"value": 3200
+			},
+			{
+				"type": "rangeDmg",
+				"value": 8500
+			},
+			{
+				"type": "rangeDmgDis",
+				"value": 10000
+			}
+		],
+		"tigger1": {
+			"hitTarget": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"poisoning": 1
+		},
+		"tigger2": {
+			"killPoisonTarget": 1,
+			"prob": 10000
+		},
+		"complete2": {
+			"enableRangeDmg": 1
+		}
+	},
+	{
+		"id": 300,
+		"equipId": 3,
+		"result": [
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "bulletSize",
+				"value": 6000
+			},
+			{
+				"type": "bulletSpeed",
+				"value": 80000
+			},
+			{
+				"type": "pierce",
+				"value": 0
+			},
+			{
+				"type": "spliAngle",
+				"value": 8
+			},
+			{
+				"type": "critDmg",
+				"value": 15000
+			}
+		],
+		"skillEffect": "Fighting/Skill/player_skill_300"
+	},
+	{
+		"id": 301,
+		"equipId": 3,
+		"result": [
+			{
+				"type": "num",
+				"value": 2
+			}
+		]
+	},
+	{
+		"id": 302,
+		"equipId": 3,
+		"result": [
+			{
+				"type": "pierce",
+				"value": 1
+			}
+		]
+	},
+	{
+		"id": 303,
+		"equipId": 3,
+		"result": [
+			{
+				"type": "num",
+				"value": 2
+			}
+		]
+	},
+	{
+		"id": 304,
+		"equipId": 3,
+		"result": [
+			{
+				"type": "upAtkSpd",
+				"value": 1100
+			}
+		]
+	},
+	{
+		"id": 305,
+		"equipId": 3,
+		"their": 305,
+		"result": [
+			{
+				"type": "bowProb",
+				"value": 2200
+			}
+		]
+	},
+	{
+		"id": 306,
+		"equipId": 3,
+		"their": 306,
+		"result": [
+			{
+				"type": "killProb",
+				"value": 210
+			}
+		]
+	},
+	{
+		"id": 307,
+		"equipId": 3,
+		"their": 305,
+		"result": [
+			{
+				"type": "vertigoTime",
+				"value": 3000
+			}
+		],
+		"tigger1": {
+			"bowHitTarget": 1,
+			"prob": 4200
+		},
+		"complete1": {
+			"vertigo": 1
+		}
+	},
+	{
+		"id": 308,
+		"equipId": 3,
+		"their": 306,
+		"tigger1": {
+			"darkBowHit": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"monsterAtkDown": 2100,
+			"duration": 3000
+		}
+	},
+	{
+		"id": 309,
+		"equipId": 3,
+		"their": 305,
+		"result": [
+			{
+				"type": "rangeDmg",
+				"value": 15500
+			},
+			{
+				"type": "rangeDmgDis",
+				"value": 10000
+			},
+			{
+				"type": "enableLightBow",
+				"value": 1
+			}
+		],
+		"tigger1": {
+			"hitTarget": 1,
+			"prob": 3100
+		},
+		"complete1": {
+			"enableRangeDmg": 1
+		}
+	},
+	{
+		"id": 310,
+		"equipId": 3,
+		"their": 306,
+		"result": [
+			{
+				"type": "enableDarkBow",
+				"value": 1
+			}
+		],
+		"tigger1": {
+			"hitTargetLittle": 1,
+			"prob": 310
+		},
+		"complete1": {
+			"kill": 1
+		}
+	},
+	{
+		"id": 400,
+		"equipId": 4,
+		"result": [
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "bulletSize",
+				"value": 6000
+			},
+			{
+				"type": "bulletSpeed",
+				"value": 70000
+			},
+			{
+				"type": "pierce",
+				"value": 0
+			},
+			{
+				"type": "atkNumCd",
+				"value": 400
+			},
+			{
+				"type": "atkNum",
+				"value": 1
+			},
+			{
+				"type": "critDmg",
+				"value": 15000
+			}
+		],
+		"skillEffect": "Fighting/Skill/player_skill_400"
+	},
+	{
+		"id": 401,
+		"equipId": 4,
+		"result": [
+			{
+				"type": "launchNum",
+				"value": 1
+			},
+			{
+				"type": "launchNumDmg",
+				"value": 10000
+			},
+			{
+				"type": "enableLaunch",
+				"value": 1
+			}
+		]
+	},
+	{
+		"id": 402,
+		"equipId": 4,
+		"result": [
+			{
+				"type": "attackBonus",
+				"value": 2600
+			}
+		]
+	},
+	{
+		"id": 403,
+		"equipId": 4,
+		"result": [
+			{
+				"type": "critRate",
+				"value": 2600
+			}
+		]
+	},
+	{
+		"id": 404,
+		"equipId": 4,
+		"result": [
+			{
+				"type": "atkNum",
+				"value": 1
+			}
+		]
+	},
+	{
+		"id": 405,
+		"equipId": 4,
+		"their": 405,
+		"result": [
+			{
+				"type": "hurtProb",
+				"value": 5000
+			}
+		]
+	},
+	{
+		"id": 406,
+		"equipId": 4,
+		"their": 406,
+		"result": [
+			{
+				"type": "windLaunchNumDmg",
+				"value": 1900
+			}
+		]
+	},
+	{
+		"id": 407,
+		"equipId": 4,
+		"their": 405,
+		"tigger1": {
+			"hitHurt": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"extraDmg": 15500
+		}
+	},
+	{
+		"id": 408,
+		"equipId": 4,
+		"their": 406,
+		"result": [
+			{
+				"type": "windLaunchNum",
+				"value": 1
+			}
+		]
+	},
+	{
+		"id": 409,
+		"equipId": 4,
+		"their": 405,
+		"result": [
+			{
+				"type": "hurtTime",
+				"value": 3000
+			},
+			{
+				"type": "hurtDmg",
+				"value": 3200
+			},
+			{
+				"type": "enableDarkDart",
+				"value": 1
+			}
+		],
+		"tigger1": {
+			"hitTarget": 1,
+			"prob": 5000
+		},
+		"complete1": {
+			"hurt": 1
+		}
+	},
+	{
+		"id": 410,
+		"equipId": 4,
+		"their": 406,
+		"result": [
+			{
+				"type": "enableSplit",
+				"value": 1
+			},
+			{
+				"type": "windLaunchNumDmg",
+				"value": -1900
+			},
+			{
+				"type": "enableWindDart",
+				"value": 1
+			}
+		],
+		"tigger1": {
+			"launch": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"splitNum": 1
+		}
+	},
+	{
+		"id": 500,
+		"equipId": 5,
+		"skillEffect": "Fighting/Skill/player_skill_500"
+	},
+	{
+		"id": 501,
+		"equipId": 5,
+		"result": [
+			{
+				"type": "upAdjoinAtk",
+				"value": 2200
+			}
+		]
+	},
+	{
+		"id": 502,
+		"equipId": 5,
+		"result": [
+			{
+				"type": "upRevert",
+				"value": 1800
+			}
+		]
+	},
+	{
+		"id": 503,
+		"equipId": 5,
+		"result": [
+			{
+				"type": "upAdjoinAtk",
+				"value": 3200
+			}
+		]
+	},
+	{
+		"id": 504,
+		"equipId": 5,
+		"result": [
+			{
+				"type": "upAtkSpd",
+				"value": 2100
+			}
+		]
+	},
+	{
+		"id": 505,
+		"equipId": 5,
+		"their": 505,
+		"result": [
+			{
+				"type": "aboutArmor",
+				"value": 1200
+			}
+		]
+	},
+	{
+		"id": 506,
+		"equipId": 5,
+		"their": 506,
+		"result": [
+			{
+				"type": "upDarkDmg",
+				"value": 3200
+			}
+		]
+	},
+	{
+		"id": 507,
+		"equipId": 5,
+		"their": 505,
+		"result": [
+			{
+				"type": "peerArmor",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 508,
+		"equipId": 5,
+		"their": 506,
+		"result": [
+			{
+				"type": "loseHp",
+				"value": -100
+			}
+		]
+	},
+	{
+		"id": 509,
+		"equipId": 5,
+		"their": 505,
+		"result": [
+			{
+				"type": "aboutArmor",
+				"value": 2200
+			},
+			{
+				"type": "enableLandCap",
+				"value": 1
+			}
+		]
+	},
+	{
+		"id": 510,
+		"equipId": 5,
+		"their": 506,
+		"result": [
+			{
+				"type": "notRevert",
+				"value": 1
+			},
+			{
+				"type": "loseHp",
+				"value": 250
+			},
+			{
+				"type": "aroundUpDmg",
+				"value": 5200
+			},
+			{
+				"type": "enableDarkCap",
+				"value": 1
+			}
+		]
+	},
+	{
+		"id": 600,
+		"equipId": 6,
+		"skillEffect": "Fighting/Skill/player_skill_600"
+	},
+	{
+		"id": 601,
+		"equipId": 6,
+		"result": [
+			{
+				"type": "aboutPhAtkSpd",
+				"value": 1500
+			}
+		]
+	},
+	{
+		"id": 602,
+		"equipId": 6,
+		"result": [
+			{
+				"type": "upAtkSpd",
+				"value": 2100
+			}
+		]
+	},
+	{
+		"id": 603,
+		"equipId": 6,
+		"result": [
+			{
+				"type": "upArmor",
+				"value": 2200
+			}
+		]
+	},
+	{
+		"id": 604,
+		"equipId": 6,
+		"result": [
+			{
+				"type": "aboutPhAtkSpd",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 605,
+		"equipId": 6,
+		"their": 605,
+		"result": [
+			{
+				"type": "fireWeaponNum",
+				"value": 2
+			}
+		]
+	},
+	{
+		"id": 606,
+		"equipId": 6,
+		"their": 606,
+		"result": [
+			{
+				"type": "atkSpdGp",
+				"value": 2500
+			}
+		]
+	},
+	{
+		"id": 607,
+		"equipId": 6,
+		"their": 605,
+		"result": [
+			{
+				"type": "fireWeaponAtk",
+				"value": 2500
+			}
+		]
+	},
+	{
+		"id": 608,
+		"equipId": 6,
+		"their": 606,
+		"result": [
+			{
+				"type": "upAtkSpdGpTime",
+				"value": 31000
+			}
+		]
+	},
+	{
+		"id": 609,
+		"equipId": 6,
+		"their": 605,
+		"result": [
+			{
+				"type": "fireWeaponAtk",
+				"value": 3500
+			},
+			{
+				"type": "fireWeaponNum",
+				"value": 2
+			},
+			{
+				"type": "eanbleFireGlove",
+				"value": 1
+			}
+		]
+	},
+	{
+		"id": 610,
+		"equipId": 6,
+		"their": 606,
+		"result": [
+			{
+				"type": "atkSpdGpTime",
+				"value": 5000
+			},
+			{
+				"type": "eanbleWindGlove",
+				"value": 1
+			}
+		],
+		"tigger1": {
+			"asHpValueTh": 3500,
+			"prob": 10000
+		},
+		"complete1": {
+			"atkSpdGp": 4500
+		}
+	},
+	{
+		"id": 700,
+		"equipId": 7,
+		"result": [
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "bulletSize",
+				"value": 10000
+			},
+			{
+				"type": "bulletSpeed",
+				"value": 50000
+			},
+			{
+				"type": "pierce",
+				"value": 0
+			},
+			{
+				"type": "critDmg",
+				"value": 15000
+			}
+		],
+		"skillEffect": "Fighting/Skill/player_skill_700"
+	},
+	{
+		"id": 701,
+		"equipId": 7,
+		"tigger1": {
+			"hitTarget": 1,
+			"prob": 2600
+		},
+		"complete1": {
+			"frozen": 1,
+			"frozenTime": 3000
+		}
+	},
+	{
+		"id": 702,
+		"equipId": 7,
+		"result": [
+			{
+				"type": "upFrozenPro",
+				"value": 2400
+			}
+		]
+	},
+	{
+		"id": 703,
+		"equipId": 7,
+		"result": [
+			{
+				"type": "enableSplit",
+				"value": 1
+			},
+			{
+				"type": "smallDmg",
+				"value": 3200
+			}
+		],
+		"tigger1": {
+			"hitTarget": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"splitNum": 5
+		},
+		"tigger2": {
+			"smallHitTarget": 1,
+			"prob": 10000
+		},
+		"complete2": {
+			"decelerate": 1,
+			"downSpd": 5000,
+			"decelerateTime": 1000
+		}
+	},
+	{
+		"id": 704,
+		"equipId": 7,
+		"result": [
+			{
+				"type": "attackBonus",
+				"value": 3200
+			}
+		]
+	},
+	{
+		"id": 705,
+		"equipId": 7,
+		"their": 705,
+		"tigger1": {
+			"crystalHit": 1,
+			"prob": 2600
+		},
+		"complete1": {
+			"frozen": 1,
+			"frozenTime": 3000
+		}
+	},
+	{
+		"id": 706,
+		"equipId": 7,
+		"their": 706,
+		"result": [
+			{
+				"type": "blizzardRange",
+				"value": 5000
+			}
+		]
+	},
+	{
+		"id": 707,
+		"equipId": 7,
+		"their": 705,
+		"result": [
+			{
+				"type": "crystalRange",
+				"value": 3000
+			}
+		]
+	},
+	{
+		"id": 708,
+		"equipId": 7,
+		"their": 706,
+		"tigger1": {
+			"useBlizzard": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"upBlizzardDmg": 1200
+		}
+	},
+	{
+		"id": 709,
+		"equipId": 7,
+		"their": 705,
+		"result": [
+			{
+				"type": "enableRangeDmg",
+				"value": 1
+			},
+			{
+				"type": "rangeDmg",
+				"value": 3200
+			},
+			{
+				"type": "crystalRange",
+				"value": 10000
+			},
+			{
+				"type": "enableCrystalWand",
+				"value": 1
+			}
+		],
+		"tigger1": {
+			"hitTarget": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"enableCrystal": 1,
+			"decelerate": 1,
+			"downSpd": 5000,
+			"decelerateTime": 3000
+		}
+	},
+	{
+		"id": 710,
+		"equipId": 7,
+		"their": 706,
+		"result": [
+			{
+				"type": "enableWindWand",
+				"value": 1
+			},
+			{
+				"type": "blizzardDmg",
+				"value": 2200
+			},
+			{
+				"type": "blizzardInterval",
+				"value": 500
+			},
+			{
+				"type": "blizzardTime",
+				"value": 5000
+			},
+			{
+				"type": "blizzardRange",
+				"value": 10000
+			}
+		],
+		"tigger1": {
+			"hitTarget": 1,
+			"prob": 2000
+		},
+		"complete1": {
+			"enableBlizzard": 1,
+			"decelerate": 1,
+			"downSpd": 5000,
+			"decelerateTime": 3000
+		}
+	},
+	{
+		"id": 800,
+		"equipId": 8,
+		"result": [
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "bulletSize",
+				"value": 7000
+			},
+			{
+				"type": "bulletSpeed",
+				"value": 60000
+			},
+			{
+				"type": "pierce",
+				"value": 0
+			},
+			{
+				"type": "poisoningTime",
+				"value": 5000
+			},
+			{
+				"type": "poisonDmg",
+				"value": 2500
+			},
+			{
+				"type": "poisonInterval",
+				"value": 1000
+			},
+			{
+				"type": "critDmg",
+				"value": 15000
+			}
+		],
+		"tigger1": {
+			"hitTarget": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"poisoning": 1
+		},
+		"skillEffect": "Fighting/Skill/player_skill_800"
+	},
+	{
+		"id": 801,
+		"equipId": 8,
+		"result": [
+			{
+				"type": "poisonDmg",
+				"value": 2500
+			},
+			{
+				"type": "rangePoisonDmg",
+				"value": 2500
+			}
+		]
+	},
+	{
+		"id": 802,
+		"equipId": 8,
+		"result": [
+			{
+				"type": "upAtkSpd",
+				"value": 2100
+			}
+		]
+	},
+	{
+		"id": 803,
+		"equipId": 8,
+		"result": [
+			{
+				"type": "rangePoisonInterval",
+				"value": 1000
+			},
+			{
+				"type": "rangeDmgDis",
+				"value": 10000
+			},
+			{
+				"type": "rangePoisonDmg",
+				"value": 2500
+			},
+			{
+				"type": "rangePoisonTime",
+				"value": 5000
+			},
+			{
+				"type": "enableRangePoison",
+				"value": 1
+			},
+			{
+				"type": "rangeDmg",
+				"value": 12500
+			},
+			{
+				"type": "enableRangeDmg",
+				"value": 1
+			}
+		],
+		"complete1": {
+			"enableRangeDmg": 1
+		}
+	},
+	{
+		"id": 804,
+		"equipId": 8,
+		"result": [
+			{
+				"type": "poisoningTime",
+				"value": 2500
+			}
+		]
+	},
+	{
+		"id": 805,
+		"equipId": 8,
+		"their": 805,
+		"result": [
+			{
+				"type": "downSpd",
+				"value": 2100
+			}
+		]
+	},
+	{
+		"id": 806,
+		"equipId": 8,
+		"their": 806,
+		"result": [
+			{
+				"type": "poisonProb",
+				"value": 2200
+			}
+		]
+	},
+	{
+		"id": 807,
+		"equipId": 8,
+		"their": 805,
+		"result": [
+			{
+				"type": "palsyProb",
+				"value": 2200
+			}
+		]
+	},
+	{
+		"id": 808,
+		"equipId": 8,
+		"their": 806,
+		"result": [
+			{
+				"type": "downPoisonInterval",
+				"value": 4100
+			}
+		]
+	},
+	{
+		"id": 809,
+		"equipId": 8,
+		"their": 805,
+		"result": [
+			{
+				"type": "palsyTime",
+				"value": 4000
+			},
+			{
+				"type": "enablePalsyBane",
+				"value": 1
+			},
+			{
+				"type": "downSpd",
+				"value": 6000
+			}
+		],
+		"tigger1": {
+			"hitTarget": 1,
+			"prob": 4200
+		},
+		"complete1": {
+			"palsy": 1,
+			"downAtkSpd": 6000
+		}
+	},
+	{
+		"id": 810,
+		"equipId": 8,
+		"their": 806,
+		"result": [
+			{
+				"type": "overlay",
+				"value": 3
+			},
+			{
+				"type": "enableStrongBane",
+				"value": 1
+			}
+		],
+		"tigger1": {
+			"whenPoisoning": 1,
+			"prob": 3200
+		},
+		"complete1": {
+			"enablePosionOverlay": 1
+		}
+	},
+	{
+		"id": 1100,
+		"equipId": 11,
+		"result": [
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "bulletSize",
+				"value": 5000
+			},
+			{
+				"type": "bulletSpeed",
+				"value": 90000
+			},
+			{
+				"type": "pierce",
+				"value": 999
+			},
+			{
+				"type": "atkNum",
+				"value": 1
+			},
+			{
+				"type": "atkNumCd",
+				"value": 300
+			},
+			{
+				"type": "rotateSpd",
+				"value": 7200000
+			},
+			{
+				"type": "critDmg",
+				"value": 15000
+			}
+		],
+		"skillEffect": "Fighting/Skill/player_skill_1100"
+	},
+	{
+		"id": 1101,
+		"equipId": 11,
+		"tigger1": {
+			"skillNum": 3,
+			"prob": 10000
+		},
+		"complete1": {
+			"enableCircle": 1
+		}
+	},
+	{
+		"id": 1102,
+		"equipId": 11,
+		"result": [
+			{
+				"type": "decSkillNum",
+				"value": 2
+			}
+		]
+	},
+	{
+		"id": 1103,
+		"equipId": 11,
+		"result": [
+			{
+				"type": "upRange",
+				"value": 2500
+			}
+		]
+	},
+	{
+		"id": 1104,
+		"equipId": 11,
+		"result": [
+			{
+				"type": "atkNum",
+				"value": 1
+			}
+		]
+	},
+	{
+		"id": 1105,
+		"equipId": 11,
+		"their": 1105,
+		"result": [
+			{
+				"type": "landCircleAtkSpd",
+				"value": 1100
+			}
+		]
+	},
+	{
+		"id": 1106,
+		"equipId": 11,
+		"their": 1106,
+		"result": [
+			{
+				"type": "waterDownSpd",
+				"value": 3100
+			},
+			{
+				"type": "waterDownAtkSpd",
+				"value": 3100
+			}
+		]
+	},
+	{
+		"id": 1107,
+		"equipId": 11,
+		"their": 1105,
+		"result": [
+			{
+				"type": "landCircleCritRate",
+				"value": 1200
+			}
+		]
+	},
+	{
+		"id": 1108,
+		"equipId": 11,
+		"their": 1106,
+		"tigger1": {
+			"waterCircleHitSlow": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"extraDmg": 5500
+		},
+		"tigger2": {
+			"waterCircleHitFrozen": 1,
+			"prob": 10000
+		},
+		"complete2": {
+			"extraDmg": 10500
+		}
+	},
+	{
+		"id": 1109,
+		"equipId": 11,
+		"their": 1105,
+		"result": [
+			{
+				"type": "landCircleBulletSize",
+				"value": 1000
+			},
+			{
+				"type": "enableLandCircle",
+				"value": 1
+			}
+		]
+	},
+	{
+		"id": 1110,
+		"equipId": 11,
+		"their": 1106,
+		"result": [
+			{
+				"type": "enableWaterCircle",
+				"value": 1
+			}
+		],
+		"tigger1": {
+			"waterCircleHit": 1,
+			"prob": 3200
+		},
+		"complete1": {
+			"decelerate": 1,
+			"downSpd": 2000,
+			"decelerateTime": 3000,
+			"downAtkSpd": 2000,
+			"downAtkSpdTime": 3000
+		}
+	},
+	{
+		"id": 1200,
+		"equipId": 12,
+		"result": [
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "bulletSize",
+				"value": 6000
+			},
+			{
+				"type": "bulletSpeed",
+				"value": 90000
+			},
+			{
+				"type": "pierce",
+				"value": 999
+			},
+			{
+				"type": "critDmg",
+				"value": 15000
+			},
+			{
+				"type": "rotateSpd",
+				"value": 7200000
+			}
+		],
+		"skillEffect": "Fighting/Skill/player_skill_1200"
+	},
+	{
+		"id": 1201,
+		"equipId": 12,
+		"result": [
+			{
+				"type": "upBulletSize",
+				"value": 2100
+			}
+		]
+	},
+	{
+		"id": 1202,
+		"equipId": 12,
+		"result": [
+			{
+				"type": "hurtTime",
+				"value": 3000
+			},
+			{
+				"type": "hurtDmg",
+				"value": 2100
+			},
+			{
+				"type": "enableDarkDart",
+				"value": 1
+			}
+		],
+		"tigger1": {
+			"hitTarget": 1,
+			"prob": 5100
+		},
+		"complete1": {
+			"hurt": 1
+		}
+	},
+	{
+		"id": 1203,
+		"equipId": 12,
+		"result": [
+			{
+				"type": "upRange",
+				"value": 2500
+			}
+		]
+	},
+	{
+		"id": 1204,
+		"equipId": 12,
+		"tigger1": {
+			"hitHurt": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"critRate": 6100
+		}
+	},
+	{
+		"id": 1205,
+		"equipId": 12,
+		"their": 1205,
+		"result": [
+			{
+				"type": "dmgArmor",
+				"value": 1200
+			}
+		]
+	},
+	{
+		"id": 1206,
+		"equipId": 12,
+		"their": 1206,
+		"result": [
+			{
+				"type": "darkAxeCritDmg",
+				"value": 10500
+			}
+		]
+	},
+	{
+		"id": 1207,
+		"equipId": 12,
+		"their": 1205,
+		"tigger1": {
+			"asHpValueTh": 10000,
+			"prob": 10000
+		},
+		"complete1": {
+			"upAtkSpd": 3600
+		}
+	},
+	{
+		"id": 1208,
+		"equipId": 12,
+		"their": 1206,
+		"tigger1": {
+			"asHpValueTh": 5000,
+			"prob": 10000
+		},
+		"complete1": {
+			"dmgRevertProb": 5000
+		}
+	},
+	{
+		"id": 1209,
+		"equipId": 12,
+		"their": 1205,
+		"result": [
+			{
+				"type": "enableDarkAxe",
+				"value": 1
+			}
+		],
+		"tigger1": {
+			"hitTarget": 1,
+			"prob": 3200
+		},
+		"complete1": {
+			"dmgArmor": 1000
+		}
+	},
+	{
+		"id": 1210,
+		"equipId": 12,
+		"their": 1206,
+		"result": [
+			{
+				"type": "enableLandAxe",
+				"value": 1
+			}
+		],
+		"tigger1": {
+			"hitTarget": 1,
+			"prob": 3200
+		},
+		"complete1": {
+			"dmgRevert": 1500
+		}
+	},
+	{
+		"id": 1300,
+		"equipId": 13,
+		"result": [
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "bulletSize",
+				"value": 6000
+			},
+			{
+				"type": "bulletSpeed",
+				"value": 80000
+			},
+			{
+				"type": "pierce",
+				"value": 0
+			},
+			{
+				"type": "critDmg",
+				"value": 15000
+			}
+		],
+		"skillEffect": "Fighting/Skill/player_skill_1300"
+	},
+	{
+		"id": 1301,
+		"equipId": 13,
+		"result": [
+			{
+				"type": "critRate",
+				"value": 5100
+			}
+		]
+	},
+	{
+		"id": 1302,
+		"equipId": 13,
+		"result": [
+			{
+				"type": "enableRangeDmg",
+				"value": 1
+			},
+			{
+				"type": "rangeDmg",
+				"value": 5500
+			},
+			{
+				"type": "rangeDmgDis",
+				"value": 7000
+			}
+		]
+	},
+	{
+		"id": 1303,
+		"equipId": 13,
+		"result": [
+			{
+				"type": "rangeDmg",
+				"value": 5200
+			}
+		]
+	},
+	{
+		"id": 1304,
+		"equipId": 13,
+		"result": [
+			{
+				"type": "rangeDmgDis",
+				"value": 3100
+			}
+		]
+	},
+	{
+		"id": 1400,
+		"equipId": 14,
+		"result": [
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "bulletSize",
+				"value": 7000
+			},
+			{
+				"type": "bulletSpeed",
+				"value": 60000
+			},
+			{
+				"type": "pierce",
+				"value": 0
+			},
+			{
+				"type": "atkNum",
+				"value": 1
+			},
+			{
+				"type": "atkNumCd",
+				"value": 500
+			},
+			{
+				"type": "critDmg",
+				"value": 15000
+			}
+		],
+		"skillEffect": "Fighting/Skill/player_skill_1400"
+	},
+	{
+		"id": 1401,
+		"equipId": 14,
+		"result": [
+			{
+				"type": "atkNum",
+				"value": 1
+			}
+		]
+	},
+	{
+		"id": 1402,
+		"equipId": 14,
+		"result": [
+			{
+				"type": "atkNum",
+				"value": 1
+			}
+		]
+	},
+	{
+		"id": 1403,
+		"equipId": 14,
+		"result": [
+			{
+				"type": "enableRangeDmg",
+				"value": 1
+			},
+			{
+				"type": "rangeDmg",
+				"value": 3200
+			},
+			{
+				"type": "rangeDmgDis",
+				"value": 12000
+			}
+		]
+	},
+	{
+		"id": 1404,
+		"equipId": 14,
+		"result": [
+			{
+				"type": "electrifyTime",
+				"value": 3000
+			},
+			{
+				"type": "electrifyDmg",
+				"value": 2200
+			}
+		],
+		"tigger1": {
+			"magneticHit": 1,
+			"prob": 5050
+		},
+		"complete1": {
+			"electrify": 1
+		}
+	},
+	{
+		"id": 1405,
+		"equipId": 14,
+		"their": 1405,
+		"result": [
+			{
+				"type": "palsyWandProb",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 1406,
+		"equipId": 14,
+		"their": 1406,
+		"result": [
+			{
+				"type": "thunderWandCrit",
+				"value": 3000
+			}
+		]
+	},
+	{
+		"id": 1407,
+		"equipId": 14,
+		"their": 1405,
+		"tigger1": {
+			"palsyWandStopEnd": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"decelerate": 1,
+			"downSpd": 8000,
+			"decelerateTime": 3000,
+			"downAtkSpd": 8000,
+			"downAtkSpdTime": 3000
+		}
+	},
+	{
+		"id": 1408,
+		"equipId": 14,
+		"their": 1406,
+		"result": [
+			{
+				"type": "allThunderProb",
+				"value": 700
+			}
+		]
+	},
+	{
+		"id": 1409,
+		"equipId": 14,
+		"their": 1405,
+		"tigger1": {
+			"palsyWandHit": 1,
+			"prob": 1000
+		},
+		"complete1": {
+			"palsyWandStop": 1,
+			"palsyWandStopTime": 1500
+		}
+	},
+	{
+		"id": 1410,
+		"equipId": 14,
+		"their": 1406,
+		"tigger1": {
+			"thunderWandHit": 1,
+			"prob": 300
+		},
+		"complete1": {
+			"allThunderDmg": 30000,
+			"enableAllThunder": 1
+		}
+	},
+	{
+		"id": 1500,
+		"equipId": 15,
+		"skillEffect": "Fighting/Skill/player_skill_1500"
+	},
+	{
+		"id": 1501,
+		"equipId": 15,
+		"result": [
+			{
+				"type": "hpBonus",
+				"value": 2100
+			}
+		]
+	},
+	{
+		"id": 1502,
+		"equipId": 15,
+		"result": [
+			{
+				"type": "upRevert",
+				"value": 2100
+			}
+		]
+	},
+	{
+		"id": 1503,
+		"equipId": 15,
+		"tigger1": {
+			"asHpValueTh": 3000,
+			"prob": 10000
+		},
+		"complete1": {
+			"hpRevert": 2100
+		}
+	},
+	{
+		"id": 1504,
+		"equipId": 15,
+		"result": [
+			{
+				"type": "hpRevert",
+				"value": 2000
+			}
+		]
+	},
+	{
+		"id": 1600,
+		"equipId": 16,
+		"result": [
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "bulletSize",
+				"value": 8000
+			},
+			{
+				"type": "bulletSpeed",
+				"value": 70000
+			},
+			{
+				"type": "pierce",
+				"value": 0
+			},
+			{
+				"type": "rangeDmg",
+				"value": 10000
+			},
+			{
+				"type": "rangeDmgDis",
+				"value": 10000
+			},
+			{
+				"type": "critDmg",
+				"value": 15000
+			}
+		],
+		"skillEffect": "Fighting/Skill/player_skill_1600"
+	},
+	{
+		"id": 1601,
+		"equipId": 16,
+		"tigger1": {
+			"hitTarget": 1,
+			"prob": 3200
+		},
+		"complete1": {
+			"fainting": 1,
+			"faintingTime": 4000,
+			"downSpd": 4000,
+			"downAtkSpd": 4000,
+			"downHit": 4000
+		}
+	},
+	{
+		"id": 1602,
+		"equipId": 16,
+		"tigger1": {
+			"hitTarget": 1,
+			"prob": 3200
+		},
+		"complete1": {
+			"enableRevert": 1,
+			"revertAtk": 2200
+		}
+	},
+	{
+		"id": 1603,
+		"equipId": 16,
+		"result": [
+			{
+				"type": "faintingProb",
+				"value": 1800
+			}
+		]
+	},
+	{
+		"id": 1604,
+		"equipId": 16,
+		"result": [
+			{
+				"type": "downHit",
+				"value": 2800
+			}
+		]
+	},
+	{
+		"id": 1700,
+		"equipId": 17,
+		"result": [
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "bulletSize",
+				"value": 6000
+			},
+			{
+				"type": "bulletSpeed",
+				"value": 80000
+			},
+			{
+				"type": "pierce",
+				"value": 0
+			},
+			{
+				"type": "critDmg",
+				"value": 15000
+			},
+			{
+				"type": "spliAngle",
+				"value": 8
+			}
+		],
+		"skillEffect": "Fighting/Skill/player_skill_1700"
+	},
+	{
+		"id": 1701,
+		"equipId": 17,
+		"result": [
+			{
+				"type": "maxNum",
+				"value": 5
+			},
+			{
+				"type": "minNum",
+				"value": 1
+			}
+		]
+	},
+	{
+		"id": 1702,
+		"equipId": 17,
+		"result": [
+			{
+				"type": "repelMaxRange",
+				"value": 40000
+			},
+			{
+				"type": "repelMinRange",
+				"value": 10000
+			}
+		],
+		"tigger1": {
+			"hitTarget": 1,
+			"prob": 5500
+		},
+		"complete1": {
+			"repel": 1
+		}
+	},
+	{
+		"id": 1703,
+		"equipId": 17,
+		"result": [
+			{
+				"type": "vertigoTime",
+				"value": 4000
+			}
+		],
+		"tigger1": {
+			"hitTarget": 1,
+			"prob": 5500
+		},
+		"complete1": {
+			"vertigo": 1
+		}
+	},
+	{
+		"id": 1704,
+		"equipId": 17,
+		"result": [
+			{
+				"type": "enableRangeDmg",
+				"value": 1
+			},
+			{
+				"type": "rangeDmg",
+				"value": 3200
+			},
+			{
+				"type": "rangeDmgDis",
+				"value": 20000
+			},
+			{
+				"type": "rangeDmgDisMin",
+				"value": 5000
+			}
+		]
+	},
+	{
+		"id": 1800,
+		"equipId": 18,
+		"result": [
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "bulletSize",
+				"value": 10000
+			},
+			{
+				"type": "bulletSpeed",
+				"value": 60000
+			},
+			{
+				"type": "pierce",
+				"value": 0
+			},
+			{
+				"type": "critDmg",
+				"value": 15000
+			}
+		],
+		"skillEffect": "Fighting/Skill/player_skill_1800"
+	},
+	{
+		"id": 1801,
+		"equipId": 18,
+		"result": [
+			{
+				"type": "enableRangeDmg",
+				"value": 1
+			},
+			{
+				"type": "rangeDmg",
+				"value": 5000
+			},
+			{
+				"type": "rangeDmgDis",
+				"value": 12000
+			}
+		]
+	},
+	{
+		"id": 1802,
+		"equipId": 18,
+		"result": [
+			{
+				"type": "upAtkSpd",
+				"value": 1600
+			}
+		]
+	},
+	{
+		"id": 1803,
+		"equipId": 18,
+		"tigger1": {
+			"hitTarget": 1,
+			"prob": 5500
+		},
+		"complete1": {
+			"decelerate": 1,
+			"downSpd": 2600,
+			"decelerateTime": 2000,
+			"downAtkSpd": 2600,
+			"downAtkSpdTime": 2000
+		}
+	},
+	{
+		"id": 1804,
+		"equipId": 18,
+		"result": [
+			{
+				"type": "rangeDmgDis",
+				"value": 2500
+			}
+		]
+	},
+	{
+		"id": 1900,
+		"equipId": 19,
+		"skillEffect": "Fighting/Skill/player_skill_1900"
+	},
+	{
+		"id": 1901,
+		"equipId": 19,
+		"result": [
+			{
+				"type": "upArmor",
+				"value": 3000
+			}
+		]
+	},
+	{
+		"id": 1902,
+		"equipId": 19,
+		"result": [
+			{
+				"type": "hpBonus",
+				"value": 3000
+			}
+		]
+	},
+	{
+		"id": 1903,
+		"equipId": 19,
+		"tigger1": {
+			"combatUnderAtk": 1,
+			"prob": 2000
+		},
+		"complete1": {
+			"downDmg": 5000
+		}
+	},
+	{
+		"id": 1904,
+		"equipId": 19,
+		"tigger1": {
+			"longUnderAtk": 1,
+			"prob": 2000
+		},
+		"complete1": {
+			"downDmg": 5000
+		}
+	},
+	{
+		"id": 2000,
+		"equipId": 20,
+		"skillEffect": "Fighting/Skill/player_skill_2000"
+	},
+	{
+		"id": 2001,
+		"equipId": 20,
+		"result": [
+			{
+				"type": "enableSynthesisCrit",
+				"value": 1
+			}
+		]
+	},
+	{
+		"id": 2002,
+		"equipId": 20,
+		"result": [
+			{
+				"type": "enableCritSuperposition",
+				"value": 1
+			}
+		]
+	},
+	{
+		"id": 2003,
+		"equipId": 20,
+		"result": [
+			{
+				"type": "enableCritSame",
+				"value": 1
+			}
+		]
+	},
+	{
+		"id": 2004,
+		"equipId": 20,
+		"result": [
+			{
+				"type": "enableCritAll",
+				"value": 1
+			}
+		]
+	},
+	{
+		"id": 2200,
+		"equipId": 22,
+		"result": [
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "bulletSize",
+				"value": 10000
+			},
+			{
+				"type": "bulletSpeed",
+				"value": 70000
+			},
+			{
+				"type": "pierce",
+				"value": 0
+			},
+			{
+				"type": "critDmg",
+				"value": 15000
+			},
+			{
+				"type": "offsetAngle",
+				"value": 20
+			}
+		],
+		"skillEffect": "Fighting/Skill/player_skill_2200"
+	},
+	{
+		"id": 2201,
+		"equipId": 22,
+		"result": [
+			{
+				"type": "enableLaunch",
+				"value": 1
+			},
+			{
+				"type": "launchTime",
+				"value": 3000
+			},
+			{
+				"type": "pierce",
+				"value": 999
+			}
+		]
+	},
+	{
+		"id": 2202,
+		"equipId": 22,
+		"result": [
+			{
+				"type": "attackBonus",
+				"value": 4000
+			}
+		]
+	},
+	{
+		"id": 2203,
+		"equipId": 22,
+		"result": [
+			{
+				"type": "bulletSpeed",
+				"value": 21000
+			}
+		]
+	},
+	{
+		"id": 2204,
+		"equipId": 22,
+		"result": [
+			{
+				"type": "launchTime",
+				"value": 3600
+			}
+		]
+	},
+	{
+		"id": 2400,
+		"equipId": 24,
+		"result": [
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "bulletSize",
+				"value": 5000
+			},
+			{
+				"type": "bulletSpeed",
+				"value": 75000
+			},
+			{
+				"type": "pierce",
+				"value": 0
+			},
+			{
+				"type": "critDmg",
+				"value": 15000
+			},
+			{
+				"type": "rotateSpd",
+				"value": 9000000
+			}
+		],
+		"skillEffect": "Fighting/Skill/player_skill_2400"
+	},
+	{
+		"id": 2401,
+		"equipId": 24,
+		"result": [
+			{
+				"type": "attackBonus",
+				"value": 3000
+			}
+		]
+	},
+	{
+		"id": 2402,
+		"equipId": 24,
+		"result": [
+			{
+				"type": "critRate",
+				"value": 3000
+			}
+		]
+	},
+	{
+		"id": 2403,
+		"equipId": 24,
+		"tigger1": {
+			"hitFirstTarget": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"enableStay": 1,
+			"stayTime": 2000,
+			"stayDmg": 8000,
+			"stayDmgInterval": 500
+		}
+	},
+	{
+		"id": 2404,
+		"equipId": 24,
+		"result": [
+			{
+				"type": "stayTime",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 2405,
+		"equipId": 24,
+		"tigger1": {
+			"killTarget": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"upBulletSize": 10,
+			"bulletSizeMax": 10000
+		}
+	},
+	{
+		"id": 2406,
+		"equipId": 24,
+		"result": [
+			{
+				"type": "upBulletSize",
+				"value": 20
+			}
+		]
+	},
+	{
+		"id": 2407,
+		"equipId": 24,
+		"result": [
+			{
+				"type": "range",
+				"value": 20000
+			}
+		]
+	},
+	{
+		"id": 2408,
+		"equipId": 24,
+		"tigger1": {
+			"hitTarget": 1,
+			"prob": 1000
+		},
+		"complete1": {
+			"enableThump": 1,
+			"thumpDmg": 60000
+		}
+	},
+	{
+		"id": 2409,
+		"equipId": 24,
+		"result": [
+			{
+				"type": "thumpProb",
+				"value": 1500
+			}
+		]
+	},
+	{
+		"id": 2500,
+		"equipId": 25,
+		"result": [
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "bulletSize",
+				"value": 10000
+			},
+			{
+				"type": "bulletSpeed",
+				"value": 70000
+			},
+			{
+				"type": "pierce",
+				"value": 0
+			},
+			{
+				"type": "atkNumCd",
+				"value": 400
+			},
+			{
+				"type": "atkNum",
+				"value": 1
+			},
+			{
+				"type": "critDmg",
+				"value": 15000
+			}
+		],
+		"skillEffect": "Fighting/Skill/player_skill_2500"
+	},
+	{
+		"id": 2501,
+		"equipId": 25,
+		"result": [
+			{
+				"type": "atkNum",
+				"value": 1
+			}
+		]
+	},
+	{
+		"id": 2502,
+		"equipId": 25,
+		"result": [
+			{
+				"type": "pierce",
+				"value": 1
+			}
+		]
+	},
+	{
+		"id": 2503,
+		"equipId": 25,
+		"tigger1": {
+			"hitTarget": 1,
+			"prob": 2500
+		},
+		"complete1": {
+			"enwind": 1,
+			"enwindTime": 3000,
+			"enwindDmg": 5000
+		}
+	},
+	{
+		"id": 2504,
+		"equipId": 25,
+		"result": [
+			{
+				"type": "enwindProb",
+				"value": 2500
+			}
+		]
+	},
+	{
+		"id": 2505,
+		"equipId": 25,
+		"result": [
+			{
+				"type": "enableRangeDmg",
+				"value": 1
+			},
+			{
+				"type": "rangeDmg",
+				"value": 10000
+			},
+			{
+				"type": "rangeDmgDis",
+				"value": 15000
+			}
+		],
+		"tigger1": {
+			"rangeDmgHit": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"enwind": 1,
+			"enwindTime": 3000,
+			"enwindDmg": 5000
+		}
+	},
+	{
+		"id": 2506,
+		"equipId": 25,
+		"result": [
+			{
+				"type": "enwindTime",
+				"value": 2000
+			}
+		]
+	},
+	{
+		"id": 2507,
+		"equipId": 25,
+		"result": [
+			{
+				"type": "upAtkSpd",
+				"value": 2000
+			}
+		]
+	},
+	{
+		"id": 2508,
+		"equipId": 25,
+		"tigger1": {
+			"hitTarget": 1,
+			"prob": 500
+		},
+		"complete1": {
+			"enwind": 1,
+			"enwindTime": 3000,
+			"enwindDmg": 5000,
+			"enableDeathEnwind": 1,
+			"deathEnwindDmg": 40000
+		}
+	},
+	{
+		"id": 2509,
+		"equipId": 25,
+		"result": [
+			{
+				"type": "deathEnwindProb",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 10001,
+		"target": 0,
+		"result": [
+			{
+				"type": "hpBonus",
+				"value": 600
+			}
+		]
+	},
+	{
+		"id": 10002,
+		"target": 0,
+		"result": [
+			{
+				"type": "hpBonus",
+				"value": 1200
+			}
+		]
+	},
+	{
+		"id": 10003,
+		"target": 0,
+		"result": [
+			{
+				"type": "hpBonus",
+				"value": 1600
+			}
+		]
+	},
+	{
+		"id": 10011,
+		"target": 0,
+		"result": [
+			{
+				"type": "attackBonus",
+				"value": 600
+			}
+		]
+	},
+	{
+		"id": 10012,
+		"target": 0,
+		"result": [
+			{
+				"type": "attackBonus",
+				"value": 900
+			}
+		]
+	},
+	{
+		"id": 10013,
+		"target": 0,
+		"result": [
+			{
+				"type": "attackBonus",
+				"value": 1400
+			}
+		]
+	},
+	{
+		"id": 10021,
+		"target": 0,
+		"result": [
+			{
+				"type": "upAtkSpd",
+				"value": 600
+			}
+		]
+	},
+	{
+		"id": 10022,
+		"target": 0,
+		"result": [
+			{
+				"type": "upAtkSpd",
+				"value": 900
+			}
+		]
+	},
+	{
+		"id": 10023,
+		"target": 0,
+		"result": [
+			{
+				"type": "upAtkSpd",
+				"value": 1400
+			}
+		]
+	},
+	{
+		"id": 10031,
+		"target": 1,
+		"result": [
+			{
+				"type": "downSpd",
+				"value": 600
+			}
+		]
+	},
+	{
+		"id": 10032,
+		"target": 1,
+		"result": [
+			{
+				"type": "downSpd",
+				"value": 1200
+			}
+		]
+	},
+	{
+		"id": 10033,
+		"target": 1,
+		"result": [
+			{
+				"type": "downSpd",
+				"value": 1600
+			}
+		]
+	},
+	{
+		"id": 10041,
+		"target": 0,
+		"result": [
+			{
+				"type": "upExp",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 10042,
+		"target": 0,
+		"result": [
+			{
+				"type": "upExp",
+				"value": 3000
+			}
+		]
+	},
+	{
+		"id": 10043,
+		"target": 0,
+		"result": [
+			{
+				"type": "upExp",
+				"value": 5000
+			}
+		]
+	},
+	{
+		"id": 10051,
+		"target": 0,
+		"result": [
+			{
+				"type": "bossExtraDmg",
+				"value": 5500
+			}
+		]
+	},
+	{
+		"id": 10052,
+		"target": 0,
+		"result": [
+			{
+				"type": "bossExtraDmg",
+				"value": 10500
+			}
+		]
+	},
+	{
+		"id": 10061,
+		"target": 0,
+		"result": [
+			{
+				"type": "everyEquipUpDmg",
+				"value": 150
+			}
+		]
+	},
+	{
+		"id": 10062,
+		"target": 0,
+		"result": [
+			{
+				"type": "everyEquipUpDmg",
+				"value": 250
+			}
+		]
+	},
+	{
+		"id": 10071,
+		"target": 0,
+		"result": [
+			{
+				"type": "roleSpdUp",
+				"value": 800
+			}
+		]
+	},
+	{
+		"id": 10072,
+		"target": 0,
+		"result": [
+			{
+				"type": "pierce",
+				"value": 3
+			}
+		]
+	},
+	{
+		"id": 50000,
+		"sort": 1,
+		"skillAct": "atk"
+	},
+	{
+		"id": 50001,
+		"sort": 1,
+		"skillAct": "atk"
+	},
+	{
+		"id": 50011,
+		"sort": 1,
+		"result": [
+			{
+				"type": "bulletSpeed",
+				"value": 100000
+			},
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "range",
+				"value": 100000
+			}
+		],
+		"skillAct": "atk",
+		"skillEffect": "Fighting/Skill/skill_102_50011"
+	},
+	{
+		"id": 50012,
+		"sort": 1,
+		"result": [
+			{
+				"type": "bulletSpeed",
+				"value": 100000
+			},
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "range",
+				"value": 100000
+			}
+		],
+		"skillAct": "atk",
+		"skillEffect": "Fighting/Skill/skill_106_50012"
+	},
+	{
+		"id": 50013,
+		"sort": 1,
+		"result": [
+			{
+				"type": "bulletSpeed",
+				"value": 100000
+			},
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "range",
+				"value": 100000
+			}
+		],
+		"skillAct": "atk",
+		"skillEffect": "Fighting/Skill/skill_107_50013"
+	},
+	{
+		"id": 50014,
+		"sort": 1,
+		"result": [
+			{
+				"type": "bulletSpeed",
+				"value": 100000
+			},
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "range",
+				"value": 100000
+			},
+			{
+				"type": "firingDmg",
+				"value": 2500
+			},
+			{
+				"type": "brulTime",
+				"value": 3000
+			},
+			{
+				"type": "fireInterval",
+				"value": 1000
+			}
+		],
+		"tigger1": {
+			"hitTarget": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"firing": 1
+		},
+		"skillAct": "atk",
+		"skillEffect": "Fighting/Skill/skill_109_50014"
+	},
+	{
+		"id": 50015,
+		"sort": 1,
+		"result": [
+			{
+				"type": "bulletSpeed",
+				"value": 100000
+			},
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "range",
+				"value": 100000
+			}
+		],
+		"skillAct": "atk",
+		"skillEffect": "Fighting/Skill/skill_112_50015"
+	},
+	{
+		"id": 50016,
+		"sort": 1,
+		"result": [
+			{
+				"type": "bulletSpeed",
+				"value": 100000
+			},
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "range",
+				"value": 100000
+			}
+		],
+		"skillAct": "atk",
+		"skillEffect": "Fighting/Skill/skill_113_50016"
+	},
+	{
+		"id": 50017,
+		"sort": 1,
+		"result": [
+			{
+				"type": "bulletSpeed",
+				"value": 100000
+			},
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "range",
+				"value": 100000
+			}
+		],
+		"skillAct": "atk",
+		"skillEffect": "Fighting/Skill/skill_118_50017"
+	},
+	{
+		"id": 50018,
+		"sort": 1,
+		"result": [
+			{
+				"type": "bulletSpeed",
+				"value": 100000
+			},
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "range",
+				"value": 100000
+			}
+		],
+		"skillAct": "atk",
+		"skillEffect": "Fighting/Skill/skill_119_50018"
+	},
+	{
+		"id": 50019,
+		"result": [
+			{
+				"type": "bulletSpeed",
+				"value": 100000
+			},
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "range",
+				"value": 100000
+			}
+		],
+		"skillAct": "atk",
+		"skillEffect": "Fighting/Skill/skill_123_50019"
+	},
+	{
+		"id": 50020,
+		"sort": 1,
+		"result": [
+			{
+				"type": "bulletSpeed",
+				"value": 100000
+			},
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "range",
+				"value": 100000
+			}
+		],
+		"skillAct": "atk",
+		"skillEffect": "Fighting/Skill/skill_120_50020"
+	},
+	{
+		"id": 50021,
+		"sort": 1,
+		"result": [
+			{
+				"type": "bulletSpeed",
+				"value": 100000
+			},
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "range",
+				"value": 100000
+			}
+		],
+		"skillAct": "atk",
+		"skillEffect": "Fighting/Skill/skill_502_50021"
+	},
+	{
+		"id": 50022,
+		"sort": 1,
+		"result": [
+			{
+				"type": "bulletSpeed",
+				"value": 100000
+			},
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "range",
+				"value": 100000
+			}
+		],
+		"skillAct": "atk",
+		"skillEffect": "Fighting/Skill/skill_506_50022"
+	},
+	{
+		"id": 50023,
+		"sort": 1,
+		"result": [
+			{
+				"type": "bulletSpeed",
+				"value": 100000
+			},
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "range",
+				"value": 100000
+			}
+		],
+		"skillAct": "atk",
+		"skillEffect": "Fighting/Skill/skill_507_50023"
+	},
+	{
+		"id": 50024,
+		"sort": 1,
+		"result": [
+			{
+				"type": "bulletSpeed",
+				"value": 100000
+			},
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "range",
+				"value": 100000
+			},
+			{
+				"type": "firingDmg",
+				"value": 2500
+			},
+			{
+				"type": "brulTime",
+				"value": 3000
+			},
+			{
+				"type": "fireInterval",
+				"value": 1000
+			}
+		],
+		"tigger1": {
+			"hitTarget": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"firing": 1
+		},
+		"skillAct": "atk",
+		"skillEffect": "Fighting/Skill/skill_509_50024"
+	},
+	{
+		"id": 50025,
+		"sort": 1,
+		"result": [
+			{
+				"type": "bulletSpeed",
+				"value": 100000
+			},
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "range",
+				"value": 100000
+			}
+		],
+		"skillAct": "atk",
+		"skillEffect": "Fighting/Skill/skill_512_50025"
+	},
+	{
+		"id": 50026,
+		"sort": 1,
+		"result": [
+			{
+				"type": "bulletSpeed",
+				"value": 100000
+			},
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "range",
+				"value": 100000
+			}
+		],
+		"skillAct": "atk",
+		"skillEffect": "Fighting/Skill/skill_513_50026"
+	},
+	{
+		"id": 50027,
+		"sort": 1,
+		"result": [
+			{
+				"type": "bulletSpeed",
+				"value": 100000
+			},
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "range",
+				"value": 100000
+			}
+		],
+		"skillAct": "atk",
+		"skillEffect": "Fighting/Skill/skill_518_50027"
+	},
+	{
+		"id": 50028,
+		"sort": 1,
+		"result": [
+			{
+				"type": "bulletSpeed",
+				"value": 100000
+			},
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "range",
+				"value": 100000
+			}
+		],
+		"skillAct": "atk",
+		"skillEffect": "Fighting/Skill/skill_519_50028"
+	},
+	{
+		"id": 50029,
+		"sort": 1,
+		"result": [
+			{
+				"type": "bulletSpeed",
+				"value": 100000
+			},
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "range",
+				"value": 100000
+			}
+		],
+		"skillAct": "atk",
+		"skillEffect": "Fighting/Skill/skill_523_50029"
+	},
+	{
+		"id": 50030,
+		"sort": 1,
+		"result": [
+			{
+				"type": "bulletSpeed",
+				"value": 100000
+			},
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "range",
+				"value": 100000
+			}
+		],
+		"skillAct": "atk",
+		"skillEffect": "Fighting/Skill/skill_520_50030"
+	},
+	{
+		"id": 50031,
+		"sort": 1,
+		"result": [
+			{
+				"type": "bulletSpeed",
+				"value": 100000
+			},
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "range",
+				"value": 100000
+			}
+		],
+		"skillAct": "atk",
+		"skillEffect": "Fighting/Skill/skill_126_50031"
+	},
+	{
+		"id": 50032,
+		"sort": 1,
+		"result": [
+			{
+				"type": "bulletSpeed",
+				"value": 100000
+			},
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "range",
+				"value": 100000
+			}
+		],
+		"skillAct": "atk",
+		"skillEffect": "Fighting/Skill/skill_526_50032"
+	},
+	{
+		"id": 50033,
+		"sort": 1,
+		"result": [
+			{
+				"type": "bulletSpeed",
+				"value": 100000
+			},
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "range",
+				"value": 100000
+			}
+		],
+		"skillAct": "atk",
+		"skillEffect": "Fighting/Skill/skill_130_50033"
+	},
+	{
+		"id": 50034,
+		"sort": 1,
+		"result": [
+			{
+				"type": "bulletSpeed",
+				"value": 100000
+			},
+			{
+				"type": "num",
+				"value": 1
+			},
+			{
+				"type": "range",
+				"value": 100000
+			}
+		],
+		"skillAct": "atk",
+		"skillEffect": "Fighting/Skill/skill_530_50034"
+	},
+	{
+		"id": 51001,
+		"sort": 1,
+		"result": [
+			{
+				"type": "dashSpeed",
+				"value": 70000
+			},
+			{
+				"type": "dashNum",
+				"value": 3
+			},
+			{
+				"type": "dashDistance",
+				"value": 100000
+			},
+			{
+				"type": "range",
+				"value": 80000
+			}
+		],
+		"skillEffect": "Fighting/Skill/skill_boss1_51001"
+	},
+	{
+		"id": 51002,
+		"sort": 1,
+		"result": [
+			{
+				"type": "bulletSpeed",
+				"value": 100000
+			},
+			{
+				"type": "num",
+				"value": 5
+			},
+			{
+				"type": "range",
+				"value": 100000
+			},
+			{
+				"type": "spliAngle",
+				"value": 15
+			}
+		],
+		"skillAct": "skill2",
+		"skillEffect": "Fighting/Skill/skill_boss1_51002"
+	},
+	{
+		"id": 51003,
+		"sort": 1,
+		"result": [
+			{
+				"type": "bulletSpeed",
+				"value": 100000
+			},
+			{
+				"type": "num",
+				"value": 15
+			},
+			{
+				"type": "range",
+				"value": 100000
+			},
+			{
+				"type": "spliAngle",
+				"value": 360
+			}
+		],
+		"skillAct": "skill1",
+		"skillEffect": "Fighting/Skill/skill_boss2_51003"
+	},
+	{
+		"id": 51004,
+		"sort": 1,
+		"result": [
+			{
+				"type": "bulletSpeed",
+				"value": 80000
+			},
+			{
+				"type": "num",
+				"value": 5
+			},
+			{
+				"type": "range",
+				"value": 100000
+			},
+			{
+				"type": "duration",
+				"value": 5000
+			},
+			{
+				"type": "atkNumCd",
+				"value": 1000
+			}
+		],
+		"skillAct": "skill2",
+		"skillEffect": "Fighting/Skill/skill_boss2_51004"
+	},
+	{
+		"id": 60001,
+		"sort": 1,
+		"tigger1": {
+			"debutTime": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"hpShield": 5000
+		}
+	},
+	{
+		"id": 60002,
+		"sort": 1,
+		"tigger1": {
+			"dead": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"ownSplit": 2,
+			"maxHpPercent": 5000,
+			"maxAtkPercent": 10000
+		}
+	},
+	{
+		"id": 60003,
+		"sort": 1,
+		"tigger1": {
+			"debutTime": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"upSpd": 10000,
+			"accelerateTime": 6000
+		}
+	},
+	{
+		"id": 60004,
+		"sort": 1,
+		"result": [
+			{
+				"type": "attackBonus",
+				"value": 1000
+			},
+			{
+				"type": "attackBonusRange",
+				"value": 25000
+			}
+		]
+	},
+	{
+		"id": 60005,
+		"sort": 1,
+		"result": [
+			{
+				"type": "downCd",
+				"value": 3000
+			},
+			{
+				"type": "downCdRange",
+				"value": 25000
+			}
+		]
+	},
+	{
+		"id": 60006,
+		"sort": 1,
+		"result": [
+			{
+				"type": "downPoisonDmg",
+				"value": 5000
+			}
+		]
+	},
+	{
+		"id": 60007,
+		"sort": 1,
+		"tigger1": {
+			"collisionTime": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"selfDestruct": 1,
+			"selfDestructDmg": 10000
+		}
+	},
+	{
+		"id": 60008,
+		"sort": 1,
+		"result": [
+			{
+				"type": "enableBleeding",
+				"value": 1
+			},
+			{
+				"type": "bleedingDmg",
+				"value": 2500
+			}
+		]
+	},
+	{
+		"id": 60009,
+		"sort": 1,
+		"result": [
+			{
+				"type": "breakArmorDmg",
+				"value": 4000
+			},
+			{
+				"type": "breakArmorRange",
+				"value": 25000
+			}
+		]
+	},
+	{
+		"id": 60010,
+		"sort": 1,
+		"result": [
+			{
+				"type": "immuneHurt",
+				"value": 1
+			}
+		]
+	},
+	{
+		"id": 60011,
+		"sort": 1,
+		"result": [
+			{
+				"type": "immuneFrozen",
+				"value": 1
+			}
+		]
+	},
+	{
+		"id": 60012,
+		"sort": 1,
+		"result": [
+			{
+				"type": "immuneVertigo",
+				"value": 1
+			}
+		]
+	},
+	{
+		"id": 60013,
+		"sort": 1,
+		"tigger1": {
+			"underAttack": 1,
+			"prob": 8000
+		},
+		"complete1": {
+			"immuneRepel": 1
+		}
+	},
+	{
+		"id": 60014,
+		"sort": 1,
+		"result": [
+			{
+				"type": "immuneRepel",
+				"value": 1
+			}
+		]
+	},
+	{
+		"id": 60015,
+		"sort": 1,
+		"tigger1": {
+			"monsterHpValueTh": 3000,
+			"prob": 10000
+		},
+		"complete1": {
+			"stop": 1,
+			"hpRevert": 1000,
+			"revertTime": 5000,
+			"revertCd": 20000,
+			"stopTime": 5000,
+			"immuneDmg": 1,
+			"immuneDmgTime": 5000
+		}
+	},
+	{
+		"id": 60016,
+		"sort": 1,
+		"tigger1": {
+			"dead": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"hpRevert": 5000,
+			"revertRange": 20000
+		}
+	},
+	{
+		"id": 60017,
+		"sort": 1,
+		"result": [
+			{
+				"type": "immunePierce",
+				"value": 1
+			}
+		]
+	},
+	{
+		"id": 60018,
+		"sort": 1,
+		"tigger1": {
+			"underDmg": 1,
+			"prob": 6000
+		},
+		"complete1": {
+			"revertAtk": 10000
+		}
+	},
+	{
+		"id": 60019,
+		"sort": 1,
+		"tigger1": {
+			"dead": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"hpShield": 5000,
+			"hpShieldRange": 25000
+		}
+	},
+	{
+		"id": 60020,
+		"sort": 1,
+		"result": [
+			{
+				"type": "immuneStop",
+				"value": 1
+			}
+		]
+	},
+	{
+		"id": 70003,
+		"result": [
+			{
+				"type": "hp",
+				"value": 50
+			}
+		]
+	},
+	{
+		"id": 70005,
+		"result": [
+			{
+				"type": "upArmor",
+				"value": 200
+			}
+		]
+	},
+	{
+		"id": 70007,
+		"result": [
+			{
+				"type": "atk",
+				"value": 20
+			}
+		]
+	},
+	{
+		"id": 70009,
+		"result": [
+			{
+				"type": "upRevert",
+				"value": 200
+			}
+		]
+	},
+	{
+		"id": 70010,
+		"result": [
+			{
+				"type": "hp",
+				"value": 100
+			}
+		]
+	},
+	{
+		"id": 70011,
+		"result": [
+			{
+				"type": "upArmor",
+				"value": 300
+			}
+		]
+	},
+	{
+		"id": 70012,
+		"result": [
+			{
+				"type": "atk",
+				"value": 40
+			}
+		]
+	},
+	{
+		"id": 70013,
+		"result": [
+			{
+				"type": "upRevert",
+				"value": 300
+			}
+		]
+	},
+	{
+		"id": 70014,
+		"result": [
+			{
+				"type": "hp",
+				"value": 200
+			}
+		]
+	},
+	{
+		"id": 70015,
+		"result": [
+			{
+				"type": "upArmor",
+				"value": 500
+			}
+		]
+	},
+	{
+		"id": 70016,
+		"result": [
+			{
+				"type": "atk",
+				"value": 60
+			}
+		]
+	},
+	{
+		"id": 70017,
+		"result": [
+			{
+				"type": "upRevert",
+				"value": 500
+			}
+		]
+	},
+	{
+		"id": 70018,
+		"result": [
+			{
+				"type": "hp",
+				"value": 300
+			}
+		]
+	},
+	{
+		"id": 70019,
+		"result": [
+			{
+				"type": "upArmor",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 70020,
+		"result": [
+			{
+				"type": "atk",
+				"value": 100
+			}
+		]
+	},
+	{
+		"id": 70021,
+		"result": [
+			{
+				"type": "upRevert",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 70022,
+		"result": [
+			{
+				"type": "hp",
+				"value": 500
+			}
+		]
+	},
+	{
+		"id": 70023,
+		"result": [
+			{
+				"type": "roleHpBonus",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 70024,
+		"result": [
+			{
+				"type": "atk",
+				"value": 100
+			}
+		]
+	},
+	{
+		"id": 70025,
+		"result": [
+			{
+				"type": "hp",
+				"value": 300
+			}
+		]
+	},
+	{
+		"id": 70026,
+		"result": [
+			{
+				"type": "roleHpBonus",
+				"value": 500
+			}
+		]
+	},
+	{
+		"id": 70027,
+		"result": [
+			{
+				"type": "roleAttackBonus",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 70028,
+		"result": [
+			{
+				"type": "enableHeroSkill",
+				"value": 1
+			},
+			{
+				"type": "killMonster",
+				"value": 1
+			},
+			{
+				"type": "killNum",
+				"value": 5
+			}
+		]
+	},
+	{
+		"id": 70029,
+		"equipId": 2,
+		"result": [
+			{
+				"type": "attackBonus",
+				"value": 1500
+			}
+		]
+	},
+	{
+		"id": 70030,
+		"result": [
+			{
+				"type": "atk",
+				"value": 200
+			}
+		]
+	},
+	{
+		"id": 70031,
+		"tigger1": {
+			"underAttack": 1,
+			"prob": 2000
+		},
+		"complete1": {
+			"miss": 1
+		},
+		"tigger2": {
+			"underAttack": 1,
+			"prob": 10000
+		},
+		"complete2": {
+			"reHit": 1,
+			"reHitDmg": 8000
+		}
+	},
+	{
+		"id": 70032,
+		"result": [
+			{
+				"type": "hp",
+				"value": 500
+			}
+		]
+	},
+	{
+		"id": 70033,
+		"result": [
+			{
+				"type": "WindCritRate",
+				"value": 1500
+			}
+		]
+	},
+	{
+		"id": 70034,
+		"result": [
+			{
+				"type": "roleHpBonus",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 70035,
+		"their": 70028,
+		"result": [
+			{
+				"type": "killNum",
+				"value": 3
+			}
+		]
+	},
+	{
+		"id": 70036,
+		"result": [
+			{
+				"type": "roleAttackBonus",
+				"value": 2000
+			}
+		]
+	},
+	{
+		"id": 70037,
+		"result": [
+			{
+				"type": "atk",
+				"value": 50
+			}
+		]
+	},
+	{
+		"id": 70038,
+		"result": [
+			{
+				"type": "critDmg",
+				"value": 500
+			}
+		]
+	},
+	{
+		"id": 70039,
+		"result": [
+			{
+				"type": "hp",
+				"value": 100
+			}
+		]
+	},
+	{
+		"id": 70040,
+		"result": [
+			{
+				"type": "critRate",
+				"value": 200
+			}
+		]
+	},
+	{
+		"id": 70041,
+		"result": [
+			{
+				"type": "atk",
+				"value": 100
+			}
+		]
+	},
+	{
+		"id": 70042,
+		"result": [
+			{
+				"type": "critDmg",
+				"value": 500
+			}
+		]
+	},
+	{
+		"id": 70043,
+		"result": [
+			{
+				"type": "hp",
+				"value": 200
+			}
+		]
+	},
+	{
+		"id": 70044,
+		"result": [
+			{
+				"type": "critRate",
+				"value": 300
+			}
+		]
+	},
+	{
+		"id": 70045,
+		"result": [
+			{
+				"type": "atk",
+				"value": 150
+			}
+		]
+	},
+	{
+		"id": 70046,
+		"result": [
+			{
+				"type": "critDmg",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 70047,
+		"result": [
+			{
+				"type": "hp",
+				"value": 300
+			}
+		]
+	},
+	{
+		"id": 70048,
+		"result": [
+			{
+				"type": "critRate",
+				"value": 500
+			}
+		]
+	},
+	{
+		"id": 70049,
+		"result": [
+			{
+				"type": "atk",
+				"value": 200
+			}
+		]
+	},
+	{
+		"id": 70050,
+		"result": [
+			{
+				"type": "critDmg",
+				"value": 1500
+			}
+		]
+	},
+	{
+		"id": 70051,
+		"result": [
+			{
+				"type": "hp",
+				"value": 500
+			}
+		]
+	},
+	{
+		"id": 70052,
+		"result": [
+			{
+				"type": "critRate",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 70053,
+		"result": [
+			{
+				"type": "atk",
+				"value": 400
+			}
+		]
+	},
+	{
+		"id": 70054,
+		"result": [
+			{
+				"type": "roleAttackBonus",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 70055,
+		"result": [
+			{
+				"type": "stopTime",
+				"value": 4000
+			}
+		]
+	},
+	{
+		"id": 70056,
+		"equipId": 14,
+		"result": [
+			{
+				"type": "upAtkSpd",
+				"value": 1500
+			}
+		]
+	},
+	{
+		"id": 70057,
+		"result": [
+			{
+				"type": "atk",
+				"value": 200
+			}
+		]
+	},
+	{
+		"id": 70058,
+		"tigger1": {
+			"inRange": 25000,
+			"prob": 10000
+		},
+		"complete1": {
+			"downAtkSpd": 1500,
+			"enableRoleHpDmg": 1,
+			"roleHpDmg": 100
+		}
+	},
+	{
+		"id": 70059,
+		"result": [
+			{
+				"type": "hp",
+				"value": 500
+			}
+		]
+	},
+	{
+		"id": 70060,
+		"result": [
+			{
+				"type": "lightAtkBonus",
+				"value": 1500
+			}
+		]
+	},
+	{
+		"id": 70061,
+		"result": [
+			{
+				"type": "roleHpBonus",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 70062,
+		"their": 70055,
+		"result": [
+			{
+				"type": "stopTime",
+				"value": 3000
+			},
+			{
+				"type": "enableMaxHpDmg",
+				"value": 1
+			},
+			{
+				"type": "maxHpDmg",
+				"value": 200
+			}
+		]
+	},
+	{
+		"id": 70063,
+		"result": [
+			{
+				"type": "roleAttackBonus",
+				"value": 2000
+			}
+		]
+	},
+	{
+		"id": 70064,
+		"result": [
+			{
+				"type": "atk",
+				"value": 50
+			}
+		]
+	},
+	{
+		"id": 70065,
+		"result": [
+			{
+				"type": "roleAttackBonus",
+				"value": 200
+			}
+		]
+	},
+	{
+		"id": 70066,
+		"result": [
+			{
+				"type": "hp",
+				"value": 100
+			}
+		]
+	},
+	{
+		"id": 70067,
+		"result": [
+			{
+				"type": "roleHpBonus",
+				"value": 500
+			}
+		]
+	},
+	{
+		"id": 70068,
+		"result": [
+			{
+				"type": "atk",
+				"value": 100
+			}
+		]
+	},
+	{
+		"id": 70069,
+		"result": [
+			{
+				"type": "roleAttackBonus",
+				"value": 300
+			}
+		]
+	},
+	{
+		"id": 70070,
+		"result": [
+			{
+				"type": "hp",
+				"value": 200
+			}
+		]
+	},
+	{
+		"id": 70071,
+		"result": [
+			{
+				"type": "roleHpBonus",
+				"value": 500
+			}
+		]
+	},
+	{
+		"id": 70072,
+		"result": [
+			{
+				"type": "atk",
+				"value": 150
+			}
+		]
+	},
+	{
+		"id": 70073,
+		"result": [
+			{
+				"type": "roleAttackBonus",
+				"value": 500
+			}
+		]
+	},
+	{
+		"id": 70074,
+		"result": [
+			{
+				"type": "hp",
+				"value": 300
+			}
+		]
+	},
+	{
+		"id": 70075,
+		"result": [
+			{
+				"type": "roleHpBonus",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 70076,
+		"result": [
+			{
+				"type": "atk",
+				"value": 200
+			}
+		]
+	},
+	{
+		"id": 70077,
+		"result": [
+			{
+				"type": "roleAttackBonus",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 70078,
+		"result": [
+			{
+				"type": "hp",
+				"value": 500
+			}
+		]
+	},
+	{
+		"id": 70079,
+		"result": [
+			{
+				"type": "roleHpBonus",
+				"value": 1500
+			}
+		]
+	},
+	{
+		"id": 70080,
+		"result": [
+			{
+				"type": "atk",
+				"value": 400
+			}
+		]
+	},
+	{
+		"id": 70081,
+		"result": [
+			{
+				"type": "roleAttackBonus",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 70082,
+		"result": [
+			{
+				"type": "enableHeroSkill",
+				"value": 1
+			},
+			{
+				"type": "sandCircleRange",
+				"value": 40000
+			},
+			{
+				"type": "sandCircleTime",
+				"value": 5000
+			}
+		],
+		"tigger1": {
+			"passSandCircle": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"hpDmg": 1500,
+			"decelerate": 1,
+			"downSpd": 7000,
+			"decelerateTime": 3000
+		}
+	},
+	{
+		"id": 70083,
+		"equipId": 16,
+		"result": [
+			{
+				"type": "upAtkSpd",
+				"value": 2500
+			}
+		]
+	},
+	{
+		"id": 70084,
+		"result": [
+			{
+				"type": "atk",
+				"value": 200
+			},
+			{
+				"type": "roleSpdUp",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 70085,
+		"result": [
+			{
+				"type": "energyRateUp",
+				"value": 2500
+			},
+			{
+				"type": "energy",
+				"value": 50
+			}
+		]
+	},
+	{
+		"id": 70086,
+		"result": [
+			{
+				"type": "hp",
+				"value": 500
+			},
+			{
+				"type": "miss",
+				"value": 500
+			}
+		]
+	},
+	{
+		"id": 70087,
+		"result": [
+			{
+				"type": "critRate",
+				"value": 500
+			}
+		]
+	},
+	{
+		"id": 70088,
+		"tigger1": {
+			"hitCircleTarget": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"extraDmg": 5000
+		}
+	},
+	{
+		"id": 70089,
+		"result": [
+			{
+				"type": "sandCircleRange",
+				"value": 20000
+			},
+			{
+				"type": "hpDmg",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 70090,
+		"tigger1": {
+			"heroHpValueLess": 5000,
+			"prob": 10000
+		},
+		"complete1": {
+			"heroImmune": 1,
+			"heroImmuneTime": 5000,
+			"upSpd": 10000,
+			"atkReplay": 50,
+			"atkReplayTime": 5000
+		}
+	},
+	{
+		"id": 70091,
+		"result": [
+			{
+				"type": "atk",
+				"value": 100
+			}
+		]
+	},
+	{
+		"id": 70092,
+		"result": [
+			{
+				"type": "roleAttackBonus",
+				"value": 200
+			},
+			{
+				"type": "roleSpd",
+				"value": 200
+			}
+		]
+	},
+	{
+		"id": 70093,
+		"result": [
+			{
+				"type": "hp",
+				"value": 150
+			}
+		]
+	},
+	{
+		"id": 70094,
+		"result": [
+			{
+				"type": "roleHpBonus",
+				"value": 500
+			}
+		]
+	},
+	{
+		"id": 70095,
+		"result": [
+			{
+				"type": "hp",
+				"value": 150
+			}
+		]
+	},
+	{
+		"id": 70096,
+		"result": [
+			{
+				"type": "roleAttackBonus",
+				"value": 300
+			},
+			{
+				"type": "roleSpd",
+				"value": 300
+			}
+		]
+	},
+	{
+		"id": 70097,
+		"result": [
+			{
+				"type": "hp",
+				"value": 250
+			}
+		]
+	},
+	{
+		"id": 70098,
+		"result": [
+			{
+				"type": "roleHpBonus",
+				"value": 500
+			}
+		]
+	},
+	{
+		"id": 70099,
+		"result": [
+			{
+				"type": "atk",
+				"value": 200
+			}
+		]
+	},
+	{
+		"id": 70100,
+		"result": [
+			{
+				"type": "roleAttackBonus",
+				"value": 500
+			},
+			{
+				"type": "roleSpd",
+				"value": 500
+			}
+		]
+	},
+	{
+		"id": 70101,
+		"result": [
+			{
+				"type": "hp",
+				"value": 400
+			}
+		]
+	},
+	{
+		"id": 70102,
+		"result": [
+			{
+				"type": "roleHpBonus",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 70103,
+		"result": [
+			{
+				"type": "atk",
+				"value": 250
+			}
+		]
+	},
+	{
+		"id": 70104,
+		"result": [
+			{
+				"type": "roleAttackBonus",
+				"value": 1000
+			},
+			{
+				"type": "roleSpd",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 70105,
+		"result": [
+			{
+				"type": "hp",
+				"value": 600
+			}
+		]
+	},
+	{
+		"id": 70106,
+		"result": [
+			{
+				"type": "roleHpBonus",
+				"value": 1500
+			}
+		]
+	},
+	{
+		"id": 70107,
+		"result": [
+			{
+				"type": "atk",
+				"value": 450
+			}
+		]
+	},
+	{
+		"id": 70108,
+		"result": [
+			{
+				"type": "roleAttackBonus",
+				"value": 1000
+			},
+			{
+				"type": "miss",
+				"value": 500
+			},
+			{
+				"type": "roleSpd",
+				"value": 2000
+			}
+		]
+	},
+	{
+		"id": 801101,
+		"equipId": 1,
+		"result": [
+			{
+				"type": "firingDmgUp",
+				"value": 500
+			}
+		]
+	},
+	{
+		"id": 801102,
+		"equipId": 1,
+		"result": [
+			{
+				"type": "firingDmgUp",
+				"value": 800
+			}
+		]
+	},
+	{
+		"id": 801103,
+		"equipId": 1,
+		"result": [
+			{
+				"type": "firingDmgUp",
+				"value": 1100
+			}
+		]
+	},
+	{
+		"id": 801104,
+		"equipId": 1,
+		"result": [
+			{
+				"type": "firingDmgUp",
+				"value": 1500
+			}
+		]
+	},
+	{
+		"id": 801105,
+		"equipId": 1,
+		"result": [
+			{
+				"type": "firingDmgUp",
+				"value": 2000
+			}
+		]
+	},
+	{
+		"id": 802101,
+		"equipId": 12,
+		"result": [
+			{
+				"type": "darkAxeCrit",
+				"value": 300
+			}
+		]
+	},
+	{
+		"id": 802102,
+		"equipId": 12,
+		"result": [
+			{
+				"type": "darkAxeCrit",
+				"value": 400
+			}
+		]
+	},
+	{
+		"id": 802103,
+		"equipId": 12,
+		"result": [
+			{
+				"type": "darkAxeCrit",
+				"value": 500
+			}
+		]
+	},
+	{
+		"id": 802104,
+		"equipId": 12,
+		"result": [
+			{
+				"type": "darkAxeCrit",
+				"value": 7000
+			}
+		]
+	},
+	{
+		"id": 802105,
+		"equipId": 12,
+		"result": [
+			{
+				"type": "darkAxeCrit",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 803101,
+		"equipId": 7,
+		"result": [
+			{
+				"type": "blizzardProb",
+				"value": 300
+			}
+		]
+	},
+	{
+		"id": 803102,
+		"equipId": 7,
+		"result": [
+			{
+				"type": "blizzardProb",
+				"value": 400
+			}
+		]
+	},
+	{
+		"id": 803103,
+		"equipId": 7,
+		"result": [
+			{
+				"type": "blizzardProb",
+				"value": 500
+			}
+		]
+	},
+	{
+		"id": 803104,
+		"equipId": 7,
+		"result": [
+			{
+				"type": "blizzardProb",
+				"value": 700
+			}
+		]
+	},
+	{
+		"id": 803105,
+		"equipId": 7,
+		"result": [
+			{
+				"type": "blizzardProb",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 900002,
+		"target": 0,
+		"result": [
+			{
+				"type": "upExp",
+				"value": 5000
+			}
+		]
+	},
+	{
+		"id": 900004,
+		"target": 0,
+		"result": [
+			{
+				"type": "upPhAtk",
+				"value": 10000
+			}
+		]
+	},
+	{
+		"id": 900005,
+		"target": 0,
+		"result": [
+			{
+				"type": "upMagicAtk",
+				"value": 10000
+			}
+		]
+	},
+	{
+		"id": 900006,
+		"target": 0,
+		"result": [
+			{
+				"type": "upAtkSpd",
+				"value": 2000
+			}
+		]
+	},
+	{
+		"id": 900007,
+		"target": 1,
+		"result": [
+			{
+				"type": "downSpd",
+				"value": 3000
+			}
+		]
+	},
+	{
+		"id": 900102,
+		"target": 1,
+		"result": [
+			{
+				"type": "attackBonus",
+				"value": 10000
+			}
+		]
+	},
+	{
+		"id": 900103,
+		"target": 1,
+		"result": [
+			{
+				"type": "upSpd",
+				"value": 3000
+			}
+		]
+	},
+	{
+		"id": 900104,
+		"target": 1,
+		"result": [
+			{
+				"type": "hpBonus",
+				"value": 10000
+			}
+		]
+	},
+	{
+		"id": 900105,
+		"target": 1,
+		"result": [
+			{
+				"type": "upAtkSpd",
+				"value": 5000
+			}
+		]
+	},
+	{
+		"id": 900106,
+		"target": 1,
+		"result": [
+			{
+				"type": "miss",
+				"value": 2000
+			}
+		]
+	},
+	{
+		"id": 900107,
+		"target": 1,
+		"result": [
+			{
+				"type": "downUnderPhAtk",
+				"value": 5000
+			}
+		]
+	},
+	{
+		"id": 900108,
+		"target": 1,
+		"result": [
+			{
+				"type": "downUnderMagicAtk",
+				"value": 5000
+			}
+		]
+	},
+	{
+		"id": 910001,
+		"heroEquipId": 1,
+		"triggerGroup": "bleedPro",
+		"addTrigger": [
+			"prob"
+		],
+		"result": [
+			{
+				"type": "heroEquipAttackBonus",
+				"value": 1000
+			}
+		],
+		"tigger1": {
+			"underPhyAttack": 1,
+			"prob": 500
+		},
+		"complete1": {
+			"bleed": 1,
+			"bleedDmg": 1000,
+			"bleedTime": 2000
+		}
+	},
+	{
+		"id": 910002,
+		"heroEquipId": 1
+	},
+	{
+		"id": 910003,
+		"heroEquipId": 1,
+		"triggerGroup": "bleedPro",
+		"addTrigger": [
+			"prob"
+		],
+		"tigger1": {
+			"underPhyAttack": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"bleed": 1,
+			"bleedDmg": 1000,
+			"bleedTime": 2000
+		}
+	},
+	{
+		"id": 910004,
+		"heroEquipId": 1,
+		"result": [
+			{
+				"type": "heroEquipAttackBonus",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 910005,
+		"heroEquipId": 1,
+		"result": [
+			{
+				"type": "bleedNum",
+				"value": 5
+			}
+		]
+	},
+	{
+		"id": 910006,
+		"heroEquipId": 4,
+		"tigger1": {
+			"underPhy4Attack": 1,
+			"prob": 200
+		},
+		"complete1": {
+			"bleed": 1,
+			"bleedDmg": 1000,
+			"bleedTime": 2000
+		}
+	},
+	{
+		"id": 910007,
+		"heroEquipId": 4,
+		"result": [
+			{
+				"type": "heroEquipHpBonus",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 910008,
+		"heroEquipId": 4,
+		"result": [
+			{
+				"type": "upRevert",
+				"value": 2000
+			}
+		]
+	},
+	{
+		"id": 910009,
+		"heroEquipId": 4,
+		"tigger1": {
+			"killMonsternum": 20,
+			"prob": 10000
+		},
+		"complete1": {
+			"hpRevert": 500
+		}
+	},
+	{
+		"id": 910010,
+		"heroEquipId": 4,
+		"result": [
+			{
+				"type": "heroEquipHpBonus",
+				"value": 1500
+			}
+		]
+	},
+	{
+		"id": 910011,
+		"heroEquipId": 2,
+		"triggerGroup": "bleedPro",
+		"addTrigger": [
+			"prob"
+		],
+		"tigger1": {
+			"underPhyAttack": 1,
+			"prob": 100
+		},
+		"complete1": {
+			"bleed": 1,
+			"bleedDmg": 1000,
+			"bleedTime": 2000
+		}
+	},
+	{
+		"id": 910012,
+		"heroEquipId": 2,
+		"result": [
+			{
+				"type": "heroEquipAttackBonus",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 910013,
+		"heroEquipId": 2,
+		"tigger1": {
+			"phyAttackMonsterRange": 40000,
+			"prob": 5000
+		},
+		"complete1": {
+			"bleed": 1,
+			"bleedDmg": 1000,
+			"bleedTime": 2000
+		}
+	},
+	{
+		"id": 910014,
+		"heroEquipId": 2,
+		"tigger1": {
+			"killMonsternum": 20,
+			"prob": 10000
+		},
+		"complete1": {
+			"bleedTime": 200,
+			"bleedTimeUpMax": 1000
+		}
+	},
+	{
+		"id": 910015,
+		"heroEquipId": 2,
+		"result": [
+			{
+				"type": "heroEquipAttackBonus",
+				"value": 1500
+			}
+		]
+	},
+	{
+		"id": 910016,
+		"heroEquipId": 5,
+		"tigger1": {
+			"phyEquipBeUped": 1,
+			"prob": 200
+		},
+		"complete1": {
+			"bleed": 1,
+			"bleedDmg": 1000,
+			"bleedTime": 2000
+		}
+	},
+	{
+		"id": 910017,
+		"heroEquipId": 5,
+		"result": [
+			{
+				"type": "heroEquipHpBonus",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 910018,
+		"heroEquipId": 5,
+		"tigger1": {
+			"heroUnderAttack": 1,
+			"prob": 5000
+		},
+		"complete1": {
+			"bleed": 1,
+			"bleedDmg": 1000,
+			"bleedTime": 2000
+		}
+	},
+	{
+		"id": 910019,
+		"heroEquipId": 5,
+		"tigger1": {
+			"bleeding": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"downDmg": 1000
+		}
+	},
+	{
+		"id": 910020,
+		"heroEquipId": 5,
+		"result": [
+			{
+				"type": "heroEquipHpBonus",
+				"value": 1500
+			}
+		]
+	},
+	{
+		"id": 910021,
+		"heroEquipId": 3,
+		"tigger1": {
+			"bagPhyEquip": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"upDmg": 100,
+			"upDmgMax": 1000
+		}
+	},
+	{
+		"id": 910022,
+		"heroEquipId": 3,
+		"result": [
+			{
+				"type": "heroEquipAttackBonus",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 910023,
+		"heroEquipId": 3,
+		"tigger1": {
+			"hitTarget": 1,
+			"prob": 100
+		},
+		"complete1": {
+			"kill": 1
+		}
+	},
+	{
+		"id": 910024,
+		"heroEquipId": 3,
+		"tigger1": {
+			"killMonsternum": 20,
+			"prob": 10000
+		},
+		"complete1": {
+			"killProb": 50,
+			"killProUpMax": 250
+		}
+	},
+	{
+		"id": 910025,
+		"heroEquipId": 3,
+		"result": [
+			{
+				"type": "heroEquipAttackBonus",
+				"value": 1500
+			}
+		]
+	},
+	{
+		"id": 910026,
+		"heroEquipId": 6,
+		"tigger1": {
+			"phyEquipMerged": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"silverCoinsNum": 1
+		}
+	},
+	{
+		"id": 910027,
+		"heroEquipId": 6,
+		"result": [
+			{
+				"type": "heroEquipHpBonus",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 910028,
+		"heroEquipId": 6,
+		"tigger1": {
+			"killMonsternum": 40,
+			"prob": 10000
+		},
+		"complete1": {
+			"immuneDmgNum": 1
+		}
+	},
+	{
+		"id": 910029,
+		"heroEquipId": 6,
+		"tigger1": {
+			"immuneDmg": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"hpShield": 500
+		}
+	},
+	{
+		"id": 910030,
+		"heroEquipId": 6,
+		"result": [
+			{
+				"type": "heroEquipHpBonus",
+				"value": 1500
+			}
+		]
+	},
+	{
+		"id": 910031,
+		"heroEquipId": 7,
+		"triggerGroup": "poisonPro",
+		"addTrigger": [
+			"prob"
+		],
+		"result": [
+			{
+				"type": "heroEquipAttackBonus",
+				"value": 1000
+			}
+		],
+		"tigger1": {
+			"underMagicAttack": 1,
+			"prob": 500
+		},
+		"complete1": {
+			"poison": 1,
+			"poisonDmgSec": 2000,
+			"poisonTime": 2000
+		}
+	},
+	{
+		"id": 910032,
+		"heroEquipId": 7
+	},
+	{
+		"id": 910033,
+		"heroEquipId": 7,
+		"triggerGroup": "poisonPro",
+		"addTrigger": [
+			"prob"
+		],
+		"tigger1": {
+			"underMagicAttack": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"poison": 1,
+			"poisonDmgSec": 2000,
+			"poisonTime": 2000
+		}
+	},
+	{
+		"id": 910034,
+		"heroEquipId": 7,
+		"result": [
+			{
+				"type": "heroEquipAttackBonus",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 910035,
+		"heroEquipId": 7,
+		"result": [
+			{
+				"type": "poisonNum",
+				"value": 5
+			}
+		]
+	},
+	{
+		"id": 910036,
+		"heroEquipId": 10,
+		"tigger1": {
+			"underMagic4Attack": 1,
+			"prob": 200
+		},
+		"complete1": {
+			"poison": 1,
+			"poisonDmgSec": 2000,
+			"poisonTime": 2000
+		}
+	},
+	{
+		"id": 910037,
+		"heroEquipId": 10,
+		"result": [
+			{
+				"type": "heroEquipHpBonus",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 910038,
+		"heroEquipId": 10,
+		"tigger1": {
+			"roundStart": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"poisonCircleNum": 2,
+			"poisonCircleRange": 10000,
+			"poisonCircleSecDmg": 1000,
+			"poisonCircleTime": 8000
+		},
+		"tigger2": {
+			"passPoisonCircle": 1,
+			"prob": 10000
+		},
+		"complete2": {
+			"poison": 1,
+			"poisonDmgSec": 2000,
+			"poisonTime": 2000
+		}
+	},
+	{
+		"id": 910039,
+		"heroEquipId": 10,
+		"result": [
+			{
+				"type": "poisonCircleNum",
+				"value": 1
+			},
+			{
+				"type": "poisonCircleRange",
+				"value": 2500
+			}
+		]
+	},
+	{
+		"id": 910040,
+		"heroEquipId": 10,
+		"result": [
+			{
+				"type": "heroEquipHpBonus",
+				"value": 1500
+			}
+		]
+	},
+	{
+		"id": 910041,
+		"heroEquipId": 8,
+		"triggerGroup": "poisonPro",
+		"addTrigger": [
+			"prob"
+		],
+		"tigger1": {
+			"underMagicAttack": 1,
+			"prob": 100
+		},
+		"complete1": {
+			"poison": 1,
+			"poisonDmgSec": 2000,
+			"poisonTime": 2000
+		}
+	},
+	{
+		"id": 910042,
+		"heroEquipId": 8,
+		"result": [
+			{
+				"type": "heroEquipAttackBonus",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 910043,
+		"heroEquipId": 8,
+		"tigger1": {
+			"heroUnderAttack": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"shockWaveDmg": 1000,
+			"shockWaveNum": 1,
+			"shockWaveSize": 15000,
+			"shockWaveSpeed": 20000,
+			"pierce": 99
+		}
+	},
+	{
+		"id": 910044,
+		"heroEquipId": 8,
+		"result": [
+			{
+				"type": "shockWaveRepel",
+				"value": 1
+			},
+			{
+				"type": "shockWaveRepelPro",
+				"value": 10000
+			},
+			{
+				"type": "shockWaveRepelRange",
+				"value": 3000
+			}
+		]
+	},
+	{
+		"id": 910045,
+		"heroEquipId": 8,
+		"result": [
+			{
+				"type": "heroEquipAttackBonus",
+				"value": 1500
+			}
+		]
+	},
+	{
+		"id": 910046,
+		"heroEquipId": 11,
+		"tigger1": {
+			"magicEquipBeUped": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"poison": 1,
+			"poisonDmgSec": 2000,
+			"poisonTime": 2000
+		}
+	},
+	{
+		"id": 910047,
+		"heroEquipId": 11,
+		"result": [
+			{
+				"type": "heroEquipHpBonus",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 910048,
+		"heroEquipId": 11,
+		"tigger1": {
+			"reverting": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"shockWaveDmg": 1000,
+			"shockWaveNum": 1,
+			"shockWaveSize": 15000,
+			"shockWaveSpeed": 20000,
+			"pierce": 99
+		}
+	},
+	{
+		"id": 910049,
+		"heroEquipId": 11,
+		"tigger1": {
+			"heroUnderPoisonMonsterAttack": 1,
+			"prob": 2500
+		},
+		"complete1": {
+			"dmgRevert": 3000
+		}
+	},
+	{
+		"id": 910050,
+		"heroEquipId": 11,
+		"result": [
+			{
+				"type": "heroEquipHpBonus",
+				"value": 1500
+			}
+		]
+	},
+	{
+		"id": 910051,
+		"heroEquipId": 9,
+		"tigger1": {
+			"bagMagicEquip": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"upDmg": 100,
+			"upDmgMax": 1000
+		}
+	},
+	{
+		"id": 910052,
+		"heroEquipId": 9,
+		"result": [
+			{
+				"type": "heroEquipAttackBonus",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 910053,
+		"heroEquipId": 9,
+		"tigger1": {
+			"killMonster": 1,
+			"prob": 3000
+		},
+		"complete1": {
+			"poisonCircleRange": 10000,
+			"poisonCircleSecDmg": 1000,
+			"poisonCircleTime": 5000
+		}
+	},
+	{
+		"id": 910054,
+		"heroEquipId": 9,
+		"result": [
+			{
+				"type": "poisonCircleTime",
+				"value": 3000
+			}
+		]
+	},
+	{
+		"id": 910055,
+		"heroEquipId": 9,
+		"result": [
+			{
+				"type": "heroEquipAttackBonus",
+				"value": 1500
+			}
+		]
+	},
+	{
+		"id": 910056,
+		"heroEquipId": 12,
+		"tigger1": {
+			"magicEquipMerged": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"silverCoinsNum": 1
+		}
+	},
+	{
+		"id": 910057,
+		"heroEquipId": 12,
+		"result": [
+			{
+				"type": "heroEquipHpBonus",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 910058,
+		"heroEquipId": 12,
+		"tigger1": {
+			"hitTarget": 1,
+			"prob": 1000
+		},
+		"complete1": {
+			"poisonPassRange": 10000,
+			"poisonPassSecDmg": 1000,
+			"poisonPassTime": 5000
+		}
+	},
+	{
+		"id": 910059,
+		"heroEquipId": 12,
+		"result": [
+			{
+				"type": "poisonPassSecDmg",
+				"value": 3000
+			},
+			{
+				"type": "poisonPassTime",
+				"value": 3000
+			}
+		]
+	},
+	{
+		"id": 910060,
+		"heroEquipId": 12,
+		"result": [
+			{
+				"type": "heroEquipHpBonus",
+				"value": 1500
+			}
+		]
+	},
+	{
+		"id": 910061,
+		"heroEquipId": 13,
+		"result": [
+			{
+				"type": "heroEquipAttackBonus",
+				"value": 1500
+			}
+		]
+	},
+	{
+		"id": 910062,
+		"heroEquipId": 13
+	},
+	{
+		"id": 910063,
+		"heroEquipId": 13,
+		"tigger1": {
+			"hitTarget": 1,
+			"prob": 1500
+		},
+		"complete1": {
+			"lightningDmg": 2000,
+			"lightningSplitNum": 3,
+			"lightningSplitDmg": 1000
+		}
+	},
+	{
+		"id": 910064,
+		"heroEquipId": 13,
+		"result": [
+			{
+				"type": "heroEquipAttackBonus",
+				"value": 2500
+			}
+		]
+	},
+	{
+		"id": 910065,
+		"heroEquipId": 13,
+		"tigger1": {
+			"momsterLightning": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"palsy": 1,
+			"downAtkSpd": 3000,
+			"downSpd": 3000,
+			"palsyTime": 3000
+		}
+	},
+	{
+		"id": 910066,
+		"heroEquipId": 16,
+		"tigger1": {
+			"heroDead": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"enableRelife": 1,
+			"relifeHp": 10000
+		}
+	},
+	{
+		"id": 910067,
+		"heroEquipId": 16,
+		"result": [
+			{
+				"type": "heroEquipHpBonus",
+				"value": 1500
+			}
+		]
+	},
+	{
+		"id": 910068,
+		"heroEquipId": 16,
+		"tigger1": {
+			"relife": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"attackBonus": 1000,
+			"downDmg": 1000
+		}
+	},
+	{
+		"id": 910069,
+		"heroEquipId": 16,
+		"result": [
+			{
+				"type": "heroEquipHpBonus",
+				"value": 2500
+			}
+		]
+	},
+	{
+		"id": 910070,
+		"heroEquipId": 16
+	},
+	{
+		"id": 910071,
+		"heroEquipId": 14,
+		"tigger1": {
+			"hitMonsterHpValueMore": 5000,
+			"prob": 10000
+		},
+		"complete1": {
+			"extraHp": 1000,
+			"upDmg": 1000
+		}
+	},
+	{
+		"id": 910072,
+		"heroEquipId": 14,
+		"result": [
+			{
+				"type": "heroEquipAttackBonus",
+				"value": 1500
+			}
+		]
+	},
+	{
+		"id": 910073,
+		"heroEquipId": 14,
+		"tigger1": {
+			"hitMonsterHpValueMore": 10000,
+			"prob": 10000
+		},
+		"complete1": {
+			"extraDmg": 1000
+		}
+	},
+	{
+		"id": 910074,
+		"heroEquipId": 14,
+		"result": [
+			{
+				"type": "heroEquipAttackBonus",
+				"value": 2500
+			}
+		]
+	},
+	{
+		"id": 910075,
+		"heroEquipId": 14,
+		"result": [
+			{
+				"type": "sameEquipAttackBonus",
+				"value": 1500
+			}
+		]
+	},
+	{
+		"id": 910076,
+		"heroEquipId": 17,
+		"tigger1": {
+			"roundStart": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"hpShield": 200
+		}
+	},
+	{
+		"id": 910077,
+		"heroEquipId": 17,
+		"result": [
+			{
+				"type": "heroEquipHpBonus",
+				"value": 1500
+			}
+		]
+	},
+	{
+		"id": 910078,
+		"heroEquipId": 17,
+		"tigger1": {
+			"roundShieldFirstBroken": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"shieldAttackDmg": 1000,
+			"shieldRange": 40000
+		}
+	},
+	{
+		"id": 910079,
+		"heroEquipId": 17,
+		"result": [
+			{
+				"type": "heroEquipHpBonus",
+				"value": 2500
+			}
+		]
+	},
+	{
+		"id": 910080,
+		"heroEquipId": 17,
+		"tigger1": {
+			"shieldAttack": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"repelPro": 10000,
+			"repelRange": 30000
+		}
+	},
+	{
+		"id": 910081,
+		"heroEquipId": 15,
+		"tigger1": {
+			"heroHpValueMore": 7000,
+			"prob": 10000
+		},
+		"complete1": {
+			"attackBonus": 2000
+		}
+	},
+	{
+		"id": 910082,
+		"heroEquipId": 15,
+		"result": [
+			{
+				"type": "heroEquipAttackBonus",
+				"value": 1500
+			}
+		]
+	},
+	{
+		"id": 910083,
+		"heroEquipId": 15,
+		"triggerGroup": "shiledDmgPro",
+		"addTrigger": [
+			"prob"
+		],
+		"tigger1": {
+			"hitTarget": 1,
+			"prob": 500
+		},
+		"complete1": {
+			"shieldDmg": 1000
+		}
+	},
+	{
+		"id": 910084,
+		"heroEquipId": 15,
+		"result": [
+			{
+				"type": "heroEquipAttackBonus",
+				"value": 2500
+			}
+		]
+	},
+	{
+		"id": 910085,
+		"heroEquipId": 15,
+		"triggerGroup": "shiledDmgPro",
+		"addTrigger": [
+			"prob"
+		],
+		"tigger1": {
+			"hitTarget": 1,
+			"prob": 500
+		},
+		"complete1": {
+			"shieldDmg": 2500
+		}
+	},
+	{
+		"id": 910086,
+		"heroEquipId": 18,
+		"result": [
+			{
+				"type": "missPro",
+				"value": 1000
+			}
+		]
+	},
+	{
+		"id": 910087,
+		"heroEquipId": 18,
+		"result": [
+			{
+				"type": "heroEquipHpBonus",
+				"value": 1500
+			}
+		]
+	},
+	{
+		"id": 910088,
+		"heroEquipId": 18,
+		"tigger1": {
+			"missing": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"hpShield": 200
+		}
+	},
+	{
+		"id": 910089,
+		"heroEquipId": 18,
+		"result": [
+			{
+				"type": "heroEquipHpBonus",
+				"value": 2500
+			}
+		]
+	},
+	{
+		"id": 910090,
+		"heroEquipId": 18,
+		"tigger1": {
+			"missing": 1,
+			"prob": 10000
+		},
+		"complete1": {
+			"attackBonus": 200,
+			"atkBonusMax": 2000
+		}
+	}
+]}
