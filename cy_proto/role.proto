@@ -1,0 +1,155 @@
+syntax = "proto3";
+package DH.Proto;
+option go_package = "./pb";
+
+import "comm.proto";
+
+message RoleData {
+  ItemBag item = 1;                       //道具
+  Lives lives = 2;                        //体力
+  Character character = 3;                //主角
+  MainStage mainStage = 4;                //主线
+  EquipBag equip = 5;                     //装备
+  Battle battle = 6;                      //战斗
+  MonthCard monthCard = 7;                //月卡
+  Shop shop = 8;                          //商城功能
+  FirstCharge firstCharge = 9;            //首充礼包
+  Hero hero = 10;                         //英雄
+  Endless endless = 11;                   //无尽冒险
+  Passport passport = 12;                 //通行证
+  DailyPack dailyPack = 13;               //每日礼包
+  LuckyDraw luckyDraw = 14;               //幸运转盘
+  TriggerGift triggerGift = 15;           //触发礼包
+  Passport diamondPassport = 16;          //钻石通行证
+  DailyFight dailyFight = 18;             //每日挑战
+  MagicDraw magicDraw = 19;               //魔法祈福
+  Secret secret = 20;                     //秘林探险
+  HeroEquipBag heroEquip = 21;            //英雄装备
+  ChapterFund chapterFund = 22;           //章节基金
+  School school = 23;                     //魔法学院
+  LuckyTrip luckyTrip = 24;               //幸运之旅
+  MagicAge magicAge = 25;                 //魔法时代
+  GiftPack giftPack = 26;                 //小礼包相关
+  LuckyEgg luckyEgg = 27;                 //幸运抽奖
+  AutumnSpecial autumn = 28;              //金秋特惠
+  Bingo bingo = 30;                       //bingo活动
+}
+
+message Character {
+  int64 changeNameStamp = 1;       //改名时间戳
+  int64 lastLogin = 2;             //最近登录时间戳
+  string area = 3;                 //角色创建时的地区；
+  string areaName = 4;              //角色创建时的地区英文名字；
+  double totalRecharge = 5;        //累计充值
+  repeated int32 unlockHead= 6;   //已解锁头像/头像框
+  repeated int32 newHead = 7;      //新解锁头像框
+  int32 adTimes = 8;               //广告观看次数；用于sdk上报存储，无实际游戏逻辑
+  int32 fixFlag = 9;               //修补标记：2024-07-31 新增默认解锁头像；
+  string discordCode = 10;           //discord兑换码
+  int32 discordFlag = 11;            //兑换标记
+  repeated string redeemCode = 12;   //游戏兑换码
+  repeated int32 inviteClaim = 13;   //邀请进度奖励已经领取的配置表id；
+  bool isInvited = 14;              //是否被邀请过，一个玩家只能被邀请一次；
+}
+
+// 魔法学院
+message School {
+  int32 version = 1;                        //活动版本；
+  int32 score = 2;                          //学院积分
+  map<int32,int64> taskProgress = 3;        //任务进度：k-任务k（任务参数*1000+type），v-进度；
+  repeated int32 taskClaimed = 4;           //已经领取的任务奖励
+  repeated int32 scoreClaimed = 5;          //学院积分进度领取记录
+  map<int32,int32> packageRecord = 6;       //礼包购买记录；k-礼包配置id，v-购买次数
+  bool fundPlus = 7;                        //学院基金付费购买记录
+  repeated int32 fundClaimed = 8;           //已经领取的免费基金奖励
+  repeated int32 fundPlusClaimed = 9;       //已经领取的付费基金奖励
+  int64 refreshStamp = 10;                  //刷新时间戳
+  bool settle = 11;                         //活动结算标记；
+  map<int32,int32> optionalRecord = 12;       //礼包购买记录；k-对应id*10+type[1-进度奖励自选，2-礼包自选] ，v-自选index从0开始
+}
+
+//幸运转盘
+message LuckyDraw {
+  int64 refreshStamp = 1;             //下一次刷新时间戳；
+  repeated int32 claimRecord = 2;     //已经领取的阶段奖励id，阶段id
+  int32 drawDayTimes = 3;             //每日已抽奖次数
+  int32 progress = 4;                 //宝箱进度
+  int32 adCount = 5;                  //广告已抽次数
+  int32 version = 6;                  //活动版本
+  bool settle = 7;                   //奖励是否已结算
+}
+
+//魔法祈愿
+message MagicDraw {
+  int64 refreshStamp = 1;             //下一次刷新时间戳；
+  repeated int32 claimRecord = 2;     //已经领取的阶段奖励id，阶段id
+  map<int32,int32> drawRecord = 3;    //抽奖记录 k-id v-已抽次数
+  int32 progress = 4;                 //宝箱进度
+  int32 adCount = 5;                  //广告已抽次数
+  int32 version = 6;                  //活动版本
+  bool settle = 7;                    //奖励是否已结算
+  bool fundPlus = 8;                  //基金是否购买
+  repeated int32 fundClaimed = 9;     //已领取的免费基金奖励
+  repeated int32 fundPlusClaimed = 10; //已领取的付费基金奖励
+  map<int32,int32> optionalRecord = 11;//自选记录；k-id ，v-自选index从0开始
+}
+
+//幸运之旅
+message LuckyTrip {
+  int64 refreshStamp = 1;             //下一次刷新时间戳；
+  repeated int32 claimRecord = 2;     //已经领取的阶段奖励id，阶段id
+  int32 progress = 4;                 //宝箱进度
+  int32 adCount = 5;                  //广告已抽次数
+  int32 version = 6;                  //活动版本
+  bool settle = 7;                    //奖励是否已结算
+  int32 todayDraw = 8;                //当日已抽次数
+  map<int32,int32> optionalRecord = 9;//自选奖励记录；k-阶段id ，v-自选index从0开始
+}
+
+//魔法时代活动
+message MagicAge {
+  int32 version = 1;                      //版本号
+  map<int32,int32> packRecord = 2;        //礼包记录 k-礼包配置id v-购买或者领取次数
+  map<int32,int32> optionalRecord = 3;    //自选记录 k-礼包配置id v-自选index
+}
+
+
+//幸运扭蛋；扭蛋英语编辑器识别不了直接蛋；
+message LuckyEgg {
+  int32 count = 1;                          //阶段奖励次数
+  map<int32,int64> taskProgress = 2;        //任务进度：k-任务k（任务参数*1000+type），v-进度；
+  repeated int32 taskClaimed = 3;           //已经领取的任务奖励
+  repeated int32 stageClaimed = 4;          //进度领取记录
+  bool fundPlus = 5;                        //基金是否购买
+  repeated int32 fundClaimed = 6;           //已领取的免费基金奖励
+  repeated int32 fundPlusClaimed = 7;       //已领取的付费基金奖励
+  map<int32,int32> exchangeRecord = 8;      //兑换商店兑换记录；k-配置表id，v-兑换次数
+  map<int32,int32> optionalRecord = 9;      //礼包购买记录；k-对应id*10+type[1-进度奖励自选，2-兑换自选] ，v-自选index从0开始
+  int64 refreshStamp = 10;                  //刷新每日购买次数时间戳
+  int32 dayBuyCount = 11;                   //今日已购买扭蛋币次数
+  int32 dayDrawCount = 12;                  //今日抽奖次数；
+  bool settle = 13;                         //奖励是否已结算
+  int32 version = 14;                       //版本号
+}
+
+// 金秋特惠活动
+message AutumnSpecial {
+  int32 version = 1;                      //版本号
+  map<int32,int32> packRecord = 2;        //礼包记录 k-礼包配置id v-购买或者领取次数
+  map<int32,int32> optionalRecord = 3;    //自选记录 k-礼包配置id v-自选index
+}
+
+// 缤果活动
+message Bingo {
+  int32 version = 1;                        //版本号
+  map<int32,int64> taskProgress = 2;        //任务进度（日常和活动的都在）：k-任务k（任务参数*1000+type），v-进度；
+  repeated int32 taskClaimed = 3;           //活动任务的领取；
+  repeated int32 taskDailyClaimed = 4;      //日常任务的领取；
+  map<int32,int32> exchangeRecord = 5;      //兑换商店兑换记录；k-配置表id，v-兑换次数
+  map<int32,int32> packageRecord = 6;       //礼包购买记录；k-配置表id，v-购买次数
+  map<int32,int32> optionalRecord = 7;      //自选记录；k-对应id*10+type[1-兑换自选，2-礼包自选] ，v-自选index从0开始
+  int32 coinBuy = 8;                        //缤果币购买次数；
+  BingoGrid grid = 9;                       //缤果活动棋盘信息
+  int64 refreshStamp = 10;                   //刷新每日购买次数时间戳
+  bool settle = 11;                         //奖励是否已结算
+}

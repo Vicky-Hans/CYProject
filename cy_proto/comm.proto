@@ -1,0 +1,592 @@
+syntax = "proto3";
+package DH.Proto;
+option go_package = "./pb";
+
+import "Ugate.proto";
+
+message Resource {
+  int32 type = 1;        // 参见配置枚举中Reward
+  int32 id = 2;
+  int64 count = 3;
+  HeroEquip heroEquip = 4;  //类型为heroEquip使用的结构
+}
+
+//概要信息
+message Digest {
+  //与前端协定
+  string name = 1;              //  昵称
+  int32 roleId = 2;             //  角色id
+  int32 logicId = 3;            //  服务器ID
+  int32 headId = 4;             //  头像ID
+  int32 lv = 5;                 //  等级
+  int64 exp = 6;                //  经验
+  int32 HeadFrame = 7;          //  头像框
+}
+
+//FB数据
+message FbData {
+  string fbHeadUrl = 1;            //fb上次上传的头像
+  string fbName = 2;                //fb上次上传的头像
+}
+
+message ItemBag {
+  map<int32,int64> itemsAll = 1;      //道具记录
+}
+
+// 排行榜基础信息结构
+message RankMember {
+  int64 roleId = 1;     //玩家
+  string name =2;       //姓名
+  int32 logo = 3;       //头像
+  int32 score = 4;      //排名分数
+  int32 rank = 5;       //排名 [从1开始，0表示没有排名【排行榜内无对应数据的情况，不能领奖，不用显示】]
+  int32 stage = 6;      //最大通关关卡；
+  int32 headFrame = 7;  //头像框
+  int32 vipStatus = 8;  //会员状态，0-非月卡，1-永久月卡，2-特权月卡，3-两者都开了；
+}
+
+message RankDigestInfo{
+  int32 stage = 1;                          //当前最大通关关卡；
+  map<int32,int32> equips = 2;              //玩家携带装备等级信息；
+  int32 currHero = 3;                       //当前英雄
+  int32 wearBox = 4;                        //服饰系统箱子部分穿戴的服饰配置的id，默认是0（未解锁未穿戴的情况下）
+  map<int32,int32> equipSlots = 5;          //装备格子里的装备; k-格子位置（行*100+列）v-格子状态或数据（0-未解锁，1-已解锁，装备id-对应装备）；行和列都从1开始；
+  map<int32,HeroEquipDigest> heroEquips = 6;  //服饰信息；k-pos v-服饰信息
+}
+
+message HeroEquipDigest {
+  int32 id = 1;
+  int32 quaId = 2;
+  int32 lv = 3;
+}
+
+//==================== 支付 ====================//
+// 充值相关的前端信息
+message appInfo {
+  string plat = 1;                        // 渠道 <<"google_play">>
+  string package = 2;                     // 包
+  string deviceId = 3;                   // 设备id
+  string payType = 4;                    // 支付类型
+}
+
+// 货币信息
+message currencyInfo {
+  string type = 1;  // 货币类型
+  uint64 price = 2; // 货币价格
+}
+
+
+// ======================逻辑功能=================
+
+//体力相关
+message Lives {
+  int32 curr = 1;                   //当前体力值
+  int64 refreshStamp = 2;           //体力倒计时开始的时间戳
+  int32 adTimes = 3;                //观看广告获得体力次数
+  int32 diamondTimes = 4;           //钻石购买体力次数
+  int64 buyRefreshStamp = 5;         //获得体力次数刷新时间,时间戳
+  int64 UnlimitedStamp = 6;         //无限体力结束时间戳
+  int32 diamondStoreTimes = 7;      //钻石购买体力存储次数：TF的功能，先移植，不需要先不管即可；
+}
+
+message CharacterSync {
+  Digest digest = 1;       //玩家概要信息
+  FbData fbData = 2;       //Fb数据
+  int64 changeNameStamp = 3;   //改名时间戳
+  string areaName = 4;              //角色创建时的地区英文名字；
+  int64 roleCreateTime = 5;        //角色创建时间戳；
+  double totalRecharge = 6;        //累计充值
+  repeated int32 unlockHead= 7;   //已解锁头像/头像框
+  repeated int32 newHead = 8;     //新解锁头像框
+  int32 adTimes = 9;               //广告观看次数；用于sdk上报存储，无实际游戏逻辑
+  string discordCode = 10;           //discord兑换码
+  int32 discordFlag = 11;            //兑换标记
+  int32 inviteNumber = 12;          //邀请人数；
+  repeated int32 inviteClaim = 13;  //邀请进度奖励已经领取的配置表id；
+  bool isInvited = 14;              //是否被邀请过，一个玩家只能被邀请一次；
+}
+
+message MailData {
+  repeated MailInfo mails = 1;         //邮件
+}
+
+//装备相关
+message Equip {
+  int32 id = 1;         //装备id
+  int32 lv = 2;         //装备等级
+  int32 wearId = 3;     //上阵信息；已废弃不使用，使用穿戴方案中的data；后端保留修复数据
+}
+
+message EquipBag {
+  map<int32,Equip> items = 1;     //全部装备，k-装备id，v-装备信息
+  int32 maxWearId = 3;            //自增的穿戴id；放到数据里的；
+  int32 currWearFormation = 4;    //当前穿戴方案
+  map<int32,EquipWearFormation> formations = 5; //穿戴方案
+  int32 fixFlag = 6;              //装备fix标记（后端使用）
+}
+
+message EquipWearFormation {
+  map<int32,int32> data = 1;      //全部装备,k-装备id，v-wearId; >0说明穿戴了，根据大小排序显示；穿戴信息；不是所有解锁信息；
+  int32 wears = 2;                //当前穿戴数量；
+}
+
+// 主线相关内容
+
+// 主线副本关卡
+message MainChapter {
+  int32 boxClaimStatus = 1;   //章节宝箱状态：从右到左每一位表示一个宝箱领取状态；0-未领取，1-领取；【和之前代码方式相同，二进制位运算】
+  int32 wave = 2;             //通过的波次
+  int32 star = 3;             //星
+}
+
+// 主线数据结构
+message MainStage {
+  map<int32,MainChapter> chapters = 1;    //章节数据：k：章节id，对应配置表的章节id，v-章节数据
+  int32 currChapter = 2;                  //当前章节：当前解锁到第几章了，章节数；
+  int64 refreshStamp = 3;                 //广告双倍次数刷新时间，扫荡+广告扫描刷新时间
+  int32 adCount = 4;                      //广告双倍剩余次数
+  int32 allStar = 7;                      //主线获得的全部星星；
+  bool hasArchive = 8;                    //是否有存档
+  Hangup hangup = 9;                      //挂机数据
+}
+
+// 主线挂机数据
+message Hangup {
+  int32 freeCount = 1;                //每日快速巡逻免费次数
+  int32 adFreeCount = 2;              //每日快速巡逻广告次数
+  int64 claimedTime = 3;              //上次领取挂机奖励时间
+  int32 heroEquipDailyUnit = 4;       //服饰每日常规累计已领时间单位数
+}
+
+// 战斗相关:不计算属性，只带入相关数据，用于处理战斗中的逻辑；
+message FightData {
+  int64 uid = 1;                    //战斗唯一id
+  int64 seed = 2;                   //随机种子
+  MainFightData stage = 3;          //主线战斗相关数据，存档数据；
+  FightAttr attr = 4;               //局外属性相关
+}
+
+// FightAttr 战斗属性相关：全局属性+装备
+message FightAttr {
+  map<string,int32> roleAttr = 1;         //战斗角色属性；
+  repeated int32 globalSkills = 2;        //全局技能效果；带触发效果的；纯属性的已经计算完毕；
+  map<int32,EquipAttr> equips = 3;        //装备信息；携带的；
+  HeroActive heroActive = 4;              //英雄主动技能信息
+  repeated int32 heroEffect = 5;          //英雄局外对战斗内刷新相关有影响的技能（heroSkill表的id）
+  map<int32,EquipAttr> heroEquips = 6;    //英雄装备信息；携带的；k-服饰id
+  repeated int32 heroEquipEffect = 7;     //英雄装备局外对战斗内刷新相关有影响的技能（heroEquipSkill表的id）（后端使用）
+  int32 wearBox = 8;                      //服饰系统箱子部分穿戴的服饰配置的id，默认是0（未解锁未穿戴的情况下）
+}
+
+// EquipAttr 局外装备对应属性
+message EquipAttr {
+  int32 lv = 1;                     //等级
+  map<string,int32> attr = 2;       //装备属性；
+  repeated int32 skills = 3;        //装备技能效果；带触发效果的；纯属性的已经计算完毕；
+}
+
+message HeroActive {
+  int32 heroId = 1;                 //英雄id；
+  map<string,int32> attr = 2;       //英雄主动技能属性；
+  repeated int32 skills = 3;        //英雄主动技能技能效果；带触发效果的；纯属性的已经计算完毕；
+  int32 energy = 4;                  //主动技能能量值
+}
+
+// FightStat 战斗结算的统计数据
+message FightStat {
+  int32 wave = 1;       //完成的波次；
+  int32 kills = 2;      //击杀怪物
+  int32 bossKills = 3;             //boss击杀数量
+  int64 harm = 4;                  //伤害值
+  int32 survivalTime = 5;          //生存时间；秒
+}
+
+message Battle {
+  int64 maxUid = 1;                 //战斗唯一id
+  BattleInfo info = 2;             //战斗存盘数据
+}
+
+message BattleInfo {
+  int32 id = 1;                     //章节id
+  int64 uid = 2;                    //战斗唯一id
+  int64 seed = 3;                   //随机种子
+  bool settle = 4;                  //用于标记战斗是否结算，避免客户端重复协议影响数据
+  int32 bType = 5;                  //战斗类型
+  bool adDouble = 6;                //主线是否已经广告双倍；
+  MainFightData stage = 7;          //主线战斗相关数据，存档数据；
+  bytes secretData = 8;                 //秘林探险存档信息
+}
+
+message MainFightData {
+  int64 uid = 1;                    //战斗uid；
+  int32 wave = 2;                   //波次
+  int32 money = 3;                  //钱
+  int32 lv = 4;                     //等级
+  int32 exp = 5;                    //经验
+  int32 interest = 6;               //利息，百分比数值
+  int32 waveGotMoney = 7;           //每波可以获得的钱；天赋带来的，固定的走配置即可；
+  int32 equipWaveRefresh = 8;       //默认的装备刷新剩余次数；每波都有；
+  int32 equipWaveAdRefresh = 9;     //默认的装备广告刷新剩余次数；每波都有；
+  int32 talentAdRefresh = 10;       //天赋重刷广告剩余次数；
+  int32 equipAdRefresh = 11;         //装备广告刷新总剩余次数；
+  map<int32,int32> equipTalent = 12;  //装备天赋，k-天赋id，v-选择次数；
+  map<int32,int32> effectTalent = 13; //效果天赋，k-天赋id，v-选择次数；影响每波活动，刷新概率，利息等；
+  repeated int32 equips = 14;         //刷新出来但未操作的装备；战斗开始就有；id*10+广告状态(0-未看，1-已看)
+  map<int32,int32> equipSlots = 15;   //装备格子里的装备; k-格子位置（行*100+列）v-格子状态或数据（0-未解锁，1-已解锁，装备id-对应装备）；行和列都从1开始；
+  repeated int32 talents = 16;        //刷新出来但未选择的天赋；选择后清空；
+  int32 talentRefreshLv = 17;         //技能选择等级
+  int32 equipRefreshMoney = 18;       //装备刷新消耗：初始配置，天赋可能会带来折扣；
+  map<string,int32> attr = 19;        //需要保存的属性，k-属性key，v-值；
+  map<int32,int32> equipsLv = 20;     //局外穿戴的装备等级，k-装备id，v-等级；
+  int32 extraEquipCount = 21;         //额外属性的数量
+  map<int32,int32> equipRatio = 22;   //装备刷新概率变化，k-装备等级，v-概率；
+  int32 settleIncrease = 23;          //结算增加
+  map<int32,int32> equipMultiAttr = 24;   //装备多属性选择记录；k-装备id，v-equip model id（技能id）
+  map<int64,int64> hurtStat = 25;     //伤害统计
+  int32 kills = 26;                   //击杀
+  int32 survivalTime = 27;            //生存时间；秒
+  int32 energy = 28;                  //主动技能能量
+  repeated int32 wish = 29;           //心愿存储槽位
+  int32 heReviveTimes = 30;           //服饰技能复活次数
+}
+
+//月卡
+message Card{
+  int64 claimDay = 1;//最近领取的天；直接用时间戳算出来的，这里用天不用时间戳的原因是方便计算；
+  int64 lastStamp = 2;//持续结束的时间
+  int32 allNums = 3;//累计获得:用于过期补偿，和领取判断
+  int32 maxNum = 4; //累积的最大领取次数
+  int64 buyDay = 5; //购买的天，避免第一天自动领取失败没有claimDay无法补发奖励；前端不使用；
+}
+
+//MonthCard 月卡
+message MonthCard{
+  Card normalCard = 1;//普通月卡
+  Card plusCard = 2;  //高级月卡
+  int32 doubleStatus = 3; //双月卡状态，0-未解锁，1-解锁未领取，2-解锁已领取；购买月卡要check更新这个值；
+  bool lifetimeCard = 4;  //终身卡购买记录；
+}
+
+//商城功能
+
+//货物
+message ShopGoods {
+  Resource reward = 1;     //每日商店货物
+  int32 limit = 2;         //当天可以购买次数
+  int64 price = 3;         //单价-每次购买的价格【不是每个道具的价格】
+  int32 discount = 4;      //折扣：折扣会随机
+}
+
+//招募功能
+message Recruit {
+  int32 commFree = 1;               //普通宝箱免费次数；；
+  int32 collectFree = 2;            //珍藏宝箱免费次数；
+  int32 lv = 3;                     //招募等级
+  int32 exp = 4;                    //招募经验；不是总经验，就是当前级的经验，直接显示；
+  int64 normalRefreshStamp = 5;       //普通招募宝箱下一次刷新时间
+  int64 advanceRefreshStamp = 6;       //珍藏招募宝箱下一次刷新时间
+  int32 minGuarantee = 7;              //服饰宝箱小保底：当前抽取的次数，必出次数等于保底次数减该次数；
+  int32 maxGuarantee = 8;              //服饰宝箱大保底；当前抽取的次数，必出次数等于保底次数减该次数；
+}
+
+// 商城
+message Shop {
+  int64 refreshStamp = 1;             //每日商城下一次刷新时间戳；
+  map<int32,int64> chapterGift =2;    //已购买的章节礼包，k-packageId,v-购买的时间戳
+  map<int32,ShopGoods> dailyShop = 3; //每日商店
+  Recruit recruit = 4;                //招募宝箱
+  map<int32,int64> diamondDouble = 5; //钻石双倍购买记录，买过n次的不再双倍；k-packageId，v-钻石双倍已购次数
+  int32 coinFree = 6;                 //金币当日免费次数
+  int32 fixFlag = 7;                  //章节礼包购买记录重置改版标记
+}
+
+// 首充礼包
+message FirstCharge {
+  int64 buyStamp = 1;   //购买的时间戳
+  int32 claim = 2;        //已经领取到的天，1-3；购买会直接给第一天的奖励，未购买为0，购买后为1，第二天第三天领取对应；
+  int32 fixFlag = 3;      //改版标记
+}
+
+//英雄
+message Hero {
+  map<int32,HeroInfo> heroes = 1;//已解锁的英雄信息,k-heroId,v-英雄具体信息
+  int32 fmtHero = 2;//当前出战英雄
+}
+
+message HeroInfo {
+  int32 lv = 1;//英雄等级，未解锁等级0，解锁1
+  int32 star = 2;//英雄星级，初始星级为0
+}
+
+// 无尽冒险
+message Endless {
+  int64 refreshStamp = 1;             //下一次免费挑战次数刷新时间；
+  int32 count = 2;                    //剩余挑战次数
+  int32 maxKill = 3;                  //个人记录最大击杀；
+  int32 maxCoinCount = 4;             //个人记录最大金币获得；
+  int32 maxSurvival = 5;              //个人记录最大生存时间；秒
+  bool hasArchive = 6;                //是否有存档
+  int32 maxDayCoin = 7;               //今日最大金币获得；
+}
+
+// 通行证
+message AllPassport {
+  map<int32,Passport> data = 1; //通行证 k-通行证类型
+}
+
+message Passport {
+  int64 endTime = 1;                  //结束时间戳；
+  int32 version = 2;                  //奖励版本（根据这个版本去显示奖励）
+  bool plus = 3;                      //是否购买付费版；
+  int32 lv = 4;                       //等级
+  int32 exp = 5;                      //经验（不是总经验，是当前级的经验进度）
+  int32 freeClaimLv = 6;              //免费领取到的等级
+  int32 plusClaimLv = 7;              //付费领取到的等级
+  bool settle = 8;                    //结算标记
+  int32 cycle = 9;                    //轮次
+}
+
+// 每日礼包
+message DailyPack {
+  int64 refreshStamp = 1;                //下一次刷新时间；
+  map<int32,int32> packRecord = 2;       //已购买礼包，k-packageId(这个功能的配置表),v-购买次数；包括免费那个宝箱；
+  int32 selectEquip = 3;                 //选择的装备；
+  map<int32,int32> optionalRecord = 4;   //自选选择记录，k-packageId(这个功能的配置表),v-自选index
+}
+
+//幸运转盘同步结构
+message LuckyDrawSync {
+  int64 startStamp = 1;                //活动开始时间戳ms；
+  int64 endStamp = 2;                  //活动结束时间戳ms；
+  int64 refreshStamp = 3;             //下一次刷新时间戳；
+  repeated int32 claimRecord = 4;     //已经领取的阶段奖励id，阶段id
+  int32 drawDayTimes = 5;             //每日已抽奖次数
+  int32 progress = 6;                 //宝箱进度
+  int32 adCount = 7;                  //广告已抽次数
+}
+
+// 触发礼包
+message TriggerGift {
+  map<int32,TriggerGiftOne> data = 1;      //条件触发礼包
+  repeated int32 preData = 2;              //老玩家触发记录，TriggerGiftType表的id
+  bool preFlag = 3;                        //检测可触发标记 true:已检测
+  int64 weekRefreshStamp = 4;              //周刷新时间
+  int64 monthRefreshStamp = 5;             //月刷新时间
+  int64 dayRefreshStamp = 6;               //日刷新时间
+  bool todayBuy = 7;                       //今日是否已买
+  int32 buyDay = 8;                        //累计天数
+  int64 buyDayRefreshStamp = 9;            //累计天数进度重置时间
+  repeated int32 claimRecord = 10;         //累计天数奖励记录
+  map<int32,int32> optionalRecord = 11;    //累计天数自选记录；k-id ，v-自选index从0开始
+}
+
+// TriggerGiftOne 一种触发礼包记录，不是最开始的关卡触发礼包，是条件触发礼包；
+message TriggerGiftOne {
+  int32 typ = 1;           //触发礼包条件类型
+  int32 condition = 2;     //条件进度
+  int64 endStamp = 3;      //触发后的结束时间
+  map<int32,int32> record = 5;   //购买记录 k-礼包id v-已购次数
+}
+
+// 每日挑战相关内容
+
+// 每日挑战数据结构
+message DailyFight {
+  int64 dayRefreshStamp = 1;          //每日刷新时间；
+  int64 weekRefreshStamp = 2;         //周宝箱刷新时间
+  int32 count = 3;                    //每日剩余挑战次数
+  int32 dailyKills = 4;               //每日击杀怪物数量
+  repeated int32 dailyClaim = 5;      //日宝箱领取记录
+  int32 weekProgress = 6;             //每周成功挑战次数，周宝箱进度
+  repeated int32 weekClaim = 7;       //周宝箱领取记录
+  bool hasArchive = 8;                //是否有存档
+  bool sweep = 9;                     //是否可扫荡
+  repeated int32 buff = 10;           //每日增益 index：0-buff 1-dbf
+  map<int32,int32> mons = 11;         //每日怪物 -1-小怪1 -2-小怪2 -3-小怪3 -4-boss -5-boss
+  int64 buffStamp = 12;               //刷新buff和怪物的时间戳
+  int32 onceMaxKill = 13;             //单局最大击杀数
+}
+
+//魔法祈愿同步结构
+message MagicDrawSync {
+  int64 startStamp = 1;                 //活动开始时间戳s；
+  int64 endStamp = 2;                   //活动结束时间戳s；
+  int64 refreshStamp = 3;               //下一次刷新时间戳s；
+  repeated int32 claimRecord = 4;       //已经领取的阶段奖励id
+  map<int32,int32> drawRecord = 5;      //抽奖记录 k-id v-该商品已抽次数
+  int32 progress = 6;                   //宝箱进度
+  int32 adCount = 7;                    //广告已抽次数
+  bool fundPlus = 8;                    //基金是否购买
+  repeated int32 fundClaimed = 9;       //已领取的免费基金奖励
+  repeated int32 fundPlusClaimed = 10;  //已领取的付费基金奖励
+  int32 days = 11;                      //活动开启的第几天
+  map<int32,int32> optionalRecord = 12; //自选记录；k-id ，v-自选index从0开始
+}
+
+// 秘林关卡数据结构
+message Secret {
+  map<int32,SecretStage> stageInfo = 1; //key:关卡 value:关卡信息
+  int32 currStage = 2;                  //当前关卡
+  bool hasArchive = 3;                  //是否有存档
+  int64 seasonTime = 5;                 //赛季结束时间
+  int32 season = 7;                     //当前赛季
+  int32 score = 8;                      //秘林积分
+  bool settle = 9;                      //是否结算赛季奖励
+  int32 maxStage = 10;                  //本赛季可达的最高关卡
+}
+
+//秘林关卡信息
+message SecretStage {
+  bool pass = 1;   //是否挑战成功
+  bool claim = 2;  //宝箱是否已领取
+}
+
+// 秘林战斗相关:不计算属性，只带入相关数据，用于处理战斗中的逻辑；
+message SFightData {
+  int64 uid = 1;                    //战斗唯一id
+  int64 seed = 2;                   //随机种子
+  SecretFightData stage = 3;        //秘林战斗相关数据，存档数据；
+  FightAttr attr = 4;               //局外属性相关
+}
+
+message SecretFightData {
+  int64 uid = 1;                          //战斗uid；
+  int32 wave = 2;                         //波次
+  int32 lv = 3;                           //等级
+  int32 exp = 4;                          //经验
+  map<int32,int32> equipTalent = 5;       //战斗天赋，k-天赋id，v-选择次数；
+  map<int32,int32> effectTalent = 6;      //效果天赋，k-天赋id，v-选择次数；影响每波活动，刷新概率
+  map<int32,int32> heroEquipTalent = 7;   //装备天赋, k-天赋id，v-选择次数
+  map<int32,int32> equipSlots = 8;        //装备格子里的装备; key-装备id value-选择次数
+  repeated int32 talents = 9;             //刷新出来但未选择的天赋；选择后清空；
+  map<string,int32> attr = 10;            //需要保存的属性，k-属性key，v-值；
+  map<int32,int32> equipsLv = 11;         //局外穿戴的装备等级，k-装备id，v-等级；
+  map<int32,int32> equipMultiAttr = 12;   //装备多属性选择记录；k-装备id，v-equip model id（技能id）
+  map<int64,int64> hurtStat = 13;         //伤害统计
+  int32 energy = 14;                      //主动技能能量
+  int32 talentBeginRefresh = 15;          //初始天赋剩余次数，进入战斗时默认选n次装备天赋，不选完无法战斗；
+  int32 dur = 16;                         //本局时长 单位秒
+  int32 kills = 17;                       //本局杀敌数
+  int32 talentAdRefresh = 18;             //天赋重刷广告剩余次数；
+  int32 season = 19;                      //赛季
+  int32 boss = 20;                        //boss
+}
+
+// 英雄装备背包
+message HeroEquipBag {
+  map<int32,int64> wear =1;           //已穿戴的，k-部位[待确定]，v-装备uid
+  map<int64,HeroEquip> items = 2;     //装备，k-uid，v-装备
+  int64 maxId = 3;                    //装备uid自增值
+}
+
+// 英雄装备
+message HeroEquip {
+  int32 id = 1;               //装备id-配置表id
+  int64 uid = 2;              //装备唯一id
+  int32 lv = 3;               //装备等级
+  int32 quaId = 4;            //装备品质【qua配置表id】,和品质颜色是两个东西
+}
+
+
+// 章节基金
+message ChapterFund {
+  bool plus = 1;                    //付费购买，false：未购买，true：已购买
+  repeated int32 freeClaim = 2;     //免费领取情况：配置表id
+  repeated int32 plusClaim = 3;     //付费领取情况：配置表id
+}
+
+// 魔法学院
+message SchoolSync {
+  int64 startStamp = 1;                     //活动开始时间戳s；
+  int64 endStamp = 2;                       //活动结束时间戳s；
+  int32 score = 3;                          //学院积分
+  map<int32,int64> taskProgress = 4;        //任务进度：k-任务k（任务参数*1000+type），v-进度；
+  repeated int32 taskClaimed = 5;           //已经领取的任务奖励
+  repeated int32 scoreClaimed = 6;          //学院积分进度领取记录
+  map<int32,int32> packageRecord = 7;       //礼包购买记录；k-礼包配置id，v-购买次数
+  bool fundPlus = 8;                        //学院基金付费购买记录
+  repeated int32 fundClaimed = 9;           //已经领取的免费基金奖励
+  repeated int32 fundPlusClaimed = 10;      //已经领取的付费基金奖励
+  map<int32,int32> optionalRecord = 11;     //礼包购买记录；k-对应id*10+type[1-进度奖励自选，2-礼包自选] ，v-自选index从0开始
+}
+
+//幸运之旅同步结构
+message LuckyTripSync {
+  int64 startStamp = 1;                //活动开始时间戳s；
+  int64 endStamp = 2;                  //活动结束时间戳s；
+  int64 refreshStamp = 3;              //下一次刷新时间戳s；
+  repeated int32 claimRecord = 4;      //已经领取的阶段奖励id
+  int32 progress = 5;                  //宝箱进度
+  int32 adCount = 6;                   //广告已抽次数
+  int32 todayDraw = 7;                 //当日已抽次数
+  map<int32,int32> optionalRecord = 8; //自选奖励记录；k-阶段id ，v-自选index从0开始
+}
+
+//幸运之旅中奖信息
+message LuckyTripRecord {
+  string nick = 1;                     //昵称
+  Resource reward = 2;                 //奖励
+  int32 level = 3;                     //几等奖 值为1、2、3
+}
+
+//魔法时代活动
+message MagicAgeSync {
+  int64 startStamp = 1;                   //活动开始时间戳s；
+  int64 endStamp = 2;                     //活动结束时间戳s；
+  map<int32,int32> packRecord = 3;        //礼包记录 k-礼包配置id v-购买或者领取次数
+  map<int32,int32> optionalRecord = 4;    //自选记录 k-礼包配置id v-自选index
+}
+
+//礼包相关内容 -0元购 后续有简单礼包在这里加逻辑
+message GiftPack {
+  int64 zeroBuy = 1;                        //0元购；购买的时间戳；0-未购买，非0-购买的时间戳
+  repeated int32 zeroClaim = 2;             //0元购，已经领取的阶段奖励id，配置表id
+}
+
+//幸运扭蛋；扭蛋英语编辑器识别不了直接蛋；
+message LuckyEggSync {
+  int32 count = 1;                          //阶段奖励次数
+  map<int32,int64> taskProgress = 2;        //任务进度：k-任务k（任务参数*1000+type），v-进度；
+  repeated int32 taskClaimed = 3;           //已经领取的任务奖励
+  repeated int32 stageClaimed = 4;          //进度奖励领取记录
+  bool fundPlus = 5;                        //基金是否购买
+  repeated int32 fundClaimed = 6;           //已领取的免费基金奖励
+  repeated int32 fundPlusClaimed = 7;       //已领取的付费基金奖励
+  map<int32,int32> exchangeRecord = 8;      //兑换商店兑换记录；k-配置表id，v-兑换次数
+  map<int32,int32> optionalRecord = 9;      //礼包购买记录；k-对应id*10+type[1-进度奖励自选，2-兑换自选] ，v-自选index从0开始
+  int32 dayBuyCount = 10;                   //今日已购买扭蛋币次数
+  int32 dayDrawCount = 11;                  //今日抽奖次数；
+  int64 startStamp = 12;                    //活动开始时间戳s；
+  int64 endStamp = 13;                      //活动结束时间戳s；
+  int64 endExchangeStamp = 14;              //活动兑换结束时间戳s；
+}
+
+// 金秋特惠
+message AutumnSpecialSync {
+  int64 startStamp = 1;                   //活动开始时间戳s；
+  int64 endStamp = 2;                     //活动结束时间戳s；
+  map<int32,int32> packRecord = 3;        //礼包记录 k-礼包配置id v-购买或者领取次数
+  map<int32,int32> optionalRecord = 4;    //自选记录 k-礼包配置id v-自选index
+}
+
+message BingoGrid {
+  int32 count = 1;                          //翻面次数，已经翻的次数；
+  int32 bingoCount = 2;                     //连线次数；
+  repeated int32 stageClaimed = 3;          //进度领取记录
+  map<int32,Resource> openRecord = 4;       //已经翻开的记录；k-位置（行*100+列，行列都是从1开始），v-翻出来的奖励
+}
+
+// 缤果活动
+message BingoSync {
+  int64 startStamp = 1;                   //活动开始时间戳s；
+  int64 endStamp = 2;                     //活动结束时间戳s；
+  map<int32,int64> taskProgress = 3;        //任务进度（日常和活动的都在）：k-任务k（任务参数*1000+type），v-进度；
+  repeated int32 taskClaimed = 4;           //活动任务的领取；这里记录分开了，但是领去没分开，记得领取后更新数据的地方要整对；
+  repeated int32 taskDailyClaimed = 5;      //日常任务的领取；
+  map<int32,int32> exchangeRecord = 6;      //兑换商店兑换记录；k-配置表id，v-兑换次数
+  map<int32,int32> packageRecord = 7;       //礼包购买记录；k-配置表id，v-购买次数
+  map<int32,int32> optionalRecord = 8;      //自选记录；k-对应id*10+type[2-兑换自选，3-礼包自选] ，v-自选index从0开始
+  int32 coinBuy = 9;                        //缤果币购买次数；
+  BingoGrid grid = 10;                      //缤果活动棋盘信息
+  int64 endExchangeStamp = 11;              //活动兑换结束时间戳s；
+}
