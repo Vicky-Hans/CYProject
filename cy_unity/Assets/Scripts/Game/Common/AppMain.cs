@@ -1,14 +1,11 @@
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
-using DH.Asset;
 using DH.Config;
 using DH.Data;
 using DH.Game;
 using DH.Game.UIViews;
-using DH.Game.ViewModels;
 using DH.UIFramework;
 using DH.UIFramework.Contexts;
-using DH.UIFramework.Services;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.EventSystems;
@@ -82,8 +79,6 @@ public class AppMain : MonoBehaviour
         {
             SRDebug.Init();
         }
-        //QualityManager.Instance.InitQualityLevel(null);
-        //QualityManager.Instance.ChangeRenderScale(auto:true);
 #if DH_DEBUG
         InitDebugInfo();
         
@@ -210,18 +205,9 @@ public class AppMain : MonoBehaviour
         DataTableManager.SetLoadAdapter(new DataLoadAdapter());
         ConfigCenter.InitConfigs();
         var context = Context.GetApplicationContext();
-
-        IServiceContainer container = context.GetContainer();
-
-        /* Initialize the data binding service */
-        BindingServiceBundle bundle = new BindingServiceBundle(context.GetContainer());
+        var bundle = new BindingServiceBundle(context.GetContainer());
         bundle.Start();
-        
-        if (IsBattleDebug)
-        {
-            return;
-        }
-        
+        if (IsBattleDebug) return;
 #if UNITY_WEBGL || WECHAT_MINI
         StartupEntry.Instance.WebGLStartGame = () =>
         {
