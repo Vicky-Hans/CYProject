@@ -1,7 +1,4 @@
 using DHFramework;
-using DHHybridCLR.Scripts;
-using UnityEngine;
-
 namespace DH.Launch
 {
     public class StartupLauncher
@@ -10,7 +7,6 @@ namespace DH.Launch
         {
             StartupEntry.Instance.Startup().Forget();
         }
-        
         public static void Quit()
         {
             DHLog.Debug("[Startup] ShutDown");

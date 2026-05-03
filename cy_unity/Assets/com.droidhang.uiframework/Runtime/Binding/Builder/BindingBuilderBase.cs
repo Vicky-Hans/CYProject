@@ -2,6 +2,7 @@
 
 using System;
 using System.Linq.Expressions;
+using DH.UIFramework.AppContext;
 using DH.UIFramework.Contexts;
 using DH.UIFramework.Converters;
 using DH.UIFramework.Parameters;

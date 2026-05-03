@@ -163,7 +163,10 @@ namespace DH.UIFramework
                     this.sourceProxy = null;
                 }
             }
-            catch (Exception) { }
+            catch (Exception e)
+            {
+                DHLog.Error("DisposeSourceProxy failed: {0}", e);
+            }
         }
 
         protected void CreateTargetProxy(object target, BindingDescription description)
@@ -194,7 +197,10 @@ namespace DH.UIFramework
                     this.targetProxy = null;
                 }
             }
-            catch (Exception) { }
+            catch (Exception e)
+            {
+                DHLog.Error("DisposeTargetProxy failed: {0}", e);
+            }
         }
 
 

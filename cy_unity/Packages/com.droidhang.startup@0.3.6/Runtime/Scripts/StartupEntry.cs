@@ -41,12 +41,9 @@ namespace DH.Launch
         {
             StartupConfig = GameRoot.Instance.StartupConfig;
             var canvasRootGo = GameObject.Find(StartupConfig.CanvsRoot);
-            
             autoDestroyStartupDlg = StartupConfig.AutoDestroyStartupDlg;
             CanvasRootTrans = canvasRootGo ? canvasRootGo.transform : null;
-            
             DHLog.Debug("[Startup] AssetsManager.Instance.Init");
-            
             AssetsManager.Instance.Init(UniTask.Action(async () =>
             {
                 await StartLauncherTask();
@@ -61,26 +58,20 @@ namespace DH.Launch
         public async void HotUpdateForSid(int sid, Action releaseFunc)
         {
             DHLog.Debug("[BeginStartGame] begin HotUpdateForSid");
-            
             await InitStartupPage();
             this.releaseFunc = releaseFunc;
             this.sid = sid;
-            
             StartCoroutine(BeginHotUpdateForSid(sid));
         }
 
         private async UniTask StartLauncherTask()
         {
             await Localization.InitSimple(GameRoot.Instance.StartupConfig.LocalizationConfigPath,DeviceUtility.GetLanguage);
-            
             await InitConfig();
-                
             TaskEntry = new TaskAssembler();
             await InitStartupPage();
-            
             await TaskEntry.LauncherTasks(OnComplete, OnComplete);
         }
-
         /// <summary>
         /// 初始化读startup配置
         /// </summary>
@@ -117,22 +108,17 @@ namespace DH.Launch
             {
                 TaskEntry.Update(Time.deltaTime, Time.unscaledDeltaTime);
             }
-            
-            if (beginStartGame)
+            if (!beginStartGame) return;
+            beginStartGame = false;
+            if (StartupConfig.UseAsyncAwait)
             {
-                beginStartGame = false;
-                if (StartupConfig.UseAsyncAwait)
-                {
-                    ExecuteStartGameAsync().Forget();
-                }
-                else
-                {
-                    ExecuteStartGame();
-                }
+                ExecuteStartGameAsync().Forget();
+            }
+            else
+            {
+                ExecuteStartGame();
             }
         }
-        
-    
         /// <summary>
         /// 选服后发现需要热更新，释放上一次lua环境，重新启动初始化阶段1
         /// </summary>
@@ -189,7 +175,6 @@ namespace DH.Launch
         private void ExecuteStartGame()
         {
             StartGame();
-
             if (autoDestroyStartupDlg)
             {
                 DestroyStartupPage();

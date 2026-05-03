@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using DH.UIFramework.Binders;
+using DH.UIFramework.AppContext;
 using DH.UIFramework.Contexts;
 using DH.UIFramework.Builder;
 using System;

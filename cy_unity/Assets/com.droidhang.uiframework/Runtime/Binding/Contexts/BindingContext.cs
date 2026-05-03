@@ -220,7 +220,9 @@ namespace DH.UIFramework.Contexts
             if (key == null)
                 return;
 
-            List<IBinding> list = this.bindings[key];
+            if (!this.bindings.TryGetValue(key, out var list))
+                return;
+
             if (list != null && list.Count > 0)
             {
                 foreach (IBinding binding in list)
