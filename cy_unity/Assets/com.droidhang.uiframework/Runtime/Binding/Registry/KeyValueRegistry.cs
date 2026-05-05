@@ -1,12 +1,18 @@
-﻿
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using DHFramework;
 
 namespace DH.UIFramework.Registry
 {
-    
-    public class KeyValueRegistry<K,V> : IKeyValueRegistry<K,V>
+    public interface IKeyValueRegistry<K, V>
+    {
+        V Find(K key);
+
+        V Find(K key, V defaultValue);
+
+        void Register(K key, V value);
+    }
+
+    public class KeyValueRegistry<K, V> : IKeyValueRegistry<K, V>
     {
         private readonly Dictionary<K, V> lookups = new Dictionary<K, V>();
 

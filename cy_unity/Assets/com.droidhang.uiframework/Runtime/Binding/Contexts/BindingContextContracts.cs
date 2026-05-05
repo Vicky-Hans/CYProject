@@ -11,13 +11,14 @@ namespace DH.UIFramework.Contexts
 
         object DataContext { get; set; }
 
-        void Add(IBinding binding,object key=null);
+        void Add(IBinding binding, object key = null);
 
-        void Add(IEnumerable<IBinding> bindings,object key = null);
+        void Add(IEnumerable<IBinding> bindings, object key = null);
 
-        void Add(object target, BindingDescription description,object key = null);
+        void Add(object target, BindingDescription description, object key = null);
 
         void Add(object target, IEnumerable<BindingDescription> descriptions, object key = null);
+
         // 临时暂停绑定，恢复后自动刷新
         void PauseBind(bool flag);
 
@@ -26,5 +27,12 @@ namespace DH.UIFramework.Contexts
         void Clear(object key);
 
         void Clear();
+    }
+
+    public interface IUnityLifeCycle
+    {
+        void Update();
+
+        void LateUpdate();
     }
 }

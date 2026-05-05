@@ -1,11 +1,24 @@
-﻿
-
-using DH.UIFramework.Contexts;
+﻿using DH.UIFramework.Contexts;
 using System;
 using UnityEngine.EventSystems;
 
 namespace DH.UIFramework
 {
+    public interface IBinding : IDisposable
+    {
+        IBindingContext BindingContext { get; set; }
+
+        object Target { get; }
+
+        object DataContext { get; set; }
+
+        void Unbind();
+
+        void ForceRefresh();
+
+        void Pause();
+    }
+
     public abstract class AbstractBinding : IBinding
     {
         private IBindingContext bindingContext;
