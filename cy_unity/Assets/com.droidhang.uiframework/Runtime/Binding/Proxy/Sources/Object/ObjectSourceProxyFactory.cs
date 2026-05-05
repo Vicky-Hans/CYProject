@@ -7,8 +7,6 @@ namespace DH.UIFramework.Proxy.Sources.Object
 {
     public class ObjectSourceProxyFactory : TypedSourceProxyFactory<ObjectSourceDescription>, INodeProxyFactory, INodeProxyFactoryRegister
     {
-        //private static readonly ILog log = LogManager.GetLogger(typeof(ObjectSourceProxyFactory));
-
         private List<PriorityFactoryPair> factories = new List<PriorityFactoryPair>();
 
         protected override bool TryCreateProxy(object source, ObjectSourceDescription description, out ISourceProxy proxy)

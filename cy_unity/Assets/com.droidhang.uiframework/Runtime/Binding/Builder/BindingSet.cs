@@ -82,21 +82,6 @@ namespace DH.UIFramework.Builder
             this.builders.Add(builder);
             return builder;
         }
-
-//#if UNITY_2019_1_OR_NEWER
-//        public virtual BindingBuilder<TChildTarget, TSource> Bind<TChildTarget>(string targetName = null) where TChildTarget : VisualElement
-//        {
-//            UIDocument document = (this.target as UnityEngine.Behaviour).GetComponent<UIDocument>();
-//            if (document == null)
-//                throw new Exception("The UIDocument not found, this is not a UIToolkit view.");
-
-//            VisualElement rootVisualElement = document.rootVisualElement;
-//            TChildTarget target = string.IsNullOrEmpty(targetName) ? rootVisualElement.Q<TChildTarget>() : rootVisualElement.Q<TChildTarget>(targetName);
-//            var builder = new BindingBuilder<TChildTarget, TSource>(context, target);
-//            this.builders.Add(builder);
-//            return builder;
-//        }
-//#endif
     }
 
     public class BindingSet<TTarget> : BindingSetBase where TTarget : class
@@ -120,21 +105,6 @@ namespace DH.UIFramework.Builder
             this.builders.Add(builder);
             return builder;
         }
-
-//#if UNITY_2019_1_OR_NEWER
-//        public virtual BindingBuilder<TChildTarget> Bind<TChildTarget>(string targetName = null) where TChildTarget : VisualElement
-//        {
-//            UIDocument document = (this.target as UnityEngine.Behaviour).GetComponent<UIDocument>();
-//            if (document == null)
-//                throw new Exception("The UIDocument not found, this is not a UIToolkit view.");
-
-//            VisualElement rootVisualElement = document.rootVisualElement;
-//            TChildTarget target = string.IsNullOrEmpty(targetName) ? rootVisualElement.Q<TChildTarget>() : rootVisualElement.Q<TChildTarget>(targetName);
-//            var builder = new BindingBuilder<TChildTarget>(context, target);
-//            this.builders.Add(builder);
-//            return builder;
-//        }
-// #endif
     }
 
     public class BindingSet : BindingSetBase

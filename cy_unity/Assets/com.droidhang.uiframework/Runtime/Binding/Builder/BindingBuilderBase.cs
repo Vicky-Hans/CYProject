@@ -16,8 +16,6 @@ namespace DH.UIFramework.Builder
 {
     public class BindingBuilderBase : IBindingBuilder
     {
-        //private static readonly ILog log = LogManager.GetLogger(typeof(BindingBuilderBase));
-
         private bool builded = false;
         private object scopeKey;
         private object target;
@@ -131,11 +129,6 @@ namespace DH.UIFramework.Builder
         {
             if (this.description.Source != null)
                 throw new BindingException("You cannot set the source path of a Fluent binding more than once");
-
-            // this.description.Source = new ExpressionSourceDescription()
-            // {
-            //     Expression = expression
-            // };
         }
 
         protected void SetExpression(LambdaExpression expression)

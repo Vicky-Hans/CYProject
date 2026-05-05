@@ -38,11 +38,6 @@ namespace DH.UIFramework.ViewModels
             Action clearFunc)
         {
         }
-        
-        // protected static void BindCollection<TKey, TSource, TTarget>(ObservableDictionary<TKey, TSource> source,
-        //     ObservableList<TTarget> target, Func<TKey,TSource, TTarget> func)
-        // {
-        // }
 
         /// <summary>
         /// 绑定数据层Collection到VM层，代码由编译器自动生成，此处只用于代码生成所需要的参数

@@ -31,10 +31,6 @@ namespace DH.UIFramework
             // 调用一下避免被IL2Cpp裁剪掉
             UpdateFontConfig(null,null);
             allFontsPaths = Font.GetPathsToOSFonts();
-            // foreach (var fontPath in allFontsPaths)
-            // {
-            //     Debug.Log(fontPath);
-            // }
         }
 
         public void UpdateFontConfig(string configJson,TMP_FontAsset font)
@@ -104,12 +100,9 @@ namespace DH.UIFramework
 
             if (string.IsNullOrEmpty(path))
             {
-                //Debug.Log($"Font not found: familyName:{familyName} styleName:{styleName}");
                 return false;
             }
-            
-            //Debug.Log($"Add font {path}");
-            
+
             Font osFont = new Font(path);
             int atlasSize = rootFontAsset.fallbackFontAssetTable.Count == 0 ? 1024 : 512;
             TMP_FontAsset asset = TMP_FontAsset.CreateFontAsset(osFont,24,1,GlyphRenderMode.SDFAA,atlasSize,atlasSize);

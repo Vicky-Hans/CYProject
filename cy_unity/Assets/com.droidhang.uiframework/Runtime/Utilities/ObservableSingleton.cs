@@ -26,7 +26,6 @@ namespace DH.UIFramework
             // not to mark type as beforefieldinit
             static Nested()
             {
-                //Debug.Log("construct Nested over here");
             }
 
             internal static readonly T instance = new T();

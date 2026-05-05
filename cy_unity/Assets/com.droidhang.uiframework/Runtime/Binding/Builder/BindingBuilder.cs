@@ -13,7 +13,6 @@ namespace DH.UIFramework.Builder
 {
     public class BindingBuilder<TTarget, TSource> : BindingBuilderBase where TTarget : class
     {
-        //private static readonly ILog log = LogManager.GetLogger(typeof(BindingBuilder<TTarget, TSource>));
         public static readonly BindingBuilder<TTarget, TSource> Default = new BindingBuilder<TTarget, TSource>(null,null);
 
         public BindingBuilder(IBindingContext context, TTarget target) : base(context, target)
@@ -37,32 +36,8 @@ namespace DH.UIFramework.Builder
 
         public BindingBuilder<TTarget, TSource> For(Expression<Func<TTarget, EventHandler<InteractionEventArgs>>> memberExpression)
         {
-            // string targetName = this.PathParser.ParseMemberName(memberExpression);
-            // this.description.TargetName = targetName;
-            // this.description.UpdateTrigger = null;
-            // this.OneWayToSource();
             return this;
         }
-
-// #if UNITY_2019_1_OR_NEWER
-//         public BindingBuilder<TTarget, TSource> For<TResult>(Expression<Func<TTarget, TResult>> memberExpression, Expression<Func<TTarget, Func<EventCallback<ChangeEvent<TResult>>, bool>>> updateTriggerExpression)
-//         {
-//             // string targetName = this.PathParser.ParseMemberName(memberExpression);
-//             // string updateTrigger = this.PathParser.ParseMemberName(updateTriggerExpression);
-//             // this.description.TargetName = targetName;
-//             // this.description.UpdateTrigger = updateTrigger;
-//             return this;
-//         }
-//
-//         public BindingBuilder<TTarget, TSource> For<TResult>(Expression<Func<TTarget, Func<EventCallback<ChangeEvent<TResult>>, bool>>> memberExpression)
-//         {
-//             // string targetName = this.PathParser.ParseMemberName(memberExpression);
-//             // this.description.TargetName = targetName;
-//             // this.description.UpdateTrigger = null;
-//             // this.OneWayToSource();
-//             return this;
-//         }
-// #endif
 
         public BindingBuilder<TTarget, TSource> To<TResult>(Expression<Func<TSource, TResult>> path)
         {
@@ -122,8 +97,6 @@ namespace DH.UIFramework.Builder
 
     public class BindingBuilder<TTarget> : BindingBuilderBase where TTarget : class
     {
-        //private static readonly ILog log = LogManager.GetLogger(typeof(BindingBuilder<TTarget>));
-
         public BindingBuilder(IBindingContext context, TTarget target) : base(context, target)
         {
             this.description.TargetType = typeof(TTarget);
@@ -293,8 +266,6 @@ namespace DH.UIFramework.Builder
 
     public class BindingBuilder : BindingBuilderBase
     {
-        //private static readonly ILog log = LogManager.GetLogger(typeof(BindingBuilder));
-
         public BindingBuilder(IBindingContext context, object target) : base(context, target)
         {
         }

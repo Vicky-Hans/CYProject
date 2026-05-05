@@ -9,8 +9,6 @@ namespace DH.UIFramework.Reflection
 {
     public class ProxyPropertyInfo : IProxyPropertyInfo
     {
-        //private static readonly ILog log = LogManager.GetLogger(typeof(ProxyPropertyInfo));
-
         private readonly bool isValueType;
         private TypeCode typeCode;
         protected PropertyInfo propertyInfo;
@@ -25,7 +23,6 @@ namespace DH.UIFramework.Reflection
             }
 
             this.propertyInfo = propertyInfo;
-            //this.isValueType = this.propertyInfo.DeclaringType.GetTypeInfo().IsValueType;
             this.isValueType = this.propertyInfo.DeclaringType.IsValueType;
 
             if (this.propertyInfo.CanRead)

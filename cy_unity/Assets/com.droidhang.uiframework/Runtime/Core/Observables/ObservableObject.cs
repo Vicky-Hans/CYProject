@@ -51,21 +51,12 @@ namespace DH.UIFramework.Observables
             }
         }
 
-        //[Conditional("DEBUG")]
-        //protected void VerifyPropertyName(string propertyName)
-        //{
-        //    var type = this.GetType();
-        //    if (!string.IsNullOrEmpty(propertyName) && type.GetProperty(propertyName) == null)
-        //        throw new ArgumentException("Property not found", propertyName);
-        //}
-
         /// <summary>
         /// Raises the PropertyChanging event.
         /// </summary>
         /// <param name="propertyName">Property name.</param>
         protected virtual void RaisePropertyChanged(string propertyName = null)
         {
-            //RaisePropertyChanged(new PropertyChangedEventArgs(propertyName));
             RaisePropertyChanged(GetPropertyChangedEventArgs(propertyName));
         }
 
@@ -77,9 +68,6 @@ namespace DH.UIFramework.Observables
         {
             try
             {
-                //VerifyPropertyName(eventArgs.PropertyName);
-
-
                 if (propertyChanged != null)
                 {
                     var tempList = ListPool<PropertyChangedEventHandler>.Get();

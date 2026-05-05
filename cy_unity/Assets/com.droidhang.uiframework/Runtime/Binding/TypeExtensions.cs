@@ -7,8 +7,6 @@ namespace DH.UIFramework
 {
     public static class TypeExtensions
     {
-        //private static readonly ILog log = LogManager.GetLogger(typeof(TypeExtensions));
-
         public static MemberInfo FindFirstMemberInfo(this Type type, string name)
         {
             var members = type.GetMember(name);

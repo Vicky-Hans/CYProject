@@ -7,8 +7,6 @@ namespace DH.UIFramework.Proxy.Targets
 {
     public class UnityPropertyProxy<TValue> : PropertyTargetProxy
     {
-        //private static readonly ILog log = LogManager.GetLogger(typeof(UnityPropertyProxy<TValue>));
-
         private UnityEvent<TValue> unityEvent;
         public UnityPropertyProxy(object target, IProxyPropertyInfo propertyInfo, UnityEvent<TValue> unityEvent) : base(target, propertyInfo)
         {

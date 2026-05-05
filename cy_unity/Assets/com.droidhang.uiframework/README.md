@@ -64,7 +64,7 @@ Runtime/
   LuaScript/            框架的 Lua 接入层（149 个 .lua）。仅在使用 Lua 接入路径时才需要，C# MVVM 用法不依赖此层。
 
 Editor/
-  CodeGen/              BindingCodeGenerator / BindingTypeGenerator / BaseInjector / AssetConfig
+  CodeGen/              AssetConfig（旧版 Lua 绑定生成器源码已移除）
   Templates/            ViewTemplate.txt / ViewTemplate.cs
   Windows/              LuaFileNameWindow
   Inspectors/           UICircularScrollView / GroupExpand / FlipPage 自定义 Inspector

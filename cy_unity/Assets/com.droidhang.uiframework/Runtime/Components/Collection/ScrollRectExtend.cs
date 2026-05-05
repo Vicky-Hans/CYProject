@@ -165,20 +165,6 @@ namespace DH.UIFramework
 
         private void RefreshView()
         {
-            // var childCount = content.childCount;
-            // var range = indexedEnumerable.Count;
-            // for (var index = 0; index < range; index++)
-            // {
-            //     GameObject item = null;
-            //     if (index >= childCount)
-            //         item = Instantiate(prefab, content, false);
-            //     else
-            //         item = content.GetChild(index).gameObject;
-            //     var context = item.GetComponent<BaseView>();
-            //     context.SetDataContext(GetValue(indexedEnumerable[index]));
-            //     if (index != -1) item.transform.SetSiblingIndex(index);
-            // }
-            // for (var index = range; index < childCount; index++) Destroy(content.GetChild(index).gameObject);
             var childCount = content.childCount;
             var range = indexedEnumerable.Count;
             if (childCount > range)

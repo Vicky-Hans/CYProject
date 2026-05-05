@@ -13,8 +13,6 @@ namespace DH.UIFramework.Proxy.Sources.Object
 {
     public class UniversalNodeProxyFactory : INodeProxyFactory
     {
-        //private static readonly ILog log = LogManager.GetLogger(typeof(UniversalNodeProxyFactory));
-
         public ISourceProxy Create(object source, PathToken token)
         {
             IPathNode node = token.Current;

@@ -106,7 +106,6 @@ namespace DH.UIFramework.Services
                         kv.Value.Dispose();
 
                     this.services.Clear();
-                    //this.services = null;
                 }
                 disposed = true;
             }

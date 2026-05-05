@@ -10,8 +10,6 @@ namespace DH.UIFramework.Proxy.Targets
 {
     public class PropertyTargetProxy : ValueTargetProxyBase
     {
-        //private static readonly ILog log = LogManager.GetLogger(typeof(PropertyTargetProxy));
-
         protected readonly IProxyPropertyInfo propertyInfo;
 
         public PropertyTargetProxy(object target, IProxyPropertyInfo propertyInfo) : base(target)

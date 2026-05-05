@@ -402,7 +402,6 @@ namespace DH.UIFramework
             try
             {
                 string urlKey = CreateMD5(url);
-                //Debug.Log($"count->{count},url->{urlKey}");
                 bool isSuccess = loadedTextureDic.TryGetValue(urlKey, out var item);
                 // 排除错误的对象
                 if (!isSuccess)

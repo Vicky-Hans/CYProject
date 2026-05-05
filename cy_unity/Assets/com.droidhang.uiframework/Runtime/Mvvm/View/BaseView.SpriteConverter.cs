@@ -98,9 +98,6 @@ namespace DH.UIFramework
             if ((target is PropertyTargetProxy field) && (field.Target is Image image))
             {
                 RefreshImageNativeSize(image);
-                // var color = image.color;
-                // color.a = 1;
-                // image.color = color;
             }
         }
 

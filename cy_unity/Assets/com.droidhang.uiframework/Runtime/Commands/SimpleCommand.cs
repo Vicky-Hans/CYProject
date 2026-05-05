@@ -16,8 +16,6 @@ namespace DH.UIFramework.Commands
 
             this.execute = execute;
             count++;
-            
-            // Debug.Log($"current command count {count}");
         }
 
         public bool Enabled
