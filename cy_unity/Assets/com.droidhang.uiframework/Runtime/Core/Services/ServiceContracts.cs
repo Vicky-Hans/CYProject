@@ -1,4 +1,3 @@
-﻿
 using System;
 
 namespace DH.UIFramework.Services
@@ -22,5 +21,27 @@ namespace DH.UIFramework.Services
         void Unregister(Type type);
 
         void Unregister(string name);
+    }
+
+    public interface IServiceLocator
+    {
+        object Resolve(Type type);
+
+        T Resolve<T>();
+
+        object Resolve(string name);
+
+        T Resolve<T>(string name);
+    }
+
+    public interface IServiceContainer : IServiceLocator, IServiceRegistry
+    {
+    }
+
+    public interface IServiceBundle
+    {
+        void Start();
+
+        void Stop();
     }
 }

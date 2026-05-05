@@ -1,5 +1,4 @@
-﻿
-
+using System.Collections.Generic;
 using System.Linq.Expressions;
 
 namespace DH.UIFramework.Paths
@@ -40,5 +39,10 @@ namespace DH.UIFramework.Paths
         /// <param name="expression"></param>
         /// <returns></returns>
         string ParseMemberName(LambdaExpression expression);
+    }
+
+    public interface IExpressionPathFinder
+    {
+        List<Path> FindPaths(LambdaExpression expression);
     }
 }

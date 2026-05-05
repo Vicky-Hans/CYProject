@@ -1,8 +1,24 @@
-﻿
 using System;
+using System.Threading;
 
 namespace DH.UIFramework.Messaging
 {
+    public interface ISubscription<T> : IDisposable
+    {
+        /// <summary>
+        /// Changes the thread of message consumption.
+        /// For example, sending a message to the UI thread for execution.
+        /// </summary>
+        /// <example>
+        /// <code>
+        /// messenger.Subscribe<Message>(m=>{}).ObserveOn(SynchronizationContext.Current);
+        /// </code>
+        /// </example>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        ISubscription<T> ObserveOn(SynchronizationContext context);
+    }
+
     /// <summary>
     /// The Messenger is a class allowing objects to exchange messages.
     /// </summary>
@@ -55,20 +71,20 @@ namespace DH.UIFramework.Messaging
         ISubscription<T> Subscribe<T>(string channel, Action<T> action);
 
         /// <summary>
-        /// Publish a message to subscribed recipients. 
+        /// Publish a message to subscribed recipients.
         /// </summary>
         /// <param name="message"></param>
         void Publish(object message);
 
         /// <summary>
-        /// Publish a message to subscribed recipients. 
+        /// Publish a message to subscribed recipients.
         /// </summary>
         /// <typeparam name="T">The type of message that will be sent.</typeparam>
         /// <param name="message">The message to send to subscribed recipients.</param>
         void Publish<T>(T message);
 
         /// <summary>
-        /// Publish a message to subscribed recipients. 
+        /// Publish a message to subscribed recipients.
         /// </summary>
         /// <param name="channel">A name for a messaging channel.If a recipient subscribes
         /// using a channel, and a sender sends a message using the same channel, then this
@@ -79,7 +95,7 @@ namespace DH.UIFramework.Messaging
         void Publish(string channel, object message);
 
         /// <summary>
-        /// Publish a message to subscribed recipients. 
+        /// Publish a message to subscribed recipients.
         /// </summary>
         /// <typeparam name="T">The type of message that will be sent.</typeparam>
         /// <param name="channel">A name for a messaging channel.If a recipient subscribes
@@ -89,6 +105,5 @@ namespace DH.UIFramework.Messaging
         /// get the message. </param>
         /// <param name="message">The message to send to subscribed recipients.</param>
         void Publish<T>(string channel, T message);
-
     }
 }
